@@ -30,13 +30,13 @@ html:
 # Launch button settings
 launch_buttons:
   notebook_interface        : "jupyterlab"
-  jupyterhub_url            : https://vioras-2499.japaneast.cloudapp.azure.com
+  jupyterhub_url            : https://vioras-jh2499.japaneast.cloudapp.azure.com
 # binderhub_url             : https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
 
 # Information about where the book exists on the web
 repository:
   url: https://github.com/Cloudedu-Osaka/textbook-2024   # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
+  #path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 parse:
