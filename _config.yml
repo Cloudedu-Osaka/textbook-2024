@@ -2,9 +2,10 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: プログラミングで遡る科学史
-author: Manabu Higashida
-email: ''
-logo                        : "favicon.png"  # A path to the book logo
+author: Manabu Higashida, Cybermedia Center, Osaka University, Japan
+email: 'manabu.higashida.cmc@osaka-u.ac.jp'
+copyright: '2024'
+logo                        : "vioras-logo.png"  # A path to the book logo
 exclude_patterns            : ["README.md"]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 # Force re-execution of notebooks on each build.
