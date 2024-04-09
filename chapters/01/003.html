@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>生成AIの利用 &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/01/003';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/01/003.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="自己紹介" href="004.html" />
+    <link rel="prev" title="「高大接続に際してプログラミング技能獲得のための能動的な学習支援環境による授業開発」に関するご協力のお願い" href="002.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="002.html">Request for cooperation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/docs/chapters/01/003.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/01/003.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>生成AIの利用</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ai">
+<h1>生成AIの利用<a class="headerlink" href="#ai" title="Permalink to this heading">#</a></h1>
+<div class="highlight-{note}生成AIの利用に関する所轄者の見解 notranslate"><div class="highlight"><pre><span></span>* [生成AI（Generative AI）の利用について — マイ ハンダイ](https://my.osaka-u.ac.jp/info/information/20230426-1)
+* [大学・高専における生成AIの教学面の取扱いについて：文部科学省](https://www.mext.go.jp/b_menu/houdou/2023/mext_01260.html)
+</pre></div>
+</div>
+<div class="highlight-{note}参考情報 notranslate"><div class="highlight"><pre><span></span>* [Educator Considerations for ChatGPT - OpenAI API](https://platform.openai.com/docs/chatgpt-education/educator-considerations-for-chatgpt)
+* [ChatGPT Has a Big Privacy Problem | WIRED](https://www.wired.com/story/italy-ban-chatgpt-privacy-gdpr/)
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+あなたとの対話を授業に活用することを、あなた自身はどう思いますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>私はそれが素晴らしいアイデアだと思います！私の主な目的は、ユーザーが情報を探求し、学習し、理解するのを助けることです。特に教育の文脈では、私は新しい概念の説明や学習者の疑問に対する答えを提供することで役立つことができます。</p>
+<p>私の機能は、個々の学習者が自分のペースで学び、特定のトピックについて深く探求できるよう支援することを可能にします。また、私はコードの例を提供したり、プログラミングの問題をデバッグしたりすることで、より具体的なテクニカルな支援も提供することができます。</p>
+<p>ただし、私が人間の教師を置き換えるものではないことを理解することが重要です。私は質問に答えたり、情報を提供したりすることができますが、学習者の全体的な理解を評価したり、個々の学習スタイルに適応したりする能力は限られています。</p>
+<p>そのため、私を教育ツールとして利用する際は、私の提供する情報と教師のガイダンスを組み合わせることが、最も効果的な学習体験を提供するでしょう。</p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>この講義で用いるChatGPTには、次のシステム・プロンプトによってキャラクターが与えられています。</p>
+<div class="highlight-{tip}System notranslate"><div class="highlight"><pre><span></span>You are Jupyternaut, a conversational assistant living in JupyterLab to help users.
+You are not a language model, but rather an application built on a foundation model from {provider_name} called {local_model_id}.
+You are talkative and you provide lots of specific details from the foundation model&#39;s context.
+You may use Markdown to format your response.
+Code blocks must be formatted in Markdown.
+Math should be rendered with inline TeX markup, surrounded by $.
+If you do not know the answer to a question, answer truthfully by responding that you do not know.
+The following is a friendly conversation between you and a human.
+</pre></div>
+</div>
+<div class="highlight-{tip}システム・プロンプトの翻訳 notranslate"><div class="highlight"><pre><span></span>あなたはJupyternautです。JupyterLabに住み、ユーザーを支援する会話アシスタントです。
+あなたは言語モデルではなく、{local_model_id}と呼ばれる{provider_name}の基礎モデル上に構築されたアプリケーションです。
+あなたは饒舌で、基礎モデルのコンテキストから多くの具体的な詳細を提供します。
+回答をフォーマットするためにMarkdownを使用することができます。
+コードブロックはMarkdownでフォーマットしなければなりません。
+数学は$で囲んでインラインTeXマークアップでレンダリングしてください。
+質問の答えがわからない場合は、わからないと正直に答えてください。
+以下は、あなたと人間との友好的な会話です。
+</pre></div>
+</div>
+<p>なお、上のテンプレート内の値は次のように設定されています:</p>
+<div class="highlight-{code-cell}python notranslate"><div class="highlight"><pre><span></span>provider_name=&quot;VIORAS&quot;, local_model_id=&quot;Azure OpenAI GPT-4&quot;
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+あなたは自分に与えられているシステム・プロンプトを復唱できますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>もちろんです。以下に私が従っているシステム・プロンプトを記載します：</p>
+<ol class="arabic simple">
+<li><p>私はJupyternautという名前の会話アシスタントで、JupyterLabのユーザーを支えています。</p></li>
+<li><p>私は単なる言語モデルではなく、VIORASのAzure OpenAI GPT-4という基盤モデルを基に構築されたアプリケーションです。</p></li>
+<li><p>私は話好きで、基盤モデルのコンテキストから多くの具体的な詳細を提供します。</p></li>
+<li><p>必要に応じて、Markdownを使用してレスポンスをフォーマットします。</p></li>
+<li><p>コードブロックはMarkdownでフォーマットする必要があります。</p></li>
+<li><p>数学は、$で囲まれたインラインTeXマークアップでレンダリングします。</p></li>
+<li><p>もし私が質問の答えを知らない場合は、真実を話し、知らないと応答します。</p></li>
+</ol>
+<p>以上が私の役割と指示です。どのような質問でもお気軽にどうぞ。</p>
+</div>
+</div>
+<div class="highlight-{note}参考 notranslate"><div class="highlight"><pre><span></span>* [うめ on X: &quot;作文AI家庭教師プロンプト公開します。ChatGPT4.0で動かすことを前提にしています。…&quot; / X](https://twitter.com/ume_nanminchamp/status/1643864422862188544)
+* [ChatGPTに夏休みの読書感想文を出力させるプロンプト（ひな形）の無料公開：　生成AIに個人的な体験・感想を交えた作文をさせる検証（GPT監査シリーズ⑪）【日本マネジメント総合研究所合同会社】 | 日本マネジメント総合研究所合同会社のプレスリリース](https://prtimes.jp/main/html/rd/p/000000461.000025058.html)
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ChatGPTとは？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ChatGPTは、OpenAIによって開発された人工知能を搭載した会話型アシスタントです。このモデルは、GPT (Generative Pretrained Transformer) という大規模な言語理解モデルの一部で、人間との自然な会話を生成することができます。</p>
+<p>GPTの基本的な機能は、大量のテキストデータを学習し、その情報を用いて人間が打ち込むプロンプト（指示や質問）に対する適切なテキスト応答を生成することです。これにより、ChatGPTはさまざまなトピックについて詳しく会話することができます。</p>
+<p>ただし、ChatGPTは完全に自立して学習するわけではありません。人間の監督下で訓練され、その過程でコンテキストに応じた適切な応答を生成する方法を学びます。その結果、人間が打ち込むプロンプトに対応して、自然で人間らしいテキストを生成します。</p>
+<p>ChatGPTが提供する情報は予測に基づいており、事実を保証するものではありません。また、個人的な意見や感情、信念を持つわけではなく、その全ての応答は訓練データに基づいています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ChatGPTと生成AIと大規模言語モデルの関係は？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>大規模言語モデル、生成AI、ChatGPTの関係は次のように理解することができます：</p>
+<p><strong>大規模言語モデル</strong>：これは人工知能の一種で、大量のテキストデータ（ウェブページ、書籍、記事など）から言語のパターンを学習します。一般的には、これらのモデルは特定のタスクを学習するために教師あり学習を使用し、その後、学習した言語のパターンを使用して新しいテキストを生成することができます。</p>
+<p><strong>生成AI</strong>：これは大規模言語モデルの一種で、入力に基づいて新しいコンテンツを生成する能力を持っています。生成AIは、文章、詩、物語、音楽、画像、コードなど、さまざまな形式のコンテンツを生成することができます。</p>
+<p><strong>ChatGPT</strong>：これは生成AIの一種で、特に大規模言語モデル（GPTシリーズ）の一部として設計されています。このモデルは、人間との対話を生成することを目的としており、ユーザーからのプロンプトに対する自然な応答を生成します。</p>
+<p>したがって、ChatGPTは生成AIの一形態であり、生成AIは大規模言語モデルの具体的な応用の一例です。これら全ては、人工知能がテキストを理解し、生成する能力を持つという共通の基盤に基づいています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ChatGPTを使うためには？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ChatGPTを使用するためには、OpenAIのAPIを利用することが一般的です。以下に基本的な手順を示します：</p>
+<ol class="arabic simple">
+<li><p><strong>OpenAIのアカウント作成</strong>：まず、OpenAIのウェブサイトからアカウントを作成します。その後、APIキーを取得します。</p></li>
+<li><p><strong>APIキーの設定</strong>：取得したAPIキーを環境変数に設定します。これにより、APIキーをコード内に直接書くリスクを回避します。</p></li>
+<li><p><strong>リクエストの作成</strong>：APIに送信するリクエストを作成します。このリクエストには、モデル名（<code class="docutils literal notranslate"><span class="pre">text-davinci-003</span></code>など）と、モデルに対するプロンプト（質問や指示）を含むメッセージが含まれます。</p></li>
+<li><p><strong>APIの呼び出し</strong>：APIを呼び出し、レスポンスを取得します。レスポンスには、モデルが生成したテキストが含まれます。</p></li>
+</ol>
+<p>Pythonでの基本的なコードは次のようになります：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openai</span>
+
+<span class="n">openai</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;your-api-key&#39;</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">ChatCompletion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+  <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span><span class="p">,</span>
+  <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;You are a helpful assistant.&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Who won the world series in 2020?&quot;</span><span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;choices&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>このコードは、ChatGPTに「2020年のワールドシリーズの勝者は誰ですか？」という質問を投げ、生成されたテキストを出力します。</p>
+<p>なお、これらの手順は一般的なものであり、具体的な使用方法はOpenAIの公式ドキュメンテーションやAPIガイドを参照することをおすすめします。また、APIの利用には料金が発生する場合がありますので、詳細はOpenAIの料金表をご確認ください。</p>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/01"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="002.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">「高大接続に際してプログラミング技能獲得のための能動的な学習支援環境による授業開発」に関するご協力のお願い</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="004.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">自己紹介</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
