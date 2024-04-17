@@ -1,0 +1,1197 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Gaussによる等差数列の和の公式 &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/02/102';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/02/102.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Assignment 2" href="103_past.html" />
+    <link rel="prev" title="Assingment 1" href="102_past.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/02/102.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/02/102.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Gaussによる等差数列の和の公式</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Gaussによる等差数列の和の公式</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Pythonによるプログラミング</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Pythonによる等差数列の表現</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Pythonによる等差数列の和</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pythoniterable">Pythonのiterableとは?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">数式とプログラミング</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">再帰と帰納</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">数式の変数とプログラムの変数</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="gauss">
+<h1>Gaussによる等差数列の和の公式<a class="headerlink" href="#gauss" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss">Carl Friedrich Gauss - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Arithmetic_progression">Arithmetic progression - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ガウスによる等差数列の和について
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ガウスによる等差数列の和の公式は幼少期にカール・フリードリヒ・ガウスによって発見されました。ガウスが学校で問題を解いているときに、1から100までのすべての整数の総和を求めるように指示されました。彼はすぐにこの問題の解を見つけ出し、その解は5050であることを発見しました。</p>
+<p>彼がどのようにしてこの解を見つけたかは、等差数列の和の公式の基礎となっています。その公式は次の通りです：</p>
+<p>$$ S = \frac{n}{2} (a+l) $$</p>
+<p>ここで、</p>
+<ul class="simple">
+<li><p>$S$は数列の和</p></li>
+<li><p>$n$は項数</p></li>
+<li><p>$a$は初項</p></li>
+<li><p>$l$は末項</p></li>
+</ul>
+<p>を表します。</p>
+<p>例えば、1から100までのすべての整数の総和を求める場合、$n=100$、$a=1$、$l=100$となります。これを公式に代入すると、以下のようになります：</p>
+<p>$$ S = \frac{100}{2} (1+100) = 5050 $$</p>
+<p>これが、ガウスがすぐに答えを見つけた方法です。この公式は、等差数列の任意の和を簡単に計算するために使用することができます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+等差数列の一般項の数式は？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>等差数列の一般項は次のように表されます：</p>
+<p>$ a_n = a_1 + (n-1) \cdot d $</p>
+<p>ここで、</p>
+<ul class="simple">
+<li><p>$ a_n $ は数列の第n項を表します。</p></li>
+<li><p>$ a_1 $ は数列の最初の項を表します。</p></li>
+<li><p>$ d $ は等差（連続する任意の2項間の差）を表します。</p></li>
+<li><p>$ n $ は項の番号を表します。</p></li>
+</ul>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+初項から第$n$項までの等差数列の和の公式は？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>等差数列の初項から第$n$項までの和は次の公式で計算できます：</p>
+<p>$ S_n = \frac{n}{2} \left(2a_1 + (n-1)d \right) $</p>
+<p>ここで、</p>
+<ul class="simple">
+<li><p>$ S_n $ は初項から第$n$項までの和を表します。</p></li>
+<li><p>$ a_1 $ は数列の最初の項を表します。</p></li>
+<li><p>$ d $ は等差（連続する任意の2項間の差）を表します。</p></li>
+<li><p>$ n $ は項の番号を表します。</p></li>
+</ul>
+<p>この公式は「初項と末項の平均 × 項数」を表しています。初項から第$n$項までの和は、初項と第$n$項の平均値を$n$回加えたものと同じになります。</p>
+</div>
+</div>
+<section id="python">
+<h2>Pythonによるプログラミング<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Pythonによる等差数列の表現<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">$n$</span></code>は、数式の変数<span class="math notranslate nohighlight">\(n\)</span>です。斜体で印字されます。
+ChatGPTに数式の変数であることを伝えるためにそのように表記しています。
+プログラムの変数は<code class="docutils literal notranslate"><span class="pre">`n`</span></code>と表記します。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+pythonで初項$a$、等差$d$の数列の$n$番目の項を表現することはできますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、Pythonで初項$a$、等差$d$の数列の$n$番目の項を表現することは可能です。次のような関数を定義します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nth_term</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">d</span>
+</pre></div>
+</div>
+<p>この関数は、初項$a$、等差$d$、そして項数$n$を引数として受け取り、数列の$n$番目の項を返します。</p>
+<p>例えば、初項が1、等差が2の数列の第5項を求めるには、次のように呼び出します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">nth_term</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>出力は<code class="docutils literal notranslate"><span class="pre">9</span></code>になります。これは、数列 {1, 3, 5, 7, 9, …} の5番目の項が9であることを示しています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+その数列をリストで表現することは？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonで初項$a$、等差$d$の数列の$n$項までをリストで表現することも可能です。<code class="docutils literal notranslate"><span class="pre">range</span></code>関数を使用してこれを実現できます。</p>
+<p>以下に、その方法を示す関数を定義します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sequence_list</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">a</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">d</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>この関数は、初項$a$、等差$d$、そして項数$n$を引数として受け取り、数列の$n$項までのリストを返します。</p>
+<p>例えば、初項が1、等差が2の数列の最初の5項をリスト形式で求めるには、次のように呼び出します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sequence_list</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>出力は<code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7,</span> <span class="pre">9]</span></code>になります。これは、数列 {1, 3, 5, 7, 9, …} の最初の5項を表しています。</p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/List_comprehension">List comprehension - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(list_comprehension)">Comparison of programming languages (list comprehension) - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="p">[</span><span class="n">a</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">d</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)])(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">_</span></code>は直前のセルの出力を引用する時に使います。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+pythonの組み込み関数`range()`で等差数列を表現することはできますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、Pythonの組み込み関数<code class="docutils literal notranslate"><span class="pre">range()</span></code>は等差数列を表現するために使用することができます。<code class="docutils literal notranslate"><span class="pre">range()</span></code>関数は3つのパラメータを取ることができます：開始値（初項）、終了値、そしてステップサイズ（等差）です。</p>
+<p>例えば、初項が1、等差が2の数列を作成するには、次のようにします：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sequence</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>出力は<code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7,</span> <span class="pre">9]</span></code>となります。これは、初項1、等差2の数列の最初の5項を表しています。</p>
+<p>ただし、<code class="docutils literal notranslate"><span class="pre">range()</span></code>関数はPythonの<code class="docutils literal notranslate"><span class="pre">list</span></code>関数と一緒に使用しないと、直接数列を出力しません。<code class="docutils literal notranslate"><span class="pre">range()</span></code>関数そのものは、イテレータを返します。リスト形式で結果を得るためには、<code class="docutils literal notranslate"><span class="pre">list()</span></code>関数を使用して<code class="docutils literal notranslate"><span class="pre">range()</span></code>関数の結果をリストに変換します。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>range(1, 11)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>range<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Init signature:</span> range<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">/,</span> <span class=" -Color -Color-Blue">*</span>args<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">**</span>kwargs<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Docstring:</span>     
+range(stop) -&gt; range object
+range(start, stop[, step]) -&gt; range object
+
+Return an object that produces a sequence of integers from start (inclusive)
+to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+These are exactly the valid indices for a list of 4 elements.
+When step is given, it specifies the increment (or decrement).
+<span class=" -Color -Color-Red">Type:</span>           type
+<span class=" -Color -Color-Red">Subclasses:</span>     
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3>Pythonによる等差数列の和<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+Pythonで1からnまでの数列の和を計算する
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonでは<code class="docutils literal notranslate"><span class="pre">sum()</span></code>関数を使用して数列の和を計算できます。以下に例を示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 末項を10とします。</span>
+
+<span class="c1"># 1からnまでの数列を生成します。</span>
+<span class="n">sequence</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># 数列の和を計算します。</span>
+<span class="n">sum_of_sequence</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_sequence</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>上記のコードを実行すると、出力は <code class="docutils literal notranslate"><span class="pre">55</span></code> となります。これは1から10までの数の和です。</p>
+<p>また、等差数列の和の公式を利用して、直接和を計算することも可能です。その場合、次のようになります：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 末項を10とします。</span>
+
+<span class="c1"># 1からnまでの数列の和を計算します。</span>
+<span class="n">sum_of_sequence</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_sequence</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このコードも同様に、出力は <code class="docutils literal notranslate"><span class="pre">55</span></code> となります。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sum<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> sum<span class=" -Color -Color-Blue">(</span>iterable<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">/,</span> start<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Docstring:</span>
+Return the sum of a &#39;start&#39; value (default: 0) plus an iterable of numbers
+
+When the iterable is empty, return the start value.
+This function is intended specifically for use with numeric values and may
+reject non-numeric types.
+<span class=" -Color -Color-Red">Type:</span>      builtin_function_or_method
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pythoniterable">
+<h3>Pythonのiterableとは?<a class="headerlink" href="#pythoniterable" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+iterableとは？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonにおけるイテラブル（iterable）は、要素を一つずつ取り出すことができるオブジェクトのことを指します。これらのオブジェクトは、<code class="docutils literal notranslate"><span class="pre">for</span></code>ループで反復処理することが可能です。</p>
+<p>主なイテラブルなオブジェクトには以下のようなものがあります：</p>
+<ul class="simple">
+<li><p>リスト（list）: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code></p></li>
+<li><p>タプル（tuple）: <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5)</span></code></p></li>
+<li><p>文字列（string）: <code class="docutils literal notranslate"><span class="pre">'Hello,</span> <span class="pre">World!'</span></code></p></li>
+<li><p>辞書（dict）: <code class="docutils literal notranslate"><span class="pre">{1:</span> <span class="pre">'one',</span> <span class="pre">2:</span> <span class="pre">'two',</span> <span class="pre">3:</span> <span class="pre">'three'}</span></code></p></li>
+<li><p>集合（set）: <code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5}</span></code></p></li>
+<li><p>ファイルオブジェクト</p></li>
+</ul>
+<p>イテラブルなオブジェクトは、内部の要素に対する反復操作が可能で、Pythonの<code class="docutils literal notranslate"><span class="pre">iter()</span></code>関数によってイテレータ（iterator）に変換することができます。イテレータは<code class="docutils literal notranslate"><span class="pre">next()</span></code>関数を用いて要素を一つずつ取り出すことができ、すべての要素を取り出した後には<code class="docutils literal notranslate"><span class="pre">StopIteration</span></code>例外を送出します。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+イテレータを使う例を紹介してください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonでイテレータを使う基本的な例を以下に示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># リストを作成します。</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># リストからイテレータを作成します。</span>
+<span class="n">my_iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># イテレータの要素を一つずつ取り出します。</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">my_iterator</span><span class="p">))</span>  <span class="c1"># 出力: 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">my_iterator</span><span class="p">))</span>  <span class="c1"># 出力: 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">my_iterator</span><span class="p">))</span>  <span class="c1"># 出力: 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">my_iterator</span><span class="p">))</span>  <span class="c1"># 出力: 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">my_iterator</span><span class="p">))</span>  <span class="c1"># 出力: 5</span>
+
+<span class="c1"># これ以上要素がないため、次の行はStopIteration例外を送出します。</span>
+<span class="c1"># print(next(my_iterator))</span>
+</pre></div>
+</div>
+<p>上記の例では、まずリストからイテレータを作成し、<code class="docutils literal notranslate"><span class="pre">next()</span></code>関数を使用してイテレータの要素を一つずつ取り出しています。すべての要素を取り出した後に<code class="docutils literal notranslate"><span class="pre">next()</span></code>関数を再度呼び出すと、<code class="docutils literal notranslate"><span class="pre">StopIteration</span></code>例外が送出されます。</p>
+<p>このように、Pythonのイテレータは反復可能なオブジェクト（iterable）から要素を一つずつ取り出すためのツールであり、その内部状態を覚えているために何度でも同じ要素を返すことはありません。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+イテレータを使うループの例を
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonでイテレータを使う<code class="docutils literal notranslate"><span class="pre">for</span></code>ループの基本的な例を以下に示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># リストを作成します。</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># リストからイテレータを作成します。</span>
+<span class="n">my_iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># イテレータの要素を一つずつ取り出して表示します。</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">my_iterator</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>上記のコードを実行すると、リストの各要素（1, 2, 3, 4, 5）が順に表示されます。<code class="docutils literal notranslate"><span class="pre">for</span></code>ループはイテレータから自動的に要素を一つずつ取り出し、<code class="docutils literal notranslate"><span class="pre">StopIteration</span></code>例外が送出されるとループが終了します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">while</span></code>ループを使用した例も紹介します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># リストを作成します。</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># リストからイテレータを作成します。</span>
+<span class="n">my_iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># イテレータの要素を一つずつ取り出して表示します。</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">my_iterator</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="k">break</span>  <span class="c1"># StopIterationが送出されたらループを終了します。</span>
+</pre></div>
+</div>
+<p>上記のコードでも、リストの各要素（1, 2, 3, 4, 5）が順に表示されます。<code class="docutils literal notranslate"><span class="pre">while</span></code>ループと<code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">except</span></code>構文を使用して、<code class="docutils literal notranslate"><span class="pre">StopIteration</span></code>例外が送出されたらループを終了するようにしています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+`for`では`iter()`を省略できるのでは？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、その通りです。Pythonの<code class="docutils literal notranslate"><span class="pre">for</span></code>ループは内部で<code class="docutils literal notranslate"><span class="pre">iter()</span></code>関数を自動的に呼び出してイテレータを作成します。したがって、反復可能なオブジェクト（iterable）を直接<code class="docutils literal notranslate"><span class="pre">for</span></code>ループに渡すことができます。</p>
+<p>以下に例を示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># リストを作成します。</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># リストの各要素を順に表示します。</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>上記のコードでは、<code class="docutils literal notranslate"><span class="pre">iter()</span></code>を明示的に呼び出すことなく<code class="docutils literal notranslate"><span class="pre">for</span></code>ループでリストの各要素を順に取り出しています。これは、<code class="docutils literal notranslate"><span class="pre">for</span></code>ループが内部で<code class="docutils literal notranslate"><span class="pre">iter(my_list)</span></code>を呼び出してイテレータを作成し、そのイテレータから要素を一つずつ取り出しているからです。</p>
+<p>なお、<code class="docutils literal notranslate"><span class="pre">for</span></code>ループは<code class="docutils literal notranslate"><span class="pre">StopIteration</span></code>例外も自動的に処理します。<code class="docutils literal notranslate"><span class="pre">next()</span></code>関数を明示的に呼び出す必要はなく、<code class="docutils literal notranslate"><span class="pre">StopIteration</span></code>例外を手動で捕捉する必要もありません。</p>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>ChatGPTの応答は必ずしも正確ではありません。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+Pythonで1からnまでの数列の和を計算する場合、`for`ループを使うとどう書けますか？
+その場合の問題点を指摘してください。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonで1から$n$までの数列の和を計算する場合、<code class="docutils literal notranslate"><span class="pre">for</span></code>ループを使用して次のように書くことができます：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">total</span>
+</pre></div>
+</div>
+<p>この関数は、1から$n$までの数を順に加算して、その和を返します。例えば、<code class="docutils literal notranslate"><span class="pre">sum_sequence(100)</span></code>と呼び出すと、1から100までの数の和（5050）を返します。</p>
+<p>しかしながら、この方法にはいくつかの問題点があります：</p>
+<ol class="arabic simple">
+<li><p><strong>効率性</strong>：この方法では、$n$の大きさに比例して計算時間が増加します。これは大きな$n$の値に対しては非効率的です。ガウスの方法（等差数列の和の公式）を使用すると、どんなに大きな$n$でも一定の時間で計算することができます。</p></li>
+<li><p><strong>浮動小数点数の精度</strong>：非常に大きな$n$の値に対しては、浮動小数点数の精度の問題が発生する可能性があります。加算の回数が増えると、小数点以下の値が丸められ、結果が正確でなくなる可能性があります。</p></li>
+</ol>
+<p>したがって、可能であれば、等差数列の和の公式を使用した方法が推奨されます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+pythonの整数は多倍長なので精度の問題は生じないのでは？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>その通りです、ごめんなさい、その点を見落としていました。Pythonの整数型は、多倍長整数（Arbitrary-precision）をサポートしています。これは、メモリが許す限り、任意の大きさの整数を正確に表現できることを意味します。したがって、Pythonの整数加算で精度の問題が発生することはありません。</p>
+<p>ただし、効率性の観点からは、大きな$n$の値に対しては、<code class="docutils literal notranslate"><span class="pre">for</span></code>ループを使用した方法よりも等差数列の和の公式を使用した方法の方が計算時間が短くて済みます。</p>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>ChatGPTの応答は必ずしも正しくありません。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">64</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">128</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">256</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(18446744073709551616,
+ 340282366920938463463374607431768211456,
+ 115792089237316195423570985008687907853269984665640564039457584007913129639936)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+関数の再帰呼び出しで書けますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、再帰関数を使用して1から$n$までの数列の和を計算することも可能です。以下にその方法を示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_sequence_recursive</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="n">sum_sequence_recursive</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>この関数は、$n$が1であれば1を返し、そうでなければ$n$と<code class="docutils literal notranslate"><span class="pre">sum_sequence_recursive(n-1)</span></code>の結果を加算して返します。したがって、この関数を呼び出すと、1から$n$までの数列の和が計算されます。</p>
+<p>ただし、再帰関数を使用する場合には注意が必要です。再帰の深さ（再帰呼び出しの回数）がPythonの最大再帰深度（通常は約1000）を超えると、<code class="docutils literal notranslate"><span class="pre">RecursionError</span></code>が発生します。したがって、この方法は$n$が非常に大きい場合には適していません。</p>
+<p>再帰呼び出しの代わりにループを使用する、または等差数列の和の公式を使用するなど、再帰の深さに制限がない方法を使用することをお勧めします。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+末尾再帰によって実装してください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>末尾再帰（Tail Recursion）は、再帰呼び出しを最後の操作として実行する再帰の形式です。これにより、コンパイラまたはインタープリタがループに最適化することが可能になります。しかし、残念ながら、Pythonは末尾再帰の最適化をサポートしていません。そのため、Pythonでは末尾再帰が深いとスタックオーバーフローが発生します。</p>
+<p>しかし、教育的な目的で末尾再帰の形式で1から$n$までの和を計算する関数を書くことは可能です。そのためには、累積引数（accumulator）を導入します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_sequence_tail_recursive</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">accumulator</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">accumulator</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">sum_sequence_tail_recursive</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">accumulator</span> <span class="o">+</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>この関数は、$n$が0であれば累積引数を返し、そうでなければ<code class="docutils literal notranslate"><span class="pre">sum_sequence_tail_recursive</span></code>関数を$n-1$と<code class="docutils literal notranslate"><span class="pre">accumulator</span> <span class="pre">+</span> <span class="pre">n</span></code>の引数で呼び出します。したがって、この関数を呼び出すと、1から$n$までの数列の和が計算されます。</p>
+<p>再び、Pythonではこの関数も$n$が大きい場合（通常は1000を超える値）には<code class="docutils literal notranslate"><span class="pre">RecursionError</span></code>を発生させる可能性がある点に注意してください。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+末尾再帰による実装をループに書き直してください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>末尾再帰の実装は、ループを用いて次のように書き換えることができます：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_sequence_loop</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">accumulator</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">accumulator</span> <span class="o">+=</span> <span class="n">n</span>
+        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">accumulator</span>
+</pre></div>
+</div>
+<p>この関数は、<code class="docutils literal notranslate"><span class="pre">while</span></code>ループを用いて$n$が0になるまで$n$を累積器<code class="docutils literal notranslate"><span class="pre">accumulator</span></code>に加え、その後$n$を1減らすという操作を繰り返します。ループが終了したら、累積器の値（1から$n$までの和）を返します。</p>
+<p>この関数は、再帰を使用する場合とは異なり、どんなに大きな$n$でも<code class="docutils literal notranslate"><span class="pre">RecursionError</span></code>を発生させることなく実行することができます。</p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Tail_call">Tail call - Wikipedia</a></p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id3">
+<h1>数式とプログラミング<a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
+<section id="id4">
+<h2>再帰と帰納<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+再帰と帰納の用語の違いを説明してください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>**再帰（Recursion）<strong>と</strong>帰納（Induction）**は、共にある問題をより小さな部分問題に分割して解決するという考え方に基づいていますが、その使用目的と文脈が異なります。</p>
+<ol class="arabic simple">
+<li><p><strong>再帰</strong>：再帰は通常、プログラミングやアルゴリズムの文脈で使用されます。再帰とは、関数が自身を呼び出すことを指します。一般的に、再帰的な関数は基底ケース（最も単純なケース）を定義し、その基底ケースに到達するまで自身を呼び出し続けます。再帰は、特に木構造の探索や分割統治法など、特定の種類の問題を解決するのに適しています。</p></li>
+<li><p><strong>帰納</strong>：帰納は主に数学や論理学の文脈で使用されます。帰納法（数学的帰納法）は、ある命題が全ての自然数に対して成り立つことを証明するための手法です。まず基底ケース（通常は自然数の最小値である1）が真であることを示し、次に「n番目のケースが真であると仮定したとき、n+1番目のケースも真である」ことを示します。これにより、その命題が全ての自然数に対して真であることが証明されます。</p></li>
+</ol>
+<p>両者の共通点は、問題をより小さな部分問題に分割して解決しようとするところにあります。しかし、再帰は実際の問題解決手法（プログラムやアルゴリズム）を指し、帰納はある命題の真偽を論証するための論理的手法を指します。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+Pythonで帰納的なプログラミングをすることはできますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、Pythonで帰納的なプログラミングをすることは可能です。帰納的なプログラミングとは、一般的には問題をより小さな部分問題に分割し、それらの部分問題の解を組み合わせて全体の問題を解くというアプローチを指します。これは特に再帰的なアプローチと共通しており、再帰的な関数を書く際には帰納的な思考が求められます。</p>
+<p>例えば、以下の再帰的な関数は帰納的な思考に基づいて1からnまでの和を計算します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># 基底ケース：0から0までの和は0</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="c1"># 再帰的なケース：nから1までの和はnと1からn-1までの和の和</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="n">sum_sequence</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_sequence</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>この関数では、より小さい部分問題（ここでは1からn-1までの和）の解を求め、それにnを加えることで全体の問題（ここでは1からnまでの和）を解いています。これは帰納的なアプローチの典型的な例です。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+もっと直接的に帰納的なプログラミングをできるプログラム言語はありますか？たとえばMathematicaではどう書けますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、プログラミング言語の中には帰納的な思考を直接的にサポートするものもあります。その一つが数式処理システムであるMathematica（現在はWolfram Languageとも呼ばれています）です。</p>
+<p>Mathematicaでは、数学的帰納法を直接的にコード化することが可能です。以下に、1から$n$までの和を計算するMathematicaのコードを示します：</p>
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">Summation</span><span class="p">[</span><span class="nv">n_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">Summation</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">Summation</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>上記のコードでは、<code class="docutils literal notranslate"><span class="pre">Summation[n_]</span> <span class="pre">:=</span> <span class="pre">Summation[n</span> <span class="pre">-</span> <span class="pre">1]</span> <span class="pre">+</span> <span class="pre">n</span> <span class="pre">/;</span> <span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>が帰納的なケース（<code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>）を定義しており、<code class="docutils literal notranslate"><span class="pre">Summation[0]</span> <span class="pre">:=</span> <span class="pre">0</span></code>が基底ケース（<code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">0</span></code>）を定義しています。</p>
+<p>しかし、このアプローチはPythonの再帰的なアプローチと同様に、深い再帰によるスタックオーバーフローの問題を避けることはできません。そのため、実際のプログラミングにおいては、深い再帰よりもループや内蔵関数を使用した方が安全で効率的です。</p>
+</div>
+</div>
+</section>
+<section id="id5">
+<h2>数式の変数とプログラムの変数<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+Pythonの変数と数式の変数の違いは？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonの変数と数学の変数は、いずれも何らかの値を表すために使用されますが、それぞれ異なる特性と目的を持っています。</p>
+<ol class="arabic simple">
+<li><p><strong>Pythonの変数</strong>：Pythonの変数は、メモリ内の特定の場所に関連付けられた名前です。このメモリの場所には、数値、文字列、リスト、辞書、関数、クラスなど、Pythonの任意のオブジェクトを格納することができます。Pythonの変数は動的に型が決定され、実行時にその値を変更することが可能です。</p></li>
+<li><p><strong>数学の変数</strong>：数学の変数は、具体的な値が未知であるか、またはその値が一連の可能な値を取ることができる量を表します。数学の変数は、数式や方程式の中で使用され、通常はアルファベットの文字で表されます。数学の変数は一般的に不変で、同じ数式の中では同じ値を示します。</p></li>
+</ol>
+<p>これらの違いにより、Pythonの変数と数学の変数はそれぞれ異なる目的と使い方を持っています。Pythonの変数はプログラムの実行中に情報を保持し操作するために使用され、数学の変数は数学的な問題を表現し解決するために使用されます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+SymPyを使って具体的に説明してください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>SymPyはPythonのライブラリで、シンボリック計算（数学的表現を記号として扱い、それらを操作する計算）をサポートしています。SymPyを使って、Pythonの変数と数学の変数（SymPyではこれをシンボルと呼びます）の違いを具体的に示します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span>
+
+<span class="c1"># SymPyのシンボルを作成します。</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+
+<span class="c1"># シンボルを使った数学的な表現を作成します。</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span>
+
+<span class="c1"># シンボルに具体的な値を代入します。</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># 出力: 5</span>
+</pre></div>
+</div>
+<p>上記のコードでは、<code class="docutils literal notranslate"><span class="pre">x</span></code>と<code class="docutils literal notranslate"><span class="pre">y</span></code>はSymPyのシンボル（数学的な変数）で、<code class="docutils literal notranslate"><span class="pre">expr</span></code>はこれらのシンボルを使った数学的な表現（ここでは<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">2*y</span></code>）です。この表現はシンボルそのものを操作し、それらを具体的な値に代入する前には具体的な値を持ちません。</p>
+<p>一方、以下のPythonのコードを見てみましょう：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pythonの変数に値を代入します。</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># 変数を使った計算を行います。</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># 出力: 5</span>
+</pre></div>
+</div>
+<p>このコードでは、<code class="docutils literal notranslate"><span class="pre">x</span></code>と<code class="docutils literal notranslate"><span class="pre">y</span></code>はPythonの変数で、すぐに具体的な値（ここでは1と2）に代入されています。<code class="docutils literal notranslate"><span class="pre">result</span></code>はこれらの変数の値を使った計算結果（ここでは<code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2*2</span></code>）です。</p>
+<p>このように、SymPyのシンボルは数学的な変数として動作し、その値が未知の状態で数学的な表現を作成し操作することができます。一方、Pythonの変数は具体的な値を持ち、それを使って計算を行います。</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="102_past.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Assingment 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="103_past.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assignment 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Gaussによる等差数列の和の公式</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Pythonによるプログラミング</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Pythonによる等差数列の表現</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Pythonによる等差数列の和</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pythoniterable">Pythonのiterableとは?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">数式とプログラミング</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">再帰と帰納</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">数式の変数とプログラムの変数</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
