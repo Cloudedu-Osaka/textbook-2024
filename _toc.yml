@@ -19,7 +19,7 @@ parts:
     title: Comments to assignment 2
   - file: chapters/03/104.ipynb
     title: How to write your own prompts to ChatGPT
-  - file: chapters/03/105.ipynb
+  - file: chapters/03/105_past.ipynb
     title: Assignment
 - caption: 2024/04/17
   numbered: false
