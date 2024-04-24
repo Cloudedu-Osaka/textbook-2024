@@ -4,6 +4,23 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/04/24
+  numbered: false
+  chapters:
+  - file: chapters/03/101.ipynb
+    title: Introduction
+  - file: chapters/03/102_past.ipynb
+    title: Past assignment 1
+  - file: chapters/03/102.ipynb
+    title: Comments to assignment 1
+  - file: chapters/03/103_past.ipynb
+    title: Past assignment 2
+  - file: chapters/03/103.ipynb
+    title: Comments to assignment 2
+  - file: chapters/03/104.ipynb
+    title: How to write your own prompts to ChatGPT
+  - file: chapters/03/105.ipynb
+    title: Assignment
 - caption: 2024/04/17
   numbered: false
   chapters:
