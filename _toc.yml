@@ -4,6 +4,21 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/05/15
+  numbered: false
+  chapters:
+  - file: chapters/05/00_past_assignment.ipynb
+    title: Past Assignment
+  - file: chapters/05/01_intro.ipynb
+    title: Numeral Systems
+  - file: chapters/05/02_intro2.ipynb
+    title: Roman Numeral (1)
+  - file: chapters/05/22_dict.ipynb
+    title: Roman Numeral (2)
+  - file: chapters/05/40_egyptian_numerals.ipynb
+    title: Egyptian Numeral
+  - file: chapters/05/50_assignment.ipynb
+    title: Assignment
 - caption: 2024/05/08
   numbered: false
   chapters:
