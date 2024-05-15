@@ -1,0 +1,1162 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ローマ数字に変換する (2) &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/05/22_dict';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/05/22_dict.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="エジプト数字に変換する" href="40_egyptian_numerals.html" />
+    <link rel="prev" title="ローマ数字に変換する (1)" href="02_intro2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/05/22_dict.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/05/22_dict.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ローマ数字に変換する (2)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wikipedia">Wikipediaのデータを活用する</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">データフレーム</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">データフレームをJSON形式に変換し、さらに辞書に変換</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">データフレームをJSON形式に変換</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pretty-print">見やすく成形 (pretty-print)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">JSON形式を辞書に変換する</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>ローマ数字に変換する (2)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Roman_numerals">Roman numerals - Wikipedia</a></p></li>
+</ul>
+<section id="wikipedia">
+<h2>Wikipediaのデータを活用する<a class="headerlink" href="#wikipedia" title="Link to this heading">#</a></h2>
+<p>pandasのライブラリ関数 <code class="docutils literal notranslate"><span class="pre">read_html()</span></code> を使ってWikipediaの表を読み込む:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Web_scraping">Web scraping - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.read_html.html">pandas.read_html — pandas 2.2.2 documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+Webスクレイピングして表をPandasのデータフレームに読み込む
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>PythonでWebスクレイピングを行い、その結果をPandasのデータフレームに読み込むには、たとえば<code class="docutils literal notranslate"><span class="pre">requests</span></code>、<code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code>、そして<code class="docutils literal notranslate"><span class="pre">pandas</span></code>といったライブラリを使用します。</p>
+<p>以下に、HTMLページからテーブルをスクレイピングし、それをPandasのデータフレームに読み込む基本的なコードを示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># WebページのURL</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://example.com&quot;</span>
+
+<span class="c1"># ページのHTMLを取得</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># BeautifulSoupオブジェクトを作成</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+
+<span class="c1"># HTML内のテーブルを見つける</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
+
+<span class="c1"># テーブルをデータフレームに変換</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">table</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このコードでは、まず<code class="docutils literal notranslate"><span class="pre">requests.get()</span></code>を使ってWebページのHTMLを取得します。次に、<code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code>を使ってHTMLを解析します。</p>
+<p>そして、<code class="docutils literal notranslate"><span class="pre">find('table')</span></code>を使ってHTML内のテーブルを見つけます。このとき、テーブルがページ内に複数ある場合は、最初に見つかったテーブルが選択されます。特定のテーブルを選択するには、より詳細なセレクタを使用する必要があります。</p>
+<p>最後に、<code class="docutils literal notranslate"><span class="pre">pd.read_html()</span></code>を使ってHTMLテーブルをデータフレームに変換します。この関数はHTML文字列を引数に取り、その中のすべてのテーブルをデータフレームのリストとして返します。今回は1つのテーブルだけを扱っているので、リストの最初の要素（<code class="docutils literal notranslate"><span class="pre">[0]</span></code>）を選択します。</p>
+<p>なお、このコードはあくまで一例であり、実際には取得するWebページやそのHTML構造により、適切なスクレイピング方法は異なります。また、Webスクレイピングは対象サイトの利用規約やロボット排除基準（robots.txt）に従う必要があります。</p>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>データフレーム<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">&#39;https://en.wikipedia.org/wiki/Roman_numerals&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Hindu–Arabic numerals Western Arabic Eastern A...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>East Asian systems Contemporary Chinese Suzhou...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Other systems History Ancient Babylonian Post-...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>By radix/base Common radices/bases 2 3 4 5 6 8...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">df1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>I</td>
+      <td>V</td>
+      <td>X</td>
+      <td>L</td>
+      <td>C</td>
+      <td>D</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>5</td>
+      <td>10</td>
+      <td>50</td>
+      <td>100</td>
+      <td>500</td>
+      <td>1000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>表を参照してローマ数字を変換するプログラムを書く:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">index</span></code> (行番号) を設定し直す</p></li>
+<li><p>表形式のままでもプログラムは書けるが、JSON形式を経由して辞書形式に変換する</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">df2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Thousands</th>
+      <th>Hundreds</th>
+      <th>Tens</th>
+      <th>Units</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>M</td>
+      <td>C</td>
+      <td>X</td>
+      <td>I</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>MM</td>
+      <td>CC</td>
+      <td>XX</td>
+      <td>II</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>MMM</td>
+      <td>CCC</td>
+      <td>XXX</td>
+      <td>III</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>NaN</td>
+      <td>CD</td>
+      <td>XL</td>
+      <td>IV</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>NaN</td>
+      <td>D</td>
+      <td>L</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>NaN</td>
+      <td>DC</td>
+      <td>LX</td>
+      <td>VI</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>NaN</td>
+      <td>DCC</td>
+      <td>LXX</td>
+      <td>VII</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>NaN</td>
+      <td>DCCC</td>
+      <td>LXXX</td>
+      <td>VIII</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>NaN</td>
+      <td>CM</td>
+      <td>XC</td>
+      <td>IX</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">:</span><span class="s1">&#39;index&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">df_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Thousands</th>
+      <th>Hundreds</th>
+      <th>Tens</th>
+      <th>Units</th>
+    </tr>
+    <tr>
+      <th>index</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>M</td>
+      <td>C</td>
+      <td>X</td>
+      <td>I</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MM</td>
+      <td>CC</td>
+      <td>XX</td>
+      <td>II</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>MMM</td>
+      <td>CCC</td>
+      <td>XXX</td>
+      <td>III</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NaN</td>
+      <td>CD</td>
+      <td>XL</td>
+      <td>IV</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NaN</td>
+      <td>D</td>
+      <td>L</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>NaN</td>
+      <td>DC</td>
+      <td>LX</td>
+      <td>VI</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NaN</td>
+      <td>DCC</td>
+      <td>LXX</td>
+      <td>VII</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>NaN</td>
+      <td>DCCC</td>
+      <td>LXXX</td>
+      <td>VIII</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>NaN</td>
+      <td>CM</td>
+      <td>XC</td>
+      <td>IX</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/NaN">NaN - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/missing_data.html">Working with missing data — pandas 2.0.1 documentation</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="json">
+<h2>データフレームをJSON形式に変換し、さらに辞書に変換<a class="headerlink" href="#json" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>データフレームをJSON形式に変換<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;{&quot;Thousands&quot;:{&quot;1&quot;:&quot;M&quot;,&quot;2&quot;:&quot;MM&quot;,&quot;3&quot;:&quot;MMM&quot;,&quot;4&quot;:null,&quot;5&quot;:null,&quot;6&quot;:null,&quot;7&quot;:null,&quot;8&quot;:null,&quot;9&quot;:null},&quot;Hundreds&quot;:{&quot;1&quot;:&quot;C&quot;,&quot;2&quot;:&quot;CC&quot;,&quot;3&quot;:&quot;CCC&quot;,&quot;4&quot;:&quot;CD&quot;,&quot;5&quot;:&quot;D&quot;,&quot;6&quot;:&quot;DC&quot;,&quot;7&quot;:&quot;DCC&quot;,&quot;8&quot;:&quot;DCCC&quot;,&quot;9&quot;:&quot;CM&quot;},&quot;Tens&quot;:{&quot;1&quot;:&quot;X&quot;,&quot;2&quot;:&quot;XX&quot;,&quot;3&quot;:&quot;XXX&quot;,&quot;4&quot;:&quot;XL&quot;,&quot;5&quot;:&quot;L&quot;,&quot;6&quot;:&quot;LX&quot;,&quot;7&quot;:&quot;LXX&quot;,&quot;8&quot;:&quot;LXXX&quot;,&quot;9&quot;:&quot;XC&quot;},&quot;Units&quot;:{&quot;1&quot;:&quot;I&quot;,&quot;2&quot;:&quot;II&quot;,&quot;3&quot;:&quot;III&quot;,&quot;4&quot;:&quot;IV&quot;,&quot;5&quot;:&quot;V&quot;,&quot;6&quot;:&quot;VI&quot;,&quot;7&quot;:&quot;VII&quot;,&quot;8&quot;:&quot;VIII&quot;,&quot;9&quot;:&quot;IX&quot;}}&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="pretty-print">
+<h4>見やすく成形 (pretty-print)<a class="headerlink" href="#pretty-print" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Prettyprint">Prettyprint - Wikipedia</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">((</span><span class="n">df_new</span><span class="o">.</span><span class="n">to_json</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">df_json</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;Thousands&quot;: {
+        &quot;1&quot;: &quot;M&quot;,
+        &quot;2&quot;: &quot;MM&quot;,
+        &quot;3&quot;: &quot;MMM&quot;,
+        &quot;4&quot;: null,
+        &quot;5&quot;: null,
+        &quot;6&quot;: null,
+        &quot;7&quot;: null,
+        &quot;8&quot;: null,
+        &quot;9&quot;: null
+    },
+    &quot;Hundreds&quot;: {
+        &quot;1&quot;: &quot;C&quot;,
+        &quot;2&quot;: &quot;CC&quot;,
+        &quot;3&quot;: &quot;CCC&quot;,
+        &quot;4&quot;: &quot;CD&quot;,
+        &quot;5&quot;: &quot;D&quot;,
+        &quot;6&quot;: &quot;DC&quot;,
+        &quot;7&quot;: &quot;DCC&quot;,
+        &quot;8&quot;: &quot;DCCC&quot;,
+        &quot;9&quot;: &quot;CM&quot;
+    },
+    &quot;Tens&quot;: {
+        &quot;1&quot;: &quot;X&quot;,
+        &quot;2&quot;: &quot;XX&quot;,
+        &quot;3&quot;: &quot;XXX&quot;,
+        &quot;4&quot;: &quot;XL&quot;,
+        &quot;5&quot;: &quot;L&quot;,
+        &quot;6&quot;: &quot;LX&quot;,
+        &quot;7&quot;: &quot;LXX&quot;,
+        &quot;8&quot;: &quot;LXXX&quot;,
+        &quot;9&quot;: &quot;XC&quot;
+    },
+    &quot;Units&quot;: {
+        &quot;1&quot;: &quot;I&quot;,
+        &quot;2&quot;: &quot;II&quot;,
+        &quot;3&quot;: &quot;III&quot;,
+        &quot;4&quot;: &quot;IV&quot;,
+        &quot;5&quot;: &quot;V&quot;,
+        &quot;6&quot;: &quot;VI&quot;,
+        &quot;7&quot;: &quot;VII&quot;,
+        &quot;8&quot;: &quot;VIII&quot;,
+        &quot;9&quot;: &quot;IX&quot;
+    }
+}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id4">
+<h3>JSON形式を辞書に変換する<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;{&quot;Thousands&quot;:{&quot;1&quot;:&quot;M&quot;,&quot;2&quot;:&quot;MM&quot;,&quot;3&quot;:&quot;MMM&quot;,&quot;4&quot;:null,&quot;5&quot;:null,&quot;6&quot;:null,&quot;7&quot;:null,&quot;8&quot;:null,&quot;9&quot;:null},&quot;Hundreds&quot;:{&quot;1&quot;:&quot;C&quot;,&quot;2&quot;:&quot;CC&quot;,&quot;3&quot;:&quot;CCC&quot;,&quot;4&quot;:&quot;CD&quot;,&quot;5&quot;:&quot;D&quot;,&quot;6&quot;:&quot;DC&quot;,&quot;7&quot;:&quot;DCC&quot;,&quot;8&quot;:&quot;DCCC&quot;,&quot;9&quot;:&quot;CM&quot;},&quot;Tens&quot;:{&quot;1&quot;:&quot;X&quot;,&quot;2&quot;:&quot;XX&quot;,&quot;3&quot;:&quot;XXX&quot;,&quot;4&quot;:&quot;XL&quot;,&quot;5&quot;:&quot;L&quot;,&quot;6&quot;:&quot;LX&quot;,&quot;7&quot;:&quot;LXX&quot;,&quot;8&quot;:&quot;LXXX&quot;,&quot;9&quot;:&quot;XC&quot;},&quot;Units&quot;:{&quot;1&quot;:&quot;I&quot;,&quot;2&quot;:&quot;II&quot;,&quot;3&quot;:&quot;III&quot;,&quot;4&quot;:&quot;IV&quot;,&quot;5&quot;:&quot;V&quot;,&quot;6&quot;:&quot;VI&quot;,&quot;7&quot;:&quot;VII&quot;,&quot;8&quot;:&quot;VIII&quot;,&quot;9&quot;:&quot;IX&quot;}}&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+次の表を10進数をローマ数字に変換するときに使うPythonの辞書に変換してください
+{_}
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>提供されたJSONデータから、各位（千の位、百の位、十の位、一の位）のローマ数字の表現を示す4つのPython辞書を作成することができます。以下にそのPythonコードを示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 提供されたJSONデータ</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Thousands&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span><span class="s2">&quot;M&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">:</span><span class="s2">&quot;MM&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="s2">&quot;MMM&quot;</span><span class="p">,</span><span class="s2">&quot;4&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span><span class="s2">&quot;7&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span><span class="s2">&quot;9&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">},</span>
+    <span class="s2">&quot;Hundreds&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">:</span><span class="s2">&quot;CC&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="s2">&quot;CCC&quot;</span><span class="p">,</span><span class="s2">&quot;4&quot;</span><span class="p">:</span><span class="s2">&quot;CD&quot;</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="s2">&quot;D&quot;</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="s2">&quot;DC&quot;</span><span class="p">,</span><span class="s2">&quot;7&quot;</span><span class="p">:</span><span class="s2">&quot;DCC&quot;</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="s2">&quot;DCCC&quot;</span><span class="p">,</span><span class="s2">&quot;9&quot;</span><span class="p">:</span><span class="s2">&quot;CM&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;Tens&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">:</span><span class="s2">&quot;XX&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="s2">&quot;XXX&quot;</span><span class="p">,</span><span class="s2">&quot;4&quot;</span><span class="p">:</span><span class="s2">&quot;XL&quot;</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="s2">&quot;L&quot;</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="s2">&quot;LX&quot;</span><span class="p">,</span><span class="s2">&quot;7&quot;</span><span class="p">:</span><span class="s2">&quot;LXX&quot;</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="s2">&quot;LXXX&quot;</span><span class="p">,</span><span class="s2">&quot;9&quot;</span><span class="p">:</span><span class="s2">&quot;XC&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;Units&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span><span class="s2">&quot;I&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">:</span><span class="s2">&quot;II&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="s2">&quot;III&quot;</span><span class="p">,</span><span class="s2">&quot;4&quot;</span><span class="p">:</span><span class="s2">&quot;IV&quot;</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="s2">&quot;V&quot;</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="s2">&quot;VI&quot;</span><span class="p">,</span><span class="s2">&quot;7&quot;</span><span class="p">:</span><span class="s2">&quot;VII&quot;</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="s2">&quot;VIII&quot;</span><span class="p">,</span><span class="s2">&quot;9&quot;</span><span class="p">:</span><span class="s2">&quot;IX&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># 各位のローマ数字表現を示す辞書</span>
+<span class="n">thousands_dict</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Thousands&quot;</span><span class="p">]</span>
+<span class="n">hundreds_dict</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Hundreds&quot;</span><span class="p">]</span>
+<span class="n">tens_dict</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Tens&quot;</span><span class="p">]</span>
+<span class="n">units_dict</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Units&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thousands:&quot;</span><span class="p">,</span> <span class="n">thousands_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hundreds:&quot;</span><span class="p">,</span> <span class="n">hundreds_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tens:&quot;</span><span class="p">,</span> <span class="n">tens_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Units:&quot;</span><span class="p">,</span> <span class="n">units_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このコードは提供されたJSONデータから4つのPython辞書を生成します。各辞書はそれぞれ千の位、百の位、十の位、一の位のローマ数字の表現をキーと値のペアとして格納します。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+その辞書を使って10進数をローマ数字に変換するプログラムを作って下さい
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>提供された辞書を使用して、10進数をローマ数字に変換するPythonプログラムを作成します。以下にそのコードを示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 提供されたJSONデータ</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Thousands&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span><span class="s2">&quot;M&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">:</span><span class="s2">&quot;MM&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="s2">&quot;MMM&quot;</span><span class="p">,</span><span class="s2">&quot;4&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span><span class="s2">&quot;7&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span><span class="s2">&quot;9&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">},</span>
+    <span class="s2">&quot;Hundreds&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">:</span><span class="s2">&quot;CC&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="s2">&quot;CCC&quot;</span><span class="p">,</span><span class="s2">&quot;4&quot;</span><span class="p">:</span><span class="s2">&quot;CD&quot;</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="s2">&quot;D&quot;</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="s2">&quot;DC&quot;</span><span class="p">,</span><span class="s2">&quot;7&quot;</span><span class="p">:</span><span class="s2">&quot;DCC&quot;</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="s2">&quot;DCCC&quot;</span><span class="p">,</span><span class="s2">&quot;9&quot;</span><span class="p">:</span><span class="s2">&quot;CM&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;Tens&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">:</span><span class="s2">&quot;XX&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="s2">&quot;XXX&quot;</span><span class="p">,</span><span class="s2">&quot;4&quot;</span><span class="p">:</span><span class="s2">&quot;XL&quot;</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="s2">&quot;L&quot;</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="s2">&quot;LX&quot;</span><span class="p">,</span><span class="s2">&quot;7&quot;</span><span class="p">:</span><span class="s2">&quot;LXX&quot;</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="s2">&quot;LXXX&quot;</span><span class="p">,</span><span class="s2">&quot;9&quot;</span><span class="p">:</span><span class="s2">&quot;XC&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;Units&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span><span class="s2">&quot;I&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">:</span><span class="s2">&quot;II&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="s2">&quot;III&quot;</span><span class="p">,</span><span class="s2">&quot;4&quot;</span><span class="p">:</span><span class="s2">&quot;IV&quot;</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="s2">&quot;V&quot;</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="s2">&quot;VI&quot;</span><span class="p">,</span><span class="s2">&quot;7&quot;</span><span class="p">:</span><span class="s2">&quot;VII&quot;</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="s2">&quot;VIII&quot;</span><span class="p">,</span><span class="s2">&quot;9&quot;</span><span class="p">:</span><span class="s2">&quot;IX&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># 各位のローマ数字表現を示す辞書</span>
+<span class="n">thousands_dict</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Thousands&quot;</span><span class="p">]</span>
+<span class="n">hundreds_dict</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Hundreds&quot;</span><span class="p">]</span>
+<span class="n">tens_dict</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Tens&quot;</span><span class="p">]</span>
+<span class="n">units_dict</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Units&quot;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">decimal_to_roman</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="c1"># 各位の数字を取得</span>
+    <span class="n">thousands</span> <span class="o">=</span> <span class="n">num</span> <span class="o">//</span> <span class="mi">1000</span>
+    <span class="n">hundreds</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">//</span> <span class="mi">100</span>
+    <span class="n">tens</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">//</span> <span class="mi">10</span>
+    <span class="n">units</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">10</span>
+
+    <span class="c1"># 各位の数字を対応するローマ数字に変換</span>
+    <span class="n">roman_thousands</span> <span class="o">=</span> <span class="n">thousands_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">thousands</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">roman_hundreds</span> <span class="o">=</span> <span class="n">hundreds_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">hundreds</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">roman_tens</span> <span class="o">=</span> <span class="n">tens_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">tens</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">roman_units</span> <span class="o">=</span> <span class="n">units_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">units</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="c1"># ローマ数字を結合</span>
+    <span class="n">roman_num</span> <span class="o">=</span> <span class="n">roman_thousands</span> <span class="o">+</span> <span class="n">roman_hundreds</span> <span class="o">+</span> <span class="n">roman_tens</span> <span class="o">+</span> <span class="n">roman_units</span>
+
+    <span class="k">return</span> <span class="n">roman_num</span>
+
+<span class="c1"># テスト</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">decimal_to_roman</span><span class="p">(</span><span class="mi">1987</span><span class="p">))</span>  <span class="c1"># MCMLXXXVII</span>
+</pre></div>
+</div>
+<p>このコードは、10進数の各位の数字を取得し、それぞれ対応するローマ数字に変換します。そして、結果を結合してローマ数字として出力します。</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/05"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_intro2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ローマ数字に変換する (1)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="40_egyptian_numerals.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">エジプト数字に変換する</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wikipedia">Wikipediaのデータを活用する</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">データフレーム</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">データフレームをJSON形式に変換し、さらに辞書に変換</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">データフレームをJSON形式に変換</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pretty-print">見やすく成形 (pretty-print)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">JSON形式を辞書に変換する</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

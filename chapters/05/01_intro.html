@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>大学入試センターの情報・情報関係基礎の入試問題を解く &#8212; プログラミングで遡る科学史</title>
+    <title>数の表現とデータ構造に依存するプログラミング &#8212; プログラミングで遡る科学史</title>
   
   
   
@@ -57,12 +57,12 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/04/103';</script>
-    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/04/103.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/05/01_intro';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/05/01_intro.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ChatGPTによるプログラミング支援" href="104.html" />
-    <link rel="prev" title="Assignment 2" href="103_past.html" />
+    <link rel="next" title="ローマ数字に変換する (1)" href="02_intro2.html" />
+    <link rel="prev" title="Science in ancient Mesopotamia" href="00_past_assignment.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,25 +170,25 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../05/00_past_assignment.html">Past Assignment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../05/01_intro.html">Numeral Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../05/02_intro2.html">Roman Numeral (1)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../05/22_dict.html">Roman Numeral (2)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../05/40_egyptian_numerals.html">Egyptian Numeral</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../05/50_assignment.html">Assignment</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="50_assignment.html">Assignment</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="101.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="102_past.html">Past assignment 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="103_past.html">Past assignment 2</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Comments to assignment 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="104.html">How to write your own prompts to ChatGPT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="105_past.html">Assignment (Past)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="106.html">Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
 <ul class="nav bd-sidenav">
@@ -280,7 +280,7 @@
       
       
       
-      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/04/103.ipynb&branch=main" target="_blank"
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/05/01_intro.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -326,7 +326,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/04/103.ipynb" target="_blank"
+      <li><a href="../../_sources/chapters/05/01_intro.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -410,7 +410,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>大学入試センターの情報・情報関係基礎の入試問題を解く</h1>
+    <h1>数の表現とデータ構造に依存するプログラミング</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -420,7 +420,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">数の表現の歴史</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">位取り記法の喪失と復活</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -433,100 +436,103 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>大学入試センターの情報・情報関係基礎の入試問題を解く<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>GPT-3.5 Turboでは、配列を不変と宣言しないと、メモリを節約するために配列の内容を改変するプログラムを出力していました。
-GPT-4では、配列を不変としなくても、不要な配列の内容の改変は行いません。</p>
-<p>プログラミングにおいて、変数が可変か不変 (定数) かはコーディングに大きな影響を与えます。
-また、配列やその要素が不変か可変かも見極める必要があります。</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
-pythonのiterableでmutableとimmutableなものの違い
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<p>Pythonのデータタイプには、mutable（変更可能）とimmutable（変更不可能）の二つのカテゴリーがあります。これらは、オブジェクトが割り当てられた後でその状態を変更できるかどうかによって区分されます。</p>
-<p><strong>Immutable（変更不可能）なデータ型</strong></p>
-<p>これらのオブジェクトは作成後に変更することができません。そのため、新しい値を割り当てると、Pythonは新しいオブジェクトを作成し、その新しいオブジェクトに古いオブジェクトの値をコピーします。Immutableなデータ型には以下のようなものがあります:</p>
-<ul class="simple">
-<li><p>整数 (int)</p></li>
-<li><p>浮動小数点数 (float)</p></li>
-<li><p>文字列 (str)</p></li>
-<li><p>タプル (tuple)</p></li>
-</ul>
-<p><strong>Mutable（変更可能）なデータ型</strong></p>
-<p>これらのオブジェクトは作成後に変更することができます。新しい値を割り当てると、Pythonは既存のオブジェクトを更新します。Mutableなデータ型には以下のようなものがあります:</p>
-<ul class="simple">
-<li><p>リスト (list)</p></li>
-<li><p>辞書 (dict)</p></li>
-<li><p>セット (set)</p></li>
-</ul>
-<p>これらの違いは、Pythonプログラムの動作に大きな影響を与えます。例えば、関数にmutableなオブジェクトを渡すと、その関数内でオブジェクトを変更すると、その変更は関数の外でも有効になります。一方、immutableなオブジェクトを渡すと、その関数内でオブジェクトを変更しても、元のオブジェクトは影響を受けません。これは、mutableなオブジェクトが「参照渡し」、immutableなオブジェクトが「値渡し」のように動作するためです。</p>
-<p>また、Pythonのイテラブル（iterable）は、要素を一つずつ取り出すことができるオブジェクトのことを指します。リスト、タプル、文字列、辞書、セットなど、多くのPythonのデータ型がイテラブルです。これらはmutableまたはimmutableであり、その特性は上述の説明に従います。</p>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
-pythonのプログラムでmutableなiterableを使う場合とimmutableなiterableを使う場合でプログラムコードはどのように変わりますか？
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<p>Pythonでmutable（変更可能）なiterableとimmutable（変更不可能）なiterableを使う場合の違いを理解するために、以下の例を見てみましょう。</p>
-<p>まず、mutableなiterableであるリストを使った例を見てみましょう。リストの要素は、インデクスを使って直接変更することができます。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_element_mutable</span><span class="p">(</span><span class="n">elements</span><span class="p">):</span>
-    <span class="n">elements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;new element&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">elements</span>
-
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;element1&quot;</span><span class="p">,</span> <span class="s2">&quot;element2&quot;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">add_element_mutable</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>  <span class="c1"># 結果：[&#39;element1&#39;, &#39;element2&#39;, &#39;new element&#39;]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># 結果：[&#39;element1&#39;, &#39;element2&#39;, &#39;new element&#39;]</span>
-</pre></div>
-</div>
-<p>この例では、関数内でリストに新しい要素を追加しています。関数を呼び出した後にリストを表示すると、リストが変更されていることがわかります。ここで注意すべき点は、関数内で行った変更が関数の外でも反映されるという点です。これは、リストがmutableであるためです。</p>
-<p>次に、immutableなiterableであるタプルを使った例を見てみましょう。タプルの要素は、一度作成すると変更することができません。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_element_immutable</span><span class="p">(</span><span class="n">elements</span><span class="p">):</span>
-    <span class="n">elements</span> <span class="o">=</span> <span class="n">elements</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;new element&quot;</span><span class="p">,)</span>
-    <span class="k">return</span> <span class="n">elements</span>
-
-<span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;element1&quot;</span><span class="p">,</span> <span class="s2">&quot;element2&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">add_element_immutable</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">))</span>  <span class="c1"># 結果：(&#39;element1&#39;, &#39;element2&#39;, &#39;new element&#39;)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">)</span>  <span class="c1"># 結果：(&#39;element1&#39;, &#39;element2&#39;)</span>
-</pre></div>
-</div>
-<p>この例では、関数内でタプルに新しい要素を追加しようとしています。しかし、タプルはimmutableであるため、新しい要素を追加すると新しいタプルが生成されます。そのため、関数を呼び出した後に元のタプルを表示すると、元のタプルは変更されていないことがわかります。</p>
-<p>このように、Pythonプログラムでは、mutableなiterableとimmutableなiterableの違いにより、プログラムの動作やコードの書き方が変わります。</p>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
-immutableなiterableを使うのはどんな場合ですか？また、mutableなiterableを使うのはどんな場合ですか？
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<p><strong>Immutableなiterable（変更不可能なイテラブル）を使う場合:</strong></p>
-<ol class="arabic simple">
-<li><p><strong>変更不要な場合:</strong> Immutableなオブジェクトは、一度作成されたらその状態が変更されることがありません。そのため、プログラムの特定の部分で値が変更されないことを保証したい場合に使用します。これは、バグの発生を防ぐために役立ちます。</p></li>
-<li><p><strong>辞書のキーとして使用する場合:</strong> Pythonの辞書では、キーはimmutableなオブジェクトでなければなりません。したがって、イテラブルなオブジェクトを辞書のキーとして使用する場合は、タプルのようなimmutableなiterableを使用します。</p></li>
-<li><p><strong>パフォーマンス:</strong> Immutableなオブジェクトは、一般的にmutableなオブジェクトよりもメモリ効率が良く、操作も高速です。大量のデータを扱う場合や、パフォーマンスが重要な場合には、immutableなオブジェクトを選択すると良いでしょう。</p></li>
-</ol>
-<p><strong>Mutableなiterable（変更可能なイテラブル）を使う場合:</strong></p>
-<ol class="arabic simple">
-<li><p><strong>変更が必要な場合:</strong> リストや辞書のようなmutableなオブジェクトは、要素の追加、削除、変更など、オブジェクトの状態を自由に変更できます。したがって、プログラムの実行中にデータを変更する必要がある場合に使用します。</p></li>
-<li><p><strong>複雑なデータ構造:</strong> 辞書やリストのようなmutableなオブジェクトは、複雑なデータ構造を表現するのに適しています。例えば、リストのリスト、辞書のリスト、辞書の辞書など、ネストしたデータ構造を作成することが可能です。</p></li>
-</ol>
-<p>以上のように、使用するデータタイプは、プログラムの要件や目的によって決まることが多いです。</p>
-</div>
-</div>
+<h1>数の表現とデータ構造に依存するプログラミング<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>数の表現の歴史<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+人間は何故十進法で数を表現するのですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>十進法が主に使われる理由は、おそらく人間の手の指が10本あることに由来しています。初期の数の表現では、手の指を使って数を数えていたと考えられています。したがって、10本の指があることから、十進法が自然に採用され、その後広まったと考えられます。</p>
+<p>しかし、すべての文化が十進法を採用しているわけではありません。例えば、古代のバビロニア人は60進法を使用しており、これは現在でも時間の計算（60分=1時間）や角度の計算（360度=1周）などで使われています。また、コンピュータの世界では、2進法や16進法が一般的に使用されています。</p>
+<p>したがって、十進法が広く採用されている理由は、人間の生物学的な特性と文化的な習慣の組み合わせによるものと言えるでしょう。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+古代のバビロニア人から始まる数の表現方法の歴史を教えてください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>古代の数学の発展は、さまざまな文化と地域で異なる進行を見せましたが、古代バビロニア人の数学から始まる数の表現方法の歴史について、一部を概観してみましょう。</p>
+<ol class="arabic simple">
+<li><p><strong>古代バビロニア（紀元前2000年頃）</strong>：古代バビロニア人は、60進法を使用しました。これは、60が多くの他の数（1、2、3、4、5、6、10、12、15、20、30）で割り切れるため、計算が容易であったからです。このシステムは、時間、角度、地理座標の表現など、現代まで影響を及ぼしています。</p></li>
+<li><p><strong>古代エジプト（紀元前2000年頃）</strong>：エジプト人は、10進法に基づく階層的な数値システムを使用していました。彼らの記号は、1、10、100、1,000、10,000、100,000、1,000,000の各値に対応していました。</p></li>
+<li><p><strong>古代ギリシャ（紀元前500年頃）</strong>：ギリシャ人は、アルファベットの文字を数字として使用するアルファベット数法を採用しました。また、ギリシャの哲学者ピタゴラスは、数の神秘的な性質を探求し、数学の哲学的な側面を強調しました。</p></li>
+<li><p><strong>古代ローマ（紀元前500年頃）</strong>：ローマ人は、特定の文字（I、V、X、L、C、D、M）を使用して数字を表現するローマ数字を採用しました。</p></li>
+<li><p><strong>中世ヨーロッパ（紀元後500年～1500年）</strong>：この時代、アラビア数字（現在私たちが使用している0から9までの数字）がインドから導入され、それまでのローマ数字を置き換えるようになりました。アラビア数字は、計算が容易であるため、商業と科学の両方で広く採用されました。</p></li>
+<li><p><strong>現代（20世紀以降）</strong>：現代のコンピュータは、2進法を使用します。これは、コンピュータの基本的な構造がオンとオフの2つの状態を持つ電子スイッチ（トランジスタ）に基づいているためです。</p></li>
+</ol>
+<p>以上のように、数の表現方法は、地域や時代、技術により変化し進化してきました。それぞれの数の表現方法は、それぞれの文化や科学のニーズに適応して発展してきたと言えるでしょう。</p>
+</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Numeral_system">Numeral system - Wikipedia</a></p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Babylonian_cuneiform_numerals">Babylonian cuneiform numerals - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Egyptian_numerals">Egyptian numerals - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Greek_numerals">Greek numerals - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Roman_numerals">Roman numerals - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Arabic_numerals">Arabic numerals - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Binary_number">Binary number - Wikipedia</a></p></li>
+</ol>
+</li>
+</ul>
+<section id="id3">
+<h3>位取り記法の喪失と復活<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Numeral_system">Numeral system - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Positional_notation">Positional notation - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sign-value_notation">Sign-value notation - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+列挙された数の表現方法を位取り記法か否かで分類してください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>位取り記法は数値を表現する方法の一つで、各桁が数値の特定の重み（通常は基数のべき乗）を持つという特徴があります。0から基数-1までの数字が各桁で使用されます。以下に、あなたが尋ねられた数の表現方法を、位取り記法か否かで分類します。</p>
+<ol class="arabic simple">
+<li><p><strong>古代バビロニア（60進法）</strong>：はい、位取り記法です。古代のバビロニア人は60を基数とする位取り記法を使用していました。</p></li>
+<li><p><strong>古代エジプト（10進法）</strong>：はい、位取り記法ですが、彼らのシステムは完全に位取り記法と呼べるものではありませんでした。彼らの記号は、1、10、100、1,000、10,000、100,000、1,000,000の各値に対応していましたが、現代の位取り記法とは異なり、位置による重み付けが行われていませんでした。</p></li>
+<li><p><strong>古代ギリシャ（アルファベット数法）</strong>：いいえ、位取り記法ではありません。値は文字に直接関連付けられ、位取りによる重み付けはありませんでした。</p></li>
+<li><p><strong>古代ローマ（ローマ数字）</strong>：いいえ、位取り記法ではありません。ローマ数字は特定の文字が特定の数値を示し、文字の組み合わせと配置によって数値が表現されますが、これは位取り記法とは異なります。</p></li>
+<li><p><strong>中世ヨーロッパ（アラビア数字）</strong>：はい、位取り記法です。アラビア数字は10を基数とする位取り記法を使用しています。</p></li>
+<li><p><strong>現代（2進法）</strong>：はい、位取り記法です。現代のコンピュータは2を基数とする位取り記法を使用しています。</p></li>
+</ol>
+<p>以上のように、位取り記法は特に中世以降の数値表現で広く採用され、現代の数学や科学、技術においても重要な役割を果たしています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+何故、古代ギリシアとローマでは位取り記法が失われたのですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>古代ギリシャやローマでは位取り記法が一般的ではなかった理由については、多くの学者が様々な理論を提唱しています。以下に、その一部を挙げてみます。</p>
+<ol class="arabic simple">
+<li><p><strong>技術的要求</strong>：古代のギリシャやローマの社会では、広範な計算が必要とされる状況が少なかった可能性があります。したがって、複雑な位取り記法を開発し、学習する強い動機付けが存在しなかったと考えられます。</p></li>
+<li><p><strong>文化的要素</strong>：位取り記法は、一度に多くの情報を保持し、操作する能力を必要とします。これは教育と訓練を必要とし、古代のギリシャやローマでは、そのような教育システムが普及していなかった可能性があります。</p></li>
+<li><p><strong>記録方法</strong>：ローマ数字やギリシャのアルファベット数法は、石碑や彫刻に記録するのに便利でした。位取り記法は、書き込みや削除が頻繁に行われる紙のような媒体に適していますが、古代ローマやギリシャでは、このような媒体が一般的ではなかった可能性があります。</p></li>
+<li><p><strong>抽象思考の欠如</strong>：位取り記法は、数の抽象的な概念（つまり、同じ「1」が10の位では「10」を、100の位では「100」を表すなど）を理解する能力を必要とします。古代のギリシャやローマの社会では、このような高度な抽象的な思考を必要とするシステムが一般的ではなかった可能性があります。</p></li>
+</ol>
+<p>以上のように、技術的な需要、教育と訓練の水準、記録方法、抽象的な思考のレベルなど、多くの要素が古代ギリシャとローマで位取り記法が一般的でなかった理由として考えられます。ただし、これらは推測の範囲を出ないことを覚えておいてください。</p>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -543,7 +549,7 @@ immutableなiterableを使うのはどんな場合ですか？また、mutable�
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters/04"
+            path: "./chapters/05"
         },
         predefinedOutput: true
     }
@@ -561,20 +567,20 @@ immutableなiterableを使うのはどんな場合ですか？また、mutable�
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="103_past.html"
+       href="00_past_assignment.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Assignment 2</p>
+        <p class="prev-next-title">Science in ancient Mesopotamia</p>
       </div>
     </a>
     <a class="right-next"
-       href="104.html"
+       href="02_intro2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ChatGPTによるプログラミング支援</p>
+        <p class="prev-next-title">ローマ数字に変換する (1)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -594,7 +600,10 @@ immutableなiterableを使うのはどんな場合ですか？また、mutable�
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">数の表現の歴史</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">位取り記法の喪失と復活</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

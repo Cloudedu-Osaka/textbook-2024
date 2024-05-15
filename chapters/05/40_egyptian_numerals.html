@@ -1,0 +1,1849 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>エジプト数字に変換する &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/05/40_egyptian_numerals';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/05/40_egyptian_numerals.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="課題" href="50_assignment.html" />
+    <link rel="prev" title="ローマ数字に変換する (2)" href="22_dict.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/05/40_egyptian_numerals.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/05/40_egyptian_numerals.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>エジプト数字に変換する</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wikipediaunicode">WikipediaからUnicodeコードポイント表を読み込む</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas">Pandasのテーブルの参照</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unicode">Unicodeコードポイントと文字表現の変換</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">それぞれの桁の最初の数をコードポイント表から探す</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">10</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">100</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1,000</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">10,000</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">100,000</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">1,000,000</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">10進数をエジプト数字に変換する</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ord-chr"><code class="docutils literal notranslate"><span class="pre">ord()</span></code> と <code class="docutils literal notranslate"><span class="pre">chr()</span></code> による文字とコードポイントの変換</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-b">“a” の次の文字 “b” を表示する</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">型の異なるオブジェクトは演算できない</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">文字・文字列を「足す」と連結される</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">文字を数字に変換して「足す」、その結果を文字に戻す</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>エジプト数字に変換する<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ロゼッタストーンとベヒストゥン碑文について
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ロゼッタストーンとベヒストゥン碑文は、古代の言語を解読するための重要な手がかりとなった記念碑です。</p>
+<p><strong>ロゼッタストーン</strong></p>
+<p>ロゼッタストーンは、紀元前196年のエジプト、プトレマイオス5世の時代の碑文です。この碑文は、古代エジプトのヒエログリフ、デモティック（エジプトの民間文書で使われた書体）、ギリシャ語の3つの言語・文字体系で書かれています。すべて同じ内容を伝えています。この3つの言語が同じ内容を伝える形で記されていることから、比較研究が可能となり、古代エジプトのヒエログリフが解読されるきっかけとなりました。この碑文は、フランスのナポレオン・ボナパルトがエジプトを侵略した際に発見され、現在はイギリスの大英博物館に収蔵されています。</p>
+<p><strong>ベヒストゥン碑文</strong></p>
+<p>ベヒストゥン碑文は、紀元前520年ごろのペルシアのダレイオス1世の時代の碑文です。この碑文は、バビロニアの楔形文字、エラム語（古代イランの言語）、古代ペルシャ語の3つの言語・文字体系で書かれています。すべて同じ内容を伝えています。これも3つの言語が同じ内容を伝える形で記されていることから、比較研究が可能となり、古代ペルシャ語の楔形文字が解読されるきっかけとなりました。この碑文は、イランのベヒストゥン山に刻まれており、現地で見ることができます。</p>
+<p>これらの碑文を通じて、古代の言語が解読され、歴史研究や言語学研究に大きな進歩をもたらしました。</p>
+</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Rosetta_Stone">Rosetta Stone - Wikipedia</a></p>
+<ul>
+<li><p>Created: 196 BC</p></li>
+<li><p>Discovered: 1779</p></li>
+<li><p>Location: Egypt</p></li>
+<li><p>Languages:</p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Egyptian_hieroglyphs">Egyptian hieroglyphs - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Demotic_%28Egyptian%29">Demotic (Egyptian) - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ancient_Greek">Ancient Greek - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Behistun_Inscription">Behistun Inscription - Wikipedia</a></p>
+<ul>
+<li><p>Created: c.520 BC</p></li>
+<li><p>Discovered: 1598</p></li>
+<li><p>Location: Iran</p></li>
+<li><p>Languages:</p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Old_Persian">Old Persian - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Elamite_language">Elamite language - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Akkadian_language">Akkadian language - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<section id="wikipediaunicode">
+<h2>WikipediaからUnicodeコードポイント表を読み込む<a class="headerlink" href="#wikipediaunicode" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Egyptian_numerals">Egyptian numerals - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sign-value_notation">Sign-value notation - Wikipedia</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Egyptian_Hieroglyphs_%28Unicode_block%29">Egyptian Hieroglyphs (Unicode block) - Wikipedia</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>lxml
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting lxml
+  Downloading lxml-5.2.2-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.4 kB)
+Downloading lxml-5.2.2-cp311-cp311-manylinux_2_28_x86_64.whl (5.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.0/5.0 MB</span> <span class=" -Color -Color-Red">62.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>:00:0100:01
+?25hInstalling collected packages: lxml
+Successfully installed lxml-5.2.2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">&#39;https://en.wikipedia.org/wiki/Egyptian_Hieroglyphs_(Unicode_block)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+      <th>15</th>
+      <th>16</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+      <td>Egyptian Hieroglyphs[1] Official Unicode Conso...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
+      <td>D</td>
+      <td>E</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>U+1300x</td>
+      <td>𓀀</td>
+      <td>𓀁</td>
+      <td>𓀂</td>
+      <td>𓀃</td>
+      <td>𓀄</td>
+      <td>𓀅</td>
+      <td>𓀆</td>
+      <td>𓀇</td>
+      <td>𓀈</td>
+      <td>𓀉</td>
+      <td>𓀊</td>
+      <td>𓀋</td>
+      <td>𓀌</td>
+      <td>𓀍</td>
+      <td>𓀎</td>
+      <td>𓀏</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>U+1301x</td>
+      <td>𓀐</td>
+      <td>𓀑</td>
+      <td>𓀒</td>
+      <td>𓀓</td>
+      <td>𓀔</td>
+      <td>𓀕</td>
+      <td>𓀖</td>
+      <td>𓀗</td>
+      <td>𓀘</td>
+      <td>𓀙</td>
+      <td>𓀚</td>
+      <td>𓀛</td>
+      <td>𓀜</td>
+      <td>𓀝</td>
+      <td>𓀞</td>
+      <td>𓀟</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>U+1302x</td>
+      <td>𓀠</td>
+      <td>𓀡</td>
+      <td>𓀢</td>
+      <td>𓀣</td>
+      <td>𓀤</td>
+      <td>𓀥</td>
+      <td>𓀦</td>
+      <td>𓀧</td>
+      <td>𓀨</td>
+      <td>𓀩</td>
+      <td>𓀪</td>
+      <td>𓀫</td>
+      <td>𓀬</td>
+      <td>𓀭</td>
+      <td>𓀮</td>
+      <td>𓀯</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>U+133Fx</td>
+      <td>𓏰</td>
+      <td>𓏱</td>
+      <td>𓏲</td>
+      <td>𓏳</td>
+      <td>𓏴</td>
+      <td>𓏵</td>
+      <td>𓏶</td>
+      <td>𓏷</td>
+      <td>𓏸</td>
+      <td>𓏹</td>
+      <td>𓏺</td>
+      <td>𓏻</td>
+      <td>𓏼</td>
+      <td>𓏽</td>
+      <td>𓏾</td>
+      <td>𓏿</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>U+1340x</td>
+      <td>𓐀</td>
+      <td>𓐁</td>
+      <td>𓐂</td>
+      <td>𓐃</td>
+      <td>𓐄</td>
+      <td>𓐅</td>
+      <td>𓐆</td>
+      <td>𓐇</td>
+      <td>𓐈</td>
+      <td>𓐉</td>
+      <td>𓐊</td>
+      <td>𓐋</td>
+      <td>𓐌</td>
+      <td>𓐍</td>
+      <td>𓐎</td>
+      <td>𓐏</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>U+1341x</td>
+      <td>𓐐</td>
+      <td>𓐑</td>
+      <td>𓐒</td>
+      <td>𓐓</td>
+      <td>𓐔</td>
+      <td>𓐕</td>
+      <td>𓐖</td>
+      <td>𓐗</td>
+      <td>𓐘</td>
+      <td>𓐙</td>
+      <td>𓐚</td>
+      <td>𓐛</td>
+      <td>𓐜</td>
+      <td>𓐝</td>
+      <td>𓐞</td>
+      <td>𓐟</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>U+1342x</td>
+      <td>𓐠</td>
+      <td>𓐡</td>
+      <td>𓐢</td>
+      <td>𓐣</td>
+      <td>𓐤</td>
+      <td>𓐥</td>
+      <td>𓐦</td>
+      <td>𓐧</td>
+      <td>𓐨</td>
+      <td>𓐩</td>
+      <td>𓐪</td>
+      <td>𓐫</td>
+      <td>𓐬</td>
+      <td>𓐭</td>
+      <td>𓐮</td>
+      <td>𓐯</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+      <td>Notes 1.^ As of Unicode version 15.1</td>
+    </tr>
+  </tbody>
+</table>
+<p>70 rows × 17 columns</p>
+</div></div></div>
+</div>
+<section id="pandas">
+<h3>Pandasのテーブルの参照<a class="headerlink" href="#pandas" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+pandasのデータフレームのx行目y列のデータを参照したい
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pandasのデータフレームから特定の行と列のデータを参照するには、<code class="docutils literal notranslate"><span class="pre">iloc</span></code>や<code class="docutils literal notranslate"><span class="pre">at</span></code>を使用できます。</p>
+<p>例えば、<code class="docutils literal notranslate"><span class="pre">dataframe</span></code>という名前のデータフレームがあり、その中からx行目y列のデータを取り出したいとすると、以下のようにします：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ilocを使用する場合</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 行と列は0から始まるので、1を引く。</span>
+
+<span class="c1"># atを使用する場合</span>
+<span class="n">row_label</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 行ラベルを取得</span>
+<span class="n">column_label</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 列ラベルを取得</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">row_label</span><span class="p">,</span> <span class="n">column_label</span><span class="p">]</span>  <span class="c1"># 行ラベルと列ラベルを指定して値を取得</span>
+</pre></div>
+</div>
+<p>ここで、<code class="docutils literal notranslate"><span class="pre">x-1</span></code>と<code class="docutils literal notranslate"><span class="pre">y-1</span></code>を使用している理由は、Pythonではインデックスが0から始まるためです。したがって、”1行目”はPythonでは”0行目”になります。</p>
+<p>また、<code class="docutils literal notranslate"><span class="pre">at</span></code>メソッドは、特定の行と列のラベルを指定して値を取得するためのもので、<code class="docutils literal notranslate"><span class="pre">iloc</span></code>よりも高速に動作することが知られています。ただし、一度に一つのセルの値のみを取得できます。</p>
+<p>なお、これらの方法はデータフレームから値を参照するためのもので、値を変更するためには別の方法を使用する必要があります。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+jupyterで一個前のセルの出力を参照したい
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Jupyterノートブックでは、アンダースコア <code class="docutils literal notranslate"><span class="pre">_</span></code> を使用して直前のセルの出力を参照することができます。例えば：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<p>上記のセルを実行すると、出力は <code class="docutils literal notranslate"><span class="pre">7</span></code> です。次のセルで <code class="docutils literal notranslate"><span class="pre">_</span></code> を使用すれば、その結果を引き続き使用することができます：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>  <span class="c1"># これは &#39;7&#39; を出力します</span>
+</pre></div>
+</div>
+<p>一方、<code class="docutils literal notranslate"><span class="pre">_N</span></code>（<code class="docutils literal notranslate"><span class="pre">N</span></code> はセルの実行番号）を使用すると、特定のセルの出力を参照することもできます。例えば、2つ目のセルの出力を参照したい場合は、<code class="docutils literal notranslate"><span class="pre">_2</span></code> を使います。</p>
+<p>ただし、これらの方法はすべての種類の出力に対して機能するわけではないことに注意してください。具体的には、表示（<code class="docutils literal notranslate"><span class="pre">print</span></code>）関数を使用して出力した結果は参照できません。これらの方法は、セルの最後の行で評価された結果を参照します。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">65</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓏺&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓏺&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="unicode">
+<h3>Unicodeコードポイントと文字表現の変換<a class="headerlink" href="#unicode" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+文字列のユニコードのコードポイントを16進数で表示したい
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonでは、<code class="docutils literal notranslate"><span class="pre">ord()</span></code>関数と<code class="docutils literal notranslate"><span class="pre">hex()</span></code>関数を組み合わせて、文字列のUnicodeのコードポイントを16進数で表示することができます。<code class="docutils literal notranslate"><span class="pre">ord()</span></code>関数は文字のUnicodeコードポイントを取得し、<code class="docutils literal notranslate"><span class="pre">hex()</span></code>関数はその整数値を16進数の文字列に変換します。</p>
+<p>以下に例を示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;あ&#39;</span>
+<span class="n">codepoint</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">hex_codepoint</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">codepoint</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hex_codepoint</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このコードは、Unicode文字 ‘あ’ のコードポイントを16進数で表示します。</p>
+<p>複数の文字からなる文字列の各文字のコードポイントを16進数で表示するには、文字列をループで処理します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;こんにちは&#39;</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The hexadecimal codepoint of </span><span class="si">{</span><span class="n">char</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">char</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このコードは、文字列 ‘こんにちは’ の各文字のUnicodeコードポイントを16進数で表示します。</p>
+<p>なお、<code class="docutils literal notranslate"><span class="pre">ord()</span></code>関数は単一のUnicode文字に対してのみ動作し、複数の文字からなる文字列を引数に取ることはできません。複数の文字からなる文字列のコードポイントを取得するには、文字列を一文字ずつ処理する必要があります。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;あ&#39;</span>
+<span class="n">codepoint</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">hex_codepoint</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">codepoint</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hex_codepoint</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0x3042
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+コードポイントをユニコードエスケープされたraw文字列で表示する
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ユニコードエスケープされた文字列を表示するには、Pythonの組み込み関数である<code class="docutils literal notranslate"><span class="pre">chr()</span></code>と<code class="docutils literal notranslate"><span class="pre">format()</span></code>を使用できます。これにより、ユニコードのコードポイントを対応する文字に変換し、そのユニコードエスケープされた表現を得ることができます。</p>
+<p>たとえば、コードポイント<code class="docutils literal notranslate"><span class="pre">12354</span></code>（これは「あ」に対応します）をユニコードエスケープされた文字列で表示するには、以下のようにします：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">codepoint</span> <span class="o">=</span> <span class="mi">12354</span>
+<span class="n">unicode_char</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">codepoint</span><span class="p">)</span>
+<span class="n">escaped_unicode_string</span> <span class="o">=</span> <span class="n">unicode_char</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;unicode_escape&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">escaped_unicode_string</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このコードは、コードポイント<code class="docutils literal notranslate"><span class="pre">12354</span></code>をユニコード文字「あ」に変換し、そのユニコードエスケープされた表現（<code class="docutils literal notranslate"><span class="pre">\u3042</span></code>）を表示します。</p>
+<p>この方法では、任意のコードポイントをユニコードエスケープされた文字列に変換できます。</p>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3>それぞれの桁の最初の数をコードポイント表から探す<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Egyptian_numerals">Egyptian numerals - Wikipedia</a></p></li>
+</ul>
+<section id="id3">
+<h4>1<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">65</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓏺&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">hex</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">_</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0x133fa&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;unicode-escape&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;\\U000133fa&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\\U000133fa&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U000133fa</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓏺&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h4>10<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">58</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓎆&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;unicode-escape&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;\\U00013386&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h4>100<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓍢&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;unicode-escape&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;\\U00013362&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id6">
+<h4>1,000<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">29</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓆼&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;unicode-escape&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;\\U000131bc&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id7">
+<h4>10,000<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓂭&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;unicode-escape&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;\\U000130ad&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id8">
+<h4>100,000<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓆐&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;unicode-escape&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;\\U00013190&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h4>1,000,000<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓁨&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;unicode-escape&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;\\U00013068&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="id10">
+<h2>10進数をエジプト数字に変換する<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+コードポイントが連続した文字を列挙する方法
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonの<code class="docutils literal notranslate"><span class="pre">chr()</span></code>関数と<code class="docutils literal notranslate"><span class="pre">range()</span></code>関数を使うと、連続したUnicodeコードポイントの文字列を生成することができます。<code class="docutils literal notranslate"><span class="pre">chr()</span></code>関数はコードポイントを文字に変換し、<code class="docutils literal notranslate"><span class="pre">range()</span></code>関数は指定した範囲の連続した整数を生成します。</p>
+<p>例えば、ASCIIの英小文字（’a’から’z’）を列挙するには、以下のようにします：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">codepoint</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">codepoint</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>これは、’a’から’z’までの英小文字を空白で区切って表示します。<code class="docutils literal notranslate"><span class="pre">ord('a')</span></code>と<code class="docutils literal notranslate"><span class="pre">ord('z')</span> <span class="pre">+</span> <span class="pre">1</span></code>は、それぞれ’a’と’z’のUnicodeコードポイントを取得します。<code class="docutils literal notranslate"><span class="pre">range()</span></code>関数は終点を含まないので、’z’を含めるためには終点に1を足す必要があります。</p>
+<p>また、任意の範囲のUnicode文字を列挙するには、コードポイントの範囲を直接指定します。例えば、ひらがな（Unicodeコードポイントは’3040’から’309F’）を列挙するには、以下のようにします：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">codepoint</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mh">0x3040</span><span class="p">,</span> <span class="mh">0x309F</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">codepoint</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>これは、Unicodeコードポイントが’3040’から’309F’の範囲の文字を空白で区切って表示します。16進数の数値はPythonでは<code class="docutils literal notranslate"><span class="pre">0x</span></code>を前につけて表現します。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">egyptian_numerals</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U000133fa</span><span class="s1">&#39;</span><span class="p">),</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U000133fa</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">9</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0x133fa 𓏺
+0x133fb 𓏻
+0x133fc 𓏼
+0x133fd 𓏽
+0x133fe 𓏾
+0x133ff 𓏿
+0x13400 𓐀
+0x13401 𓐁
+0x13402 𓐂
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U000133fa</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">egyptian_numerals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U000133fa</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
+<span class="n">egyptian_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 𓏺
+2 𓏻
+3 𓏼
+4 𓏽
+5 𓏾
+6 𓏿
+7 𓐀
+8 𓐁
+9 𓐂
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;𓏺&#39;, 2: &#39;𓏻&#39;, 3: &#39;𓏼&#39;, 4: &#39;𓏽&#39;, 5: &#39;𓏾&#39;, 6: &#39;𓏿&#39;, 7: &#39;𓐀&#39;, 8: &#39;𓐁&#39;, 9: &#39;𓐂&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U00013386</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">egyptian_numerals</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U00013386</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
+<span class="n">egyptian_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 𓎆
+20 𓎇
+30 𓎈
+40 𓎉
+50 𓎊
+60 𓎋
+70 𓎌
+80 𓎍
+90 𓎎
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;𓏺&#39;,
+ 2: &#39;𓏻&#39;,
+ 3: &#39;𓏼&#39;,
+ 4: &#39;𓏽&#39;,
+ 5: &#39;𓏾&#39;,
+ 6: &#39;𓏿&#39;,
+ 7: &#39;𓐀&#39;,
+ 8: &#39;𓐁&#39;,
+ 9: &#39;𓐂&#39;,
+ 10: &#39;𓎆&#39;,
+ 20: &#39;𓎇&#39;,
+ 30: &#39;𓎈&#39;,
+ 40: &#39;𓎉&#39;,
+ 50: &#39;𓎊&#39;,
+ 60: &#39;𓎋&#39;,
+ 70: &#39;𓎌&#39;,
+ 80: &#39;𓎍&#39;,
+ 90: &#39;𓎎&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U00013362</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">egyptian_numerals</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U00013362</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
+<span class="n">egyptian_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100 𓍢
+200 𓍣
+300 𓍤
+400 𓍥
+500 𓍦
+600 𓍧
+700 𓍨
+800 𓍩
+900 𓍪
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;𓏺&#39;,
+ 2: &#39;𓏻&#39;,
+ 3: &#39;𓏼&#39;,
+ 4: &#39;𓏽&#39;,
+ 5: &#39;𓏾&#39;,
+ 6: &#39;𓏿&#39;,
+ 7: &#39;𓐀&#39;,
+ 8: &#39;𓐁&#39;,
+ 9: &#39;𓐂&#39;,
+ 10: &#39;𓎆&#39;,
+ 20: &#39;𓎇&#39;,
+ 30: &#39;𓎈&#39;,
+ 40: &#39;𓎉&#39;,
+ 50: &#39;𓎊&#39;,
+ 60: &#39;𓎋&#39;,
+ 70: &#39;𓎌&#39;,
+ 80: &#39;𓎍&#39;,
+ 90: &#39;𓎎&#39;,
+ 100: &#39;𓍢&#39;,
+ 200: &#39;𓍣&#39;,
+ 300: &#39;𓍤&#39;,
+ 400: &#39;𓍥&#39;,
+ 500: &#39;𓍦&#39;,
+ 600: &#39;𓍧&#39;,
+ 700: &#39;𓍨&#39;,
+ 800: &#39;𓍩&#39;,
+ 900: &#39;𓍪&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U000131bc</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">egyptian_numerals</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">1000</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U000131bc</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
+<span class="n">egyptian_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000 𓆼
+2000 𓆽
+3000 𓆾
+4000 𓆿
+5000 𓇀
+6000 𓇁
+7000 𓇂
+8000 𓇃
+9000 𓇄
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;𓏺&#39;,
+ 2: &#39;𓏻&#39;,
+ 3: &#39;𓏼&#39;,
+ 4: &#39;𓏽&#39;,
+ 5: &#39;𓏾&#39;,
+ 6: &#39;𓏿&#39;,
+ 7: &#39;𓐀&#39;,
+ 8: &#39;𓐁&#39;,
+ 9: &#39;𓐂&#39;,
+ 10: &#39;𓎆&#39;,
+ 20: &#39;𓎇&#39;,
+ 30: &#39;𓎈&#39;,
+ 40: &#39;𓎉&#39;,
+ 50: &#39;𓎊&#39;,
+ 60: &#39;𓎋&#39;,
+ 70: &#39;𓎌&#39;,
+ 80: &#39;𓎍&#39;,
+ 90: &#39;𓎎&#39;,
+ 100: &#39;𓍢&#39;,
+ 200: &#39;𓍣&#39;,
+ 300: &#39;𓍤&#39;,
+ 400: &#39;𓍥&#39;,
+ 500: &#39;𓍦&#39;,
+ 600: &#39;𓍧&#39;,
+ 700: &#39;𓍨&#39;,
+ 800: &#39;𓍩&#39;,
+ 900: &#39;𓍪&#39;,
+ 1000: &#39;𓆼&#39;,
+ 2000: &#39;𓆽&#39;,
+ 3000: &#39;𓆾&#39;,
+ 4000: &#39;𓆿&#39;,
+ 5000: &#39;𓇀&#39;,
+ 6000: &#39;𓇁&#39;,
+ 7000: &#39;𓇂&#39;,
+ 8000: &#39;𓇃&#39;,
+ 9000: &#39;𓇄&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">10000</span><span class="p">,</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U000130ad</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">egyptian_numerals</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">10000</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U000130ad</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
+<span class="n">egyptian_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000 𓂭
+20000 𓂮
+30000 𓂯
+40000 𓂰
+50000 𓂱
+60000 𓂲
+70000 𓂳
+80000 𓂴
+90000 𓂵
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;𓏺&#39;,
+ 2: &#39;𓏻&#39;,
+ 3: &#39;𓏼&#39;,
+ 4: &#39;𓏽&#39;,
+ 5: &#39;𓏾&#39;,
+ 6: &#39;𓏿&#39;,
+ 7: &#39;𓐀&#39;,
+ 8: &#39;𓐁&#39;,
+ 9: &#39;𓐂&#39;,
+ 10: &#39;𓎆&#39;,
+ 20: &#39;𓎇&#39;,
+ 30: &#39;𓎈&#39;,
+ 40: &#39;𓎉&#39;,
+ 50: &#39;𓎊&#39;,
+ 60: &#39;𓎋&#39;,
+ 70: &#39;𓎌&#39;,
+ 80: &#39;𓎍&#39;,
+ 90: &#39;𓎎&#39;,
+ 100: &#39;𓍢&#39;,
+ 200: &#39;𓍣&#39;,
+ 300: &#39;𓍤&#39;,
+ 400: &#39;𓍥&#39;,
+ 500: &#39;𓍦&#39;,
+ 600: &#39;𓍧&#39;,
+ 700: &#39;𓍨&#39;,
+ 800: &#39;𓍩&#39;,
+ 900: &#39;𓍪&#39;,
+ 1000: &#39;𓆼&#39;,
+ 2000: &#39;𓆽&#39;,
+ 3000: &#39;𓆾&#39;,
+ 4000: &#39;𓆿&#39;,
+ 5000: &#39;𓇀&#39;,
+ 6000: &#39;𓇁&#39;,
+ 7000: &#39;𓇂&#39;,
+ 8000: &#39;𓇃&#39;,
+ 9000: &#39;𓇄&#39;,
+ 10000: &#39;𓂭&#39;,
+ 20000: &#39;𓂮&#39;,
+ 30000: &#39;𓂯&#39;,
+ 40000: &#39;𓂰&#39;,
+ 50000: &#39;𓂱&#39;,
+ 60000: &#39;𓂲&#39;,
+ 70000: &#39;𓂳&#39;,
+ 80000: &#39;𓂴&#39;,
+ 90000: &#39;𓂵&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decimal_to_egyptian</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">egyptian_numerals</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="k">while</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="n">value</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">egyptian_numerals</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>
+            <span class="n">num</span> <span class="o">-=</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decimal_to_egyptian</span><span class="p">(</span><span class="mi">4622</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𓆿𓍧𓎇𓏻&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Egyptian_numerals">Egyptian numerals - Wikipedia</a></p></li>
+</ul>
+</section>
+<section id="ord-chr">
+<h2><code class="docutils literal notranslate"><span class="pre">ord()</span></code> と <code class="docutils literal notranslate"><span class="pre">chr()</span></code> による文字とコードポイントの変換<a class="headerlink" href="#ord-chr" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+`ord()`が必要な理由
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonの<code class="docutils literal notranslate"><span class="pre">ord()</span></code>関数は、特定の一つのUnicode文字を表す文字列を引数に取り、その文字のUnicodeコードポイントを整数として返す関数です。Unicodeコードポイントとは、各Unicode文字に一意に割り当てられた数値のことを指します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">ord()</span></code>関数が必要な理由は、文字とその背後の数値表現（つまりコードポイント）との間の変換を可能にするためです。この変換は、文字データを扱う際のさまざまなタスクで必要とされます。たとえば、その文字のバイナリ表現を取得したり、文字の並び替え順（コードポイントの数値に基づく）を決定したり、特定の範囲の文字を生成したりする場合などです。</p>
+<p>具体的な使用例としては、前述したように連続したコードポイントの文字列を生成する際や、与えられた文字が特定のUnicodeブロック（例えば、ラテン文字やひらがなやキリル文字など）に属するかどうかを判断する際などに<code class="docutils literal notranslate"><span class="pre">ord()</span></code>関数を使います。</p>
+<p>そのため、<code class="docutils literal notranslate"><span class="pre">ord()</span></code>関数はPythonで文字とコードポイントとの間の変換を行うための基本的なツールと言えます。</p>
+</div>
+</div>
+<section id="a-b">
+<h3>“a” の次の文字 “b” を表示する<a class="headerlink" href="#a-b" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chr<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> chr<span class=" -Color -Color-Blue">(</span>i<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">/)</span>
+<span class=" -Color -Color-Red">Docstring:</span> Return a Unicode string of one character with ordinal i; 0 &lt;= i &lt;= 0x10ffff.
+<span class=" -Color -Color-Red">Type:</span>      builtin_function_or_method
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ord<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> ord<span class=" -Color -Color-Blue">(</span>c<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">/)</span>
+<span class=" -Color -Color-Red">Docstring:</span> Return the Unicode code point for a one-character string.
+<span class=" -Color -Color-Red">Type:</span>      builtin_function_or_method
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>97
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;a&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id11">
+<h4>型の異なるオブジェクトは演算できない<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;a&#39;</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">72</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="s1">&#39;a&#39;</span><span class="o">+</span><span class="mi">1</span>
+
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id12">
+<h4>文字・文字列を「足す」と連結される<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;a&#39;</span><span class="o">+</span><span class="s1">&#39;1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;a1&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id13">
+<h4>文字を数字に変換して「足す」、その結果を文字に戻す<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>98
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;b&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;b&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">i</span><span class="p">,</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 97 a
+1 98 b
+2 99 c
+3 100 d
+4 101 e
+5 102 f
+6 103 g
+7 104 h
+8 105 i
+9 106 j
+10 107 k
+11 108 l
+12 109 m
+13 110 n
+14 111 o
+15 112 p
+16 113 q
+17 114 r
+18 115 s
+19 116 t
+20 117 u
+21 118 v
+22 119 w
+23 120 x
+24 121 y
+25 122 z
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/05"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="22_dict.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ローマ数字に変換する (2)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="50_assignment.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">課題</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wikipediaunicode">WikipediaからUnicodeコードポイント表を読み込む</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas">Pandasのテーブルの参照</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unicode">Unicodeコードポイントと文字表現の変換</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">それぞれの桁の最初の数をコードポイント表から探す</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">10</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">100</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1,000</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">10,000</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">100,000</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">1,000,000</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">10進数をエジプト数字に変換する</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ord-chr"><code class="docutils literal notranslate"><span class="pre">ord()</span></code> と <code class="docutils literal notranslate"><span class="pre">chr()</span></code> による文字とコードポイントの変換</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-b">“a” の次の文字 “b” を表示する</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">型の異なるオブジェクトは演算できない</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">文字・文字列を「足す」と連結される</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">文字を数字に変換して「足す」、その結果を文字に戻す</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
