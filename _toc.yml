@@ -4,6 +4,21 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/05/22
+  numbered: false
+  chapters:
+  - file: chapters/06/01_intro.ipynb
+    title: Introduction
+  - file: chapters/06/02_past_assignment.ipynb
+    title: Past Assignment
+  - file: chapters/06/03_past_assignment_comment.ipynb
+    title: Comments to Past Assignment
+  - file: chapters/06/04_babylonian_numerals.ipynb
+    title: Babylonian Numeral
+  - file: chapters/06/05_plimpton322.ipynb
+    title: Plimpton 322
+  - file: chapters/06/06_assignment.ipynb
+    title: Assignment
 - caption: 2024/05/15
   numbered: false
   chapters:
