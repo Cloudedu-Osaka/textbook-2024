@@ -1,0 +1,1478 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>バビロニア数字に変換するための辞書を作る &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/06/04_babylonian_numerals';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/06/04_babylonian_numerals.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Plimton 322 の解読 (1)" href="05_plimpton322.html" />
+    <link rel="prev" title="課題の解説" href="03_past_assignment_comment.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/22</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Babylonian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_plimpton322.html">Plimpton 322</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05/00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/06/04_babylonian_numerals.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/06/04_babylonian_numerals.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>バビロニア数字に変換するための辞書を作る</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">粘土板に楔形文字を書く</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">古代バビロニアの楔形文字による数字</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">60進法の各桁の記号を表現するための辞書を作る</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">60進数の位取り記法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2の平方根</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pythagorean-theorem-and-square-root">Pythagorean theorem and square root</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>バビロニア数字に変換するための辞書を作る<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>粘土板に楔形文字を書く<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.khanacademy.org/humanities/ancient-art-civilizations/ancient-near-east1/the-ancient-near-east-an-introduction/v/cuneiform">Writing Cuneiform (video) | Khan Academy</a></p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>古代バビロニアの楔形文字による数字<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Babylonian_cuneiform_numerals">Babylonian cuneiform numerals - Wikipedia</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cuneiform_%28Unicode_block%29">Cuneiform (Unicode block) - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cuneiform_Numbers_and_Punctuation">Cuneiform Numbers and Punctuation - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_cuneiform_signs">List of cuneiform signs - Wikipedia</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>lxml
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting lxml
+  Using cached lxml-5.2.2-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.4 kB)
+Using cached lxml-5.2.2-cp311-cp311-manylinux_2_28_x86_64.whl (5.0 MB)
+Installing collected packages: lxml
+Successfully installed lxml-5.2.2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">&#39;https://en.wikipedia.org/wiki/Cuneiform_Numbers_and_Punctuation&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sign</th>
+      <th>Code point</th>
+      <th>Name</th>
+      <th>Borger (2003)</th>
+      <th>Borger (1981)</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>𒀸</td>
+      <td>U+12038</td>
+      <td>one AŠ</td>
+      <td>001</td>
+      <td>NaN</td>
+      <td>1, from general Cuneiform_(Unicode_block) not ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>𒐀</td>
+      <td>U+12400</td>
+      <td>two AŠ</td>
+      <td>002</td>
+      <td>2</td>
+      <td>2, = U+1212C</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>𒐁</td>
+      <td>U+12401</td>
+      <td>three AŠ</td>
+      <td>004</td>
+      <td>NaN</td>
+      <td>3, EŠ6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>𒐂</td>
+      <td>U+12402</td>
+      <td>four AŠ</td>
+      <td>215</td>
+      <td>12442</td>
+      <td>4, LIMMU2, LIMM2, TAB.TAB</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>𒐃</td>
+      <td>U+12403</td>
+      <td>five AŠ</td>
+      <td>216</td>
+      <td>NaN</td>
+      <td>5, IA7, TAB.TAB.AŠ</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>𒑢</td>
+      <td>U+12462</td>
+      <td>Old Assyrian one quarter</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>𒑰</td>
+      <td>U+12470</td>
+      <td>Old Assyrian word divider</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>𒑱</td>
+      <td>U+12471</td>
+      <td>vertical colon</td>
+      <td>592</td>
+      <td>NaN</td>
+      <td>Glossenkeil</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>𒑲</td>
+      <td>U+12472</td>
+      <td>diagonal colon</td>
+      <td>592</td>
+      <td>NaN</td>
+      <td>Glossenkeil</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>𒑳</td>
+      <td>U+12473</td>
+      <td>diagonal tricolon</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>104 rows × 6 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sign</th>
+      <th>Code point</th>
+      <th>Name</th>
+      <th>Borger (2003)</th>
+      <th>Borger (1981)</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>22</th>
+      <td>𒐕</td>
+      <td>U+12415</td>
+      <td>one GEŠ2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>𒐖</td>
+      <td>U+12416</td>
+      <td>two GEŠ2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>𒐗</td>
+      <td>U+12417</td>
+      <td>three GEŠ2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>𒐘</td>
+      <td>U+12418</td>
+      <td>four GEŠ2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>𒐙</td>
+      <td>U+12419</td>
+      <td>five GEŠ2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>𒐚</td>
+      <td>U+1241A</td>
+      <td>six GEŠ2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>𒐛</td>
+      <td>U+1241B</td>
+      <td>seven GEŠ2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>𒐜</td>
+      <td>U+1241C</td>
+      <td>eight GEŠ2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>𒐝</td>
+      <td>U+1241D</td>
+      <td>nine GEŠ2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">U</span><span class="s1">&#39;</span><span class="se">\U00012415</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𒐕&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U00012415</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 𒐕
+2 𒐖
+3 𒐗
+4 𒐘
+5 𒐙
+6 𒐚
+7 𒐛
+8 𒐜
+9 𒐝
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U0001230B</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𒌋&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U00012399</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𒎙&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U0001230D</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𒌍&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U0001240F</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𒐏&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U00012410</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𒐐&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>60進法の各桁の記号を表現するための辞書を作る<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">babylonian_numerals</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U00012415</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">babylonian_numerals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\U00012415</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
+<span class="n">babylonian_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 𒐕
+2 𒐖
+3 𒐗
+4 𒐘
+5 𒐙
+6 𒐚
+7 𒐛
+8 𒐜
+9 𒐝
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;𒐕&#39;, 2: &#39;𒐖&#39;, 3: &#39;𒐗&#39;, 4: &#39;𒐘&#39;, 5: &#39;𒐙&#39;, 6: &#39;𒐚&#39;, 7: &#39;𒐛&#39;, 8: &#39;𒐜&#39;, 9: &#39;𒐝&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">babylonian_numerals</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U0001230B</span><span class="s1">&#39;</span>
+<span class="n">babylonian_numerals</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U00012399</span><span class="s1">&#39;</span>
+<span class="n">babylonian_numerals</span><span class="p">[</span><span class="mi">30</span><span class="p">]</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U0001230D</span><span class="s1">&#39;</span>
+<span class="n">babylonian_numerals</span><span class="p">[</span><span class="mi">40</span><span class="p">]</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U0001240F</span><span class="s1">&#39;</span>
+<span class="n">babylonian_numerals</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\U00012410</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">babylonian_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;𒐕&#39;,
+ 2: &#39;𒐖&#39;,
+ 3: &#39;𒐗&#39;,
+ 4: &#39;𒐘&#39;,
+ 5: &#39;𒐙&#39;,
+ 6: &#39;𒐚&#39;,
+ 7: &#39;𒐛&#39;,
+ 8: &#39;𒐜&#39;,
+ 9: &#39;𒐝&#39;,
+ 10: &#39;𒌋&#39;,
+ 20: &#39;𒎙&#39;,
+ 30: &#39;𒌍&#39;,
+ 40: &#39;𒐏&#39;,
+ 50: &#39;𒐐&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decimal_to_babylonian</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">babylonian_numerals</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="k">while</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="n">value</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">babylonian_numerals</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>
+            <span class="n">num</span> <span class="o">-=</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decimal_to_babylonian</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;𒌍𒐗&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h2>60進数の位取り記法<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+pythonで10進数の実数を位取り記法の60進数に変換する。戻り値は0から59までの整数のリストで返す
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonで10進数の実数を60進数に変換する関数を作成することができます。以下はその一例です：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decimal_to_base60</span><span class="p">(</span><span class="n">decimal</span><span class="p">):</span>
+    <span class="n">base60</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">decimal</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">decimal</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">decimal</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+        <span class="n">base60</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">remainder</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">base60</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>この関数は10進数（<code class="docutils literal notranslate"><span class="pre">decimal</span></code>）を引数に取り、その数値を60進数に変換します。<code class="docutils literal notranslate"><span class="pre">divmod</span></code>関数を使って10進数を60で除した商と余りを求め、余りを60進数の桁の値とします。この手順を10進数が0になるまで繰り返します。</p>
+<p>最後に得られたリストは最下位の桁から始まるので、リストを反転（<code class="docutils literal notranslate"><span class="pre">[::-1]</span></code>）して最上位の桁から始まるようにします。</p>
+<p>ただし、上記の関数は整数のみを変換できます。実数（浮動小数点数）を変換するには、整数部分と小数部分を分けて考える必要があります。</p>
+<p>小数部分を60進数に変換するには、小数部分を60倍して新たな整数部分と小数部分を得るという手順を繰り返すことで求めることができます。ただし、一般的には無限に続く小数部分を持つことがあるため、ある程度の精度まで求めたら計算を終了するか、あるいはあらかじめ変換する桁数を決めておくなどの工夫が必要です。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+整数部分と小数部分を処理してください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>了解しました。以下に、実数の整数部分と小数部分を60進数に変換するPython関数を作成します。小数部分の精度はあらかじめ設定できるようにします。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decimal_to_base60</span><span class="p">(</span><span class="n">decimal</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="c1"># 整数部分の変換</span>
+    <span class="n">integer_part</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">decimal</span><span class="p">)</span>
+    <span class="n">base60_integer_part</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">integer_part</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">integer_part</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">integer_part</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+        <span class="n">base60_integer_part</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">remainder</span><span class="p">))</span>
+    <span class="n">base60_integer_part</span> <span class="o">=</span> <span class="n">base60_integer_part</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># 小数部分の変換</span>
+    <span class="n">fractional_part</span> <span class="o">=</span> <span class="n">decimal</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">decimal</span><span class="p">)</span>
+    <span class="n">base60_fractional_part</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">precision</span><span class="p">):</span>
+        <span class="n">fractional_part</span> <span class="o">*=</span> <span class="mi">60</span>
+        <span class="n">fractional_digit</span><span class="p">,</span> <span class="n">fractional_part</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">fractional_part</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">base60_fractional_part</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">fractional_digit</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">base60_integer_part</span><span class="p">,</span> <span class="n">base60_fractional_part</span>
+</pre></div>
+</div>
+<p>この関数は、整数部分と小数部分をそれぞれ60進数に変換しています。小数部分の変換は、小数部分を60倍して新たな整数部分（60進数の桁の値）と小数部分を得るという手順を繰り返します。この繰り返しは<code class="docutils literal notranslate"><span class="pre">precision</span></code>で指定した回数だけ行います。</p>
+<p>例えば、<code class="docutils literal notranslate"><span class="pre">decimal_to_base60(1234.5678,</span> <span class="pre">3)</span></code>を実行すると、10進数の1234.5678を60進数に変換した結果を返します。3は小数部分の精度（変換する桁数）を表しています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decimal_to_base60</span><span class="p">(</span><span class="n">decimal</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="c1"># 整数部分の変換</span>
+    <span class="n">integer_part</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">decimal</span><span class="p">)</span>
+    <span class="n">base60_integer_part</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">integer_part</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">integer_part</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">integer_part</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+        <span class="n">base60_integer_part</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">remainder</span><span class="p">))</span>
+    <span class="n">base60_integer_part</span> <span class="o">=</span> <span class="n">base60_integer_part</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># 小数部分の変換</span>
+    <span class="n">fractional_part</span> <span class="o">=</span> <span class="n">decimal</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">decimal</span><span class="p">)</span>
+    <span class="n">base60_fractional_part</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">precision</span><span class="p">):</span>
+        <span class="n">fractional_part</span> <span class="o">*=</span> <span class="mi">60</span>
+        <span class="n">fractional_digit</span><span class="p">,</span> <span class="n">fractional_part</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">fractional_part</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">base60_fractional_part</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">fractional_digit</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">base60_integer_part</span><span class="p">,</span> <span class="n">base60_fractional_part</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decimal_to_base60</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([3, 25, 45], [0, 0, 0, 0, 0])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>古代バビロニアには<span class="math notranslate nohighlight">\(0\)</span>と小数点はないので、リストのリストをフラット化します</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+pythonで、リストのリストをフラット化する方法
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonでリストのリスト（二次元リスト）を一次元リストにフラット化する方法はいくつかあります。以下に、その一部を示します。</p>
+<h3 class="rubric" id="id6">1. ループを使用する</h3>
+<p>もっとも基本的な方法は、ネストされたリストをループで処理することです：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">nested_list</span><span class="p">):</span>
+    <span class="n">flat_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">sublist</span> <span class="ow">in</span> <span class="n">nested_list</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">sublist</span><span class="p">:</span>
+            <span class="n">flat_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">flat_list</span>
+</pre></div>
+</div>
+<h3 class="rubric" id="id7">2. リスト内包表記を使用する</h3>
+<p>リスト内包表記を使用すると、上記のフラット化処理をより短く書くことができます：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">nested_list</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">sublist</span> <span class="ow">in</span> <span class="n">nested_list</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">sublist</span><span class="p">]</span>
+</pre></div>
+</div>
+<h3 class="rubric" id="itertools-chain">3. <code class="docutils literal notranslate"><span class="pre">itertools.chain</span></code>を使用する</h3>
+<p><code class="docutils literal notranslate"><span class="pre">itertools</span></code>モジュールの<code class="docutils literal notranslate"><span class="pre">chain</span></code>関数を使用すると、ネストされたリストをフラット化することができます：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span>
+
+<span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">nested_list</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">nested_list</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">chain.from_iterable</span></code>はイテラブル（ここではリストのリスト）の各要素（ここではサブリスト）を連結します。</p>
+<p>これらの方法はすべて、二次元リストを一次元リストにフラット化します。深くネストされたリスト（二次元以上）をフラット化するには、再帰的な処理が必要となります。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+組み込み関数`sum`を使うこともできます
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、その通りです。Pythonの組み込み関数<code class="docutils literal notranslate"><span class="pre">sum</span></code>を使って二次元リストをフラット化することも可能です。</p>
+<p><code class="docutils literal notranslate"><span class="pre">sum</span></code>関数は、通常、数値のリストを合計するために使用しますが、第2引数に空のリスト<code class="docutils literal notranslate"><span class="pre">[]</span></code>を指定すると、リストの連結を行うことができます。これを利用して、二次元リストをフラット化することができます。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">nested_list</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nested_list</span><span class="p">,</span> <span class="p">[])</span>
+</pre></div>
+</div>
+<p>この関数は、<code class="docutils literal notranslate"><span class="pre">nested_list</span></code>の各サブリストを連結して一次元リストを作成します。</p>
+<p>ただし、この方法はリストが大きい場合には非効率的です。<code class="docutils literal notranslate"><span class="pre">sum</span></code>関数はリストを連結するたびに新しいリストを作成するため、リストのサイズが大きいときには時間とメモリの両方でコストがかかります。そのため、大きなリストを扱う場合には、<code class="docutils literal notranslate"><span class="pre">itertools.chain</span></code>を使用する方法が推奨されます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span>
+<span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">decimal_to_base60</span><span class="p">(</span><span class="mi">12345</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;itertools.chain at 0x72442de584f0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 25, 45, 0, 0, 0, 0, 0]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">decimal_to_base60</span><span class="p">(</span><span class="mi">12345</span><span class="p">),</span> <span class="p">[])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 25, 45, 0, 0, 0, 0, 0]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">decimal_to_babylonian</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">decimal_to_base60</span><span class="p">(</span><span class="mi">12345</span><span class="p">),</span> <span class="p">[])))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;𒐗&#39;, &#39;𒎙𒐙&#39;, &#39;𒐏𒐙&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>map<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Init signature:</span> map<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">/,</span> <span class=" -Color -Color-Blue">*</span>args<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">**</span>kwargs<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Docstring:</span>     
+map(func, *iterables) --&gt; map object
+
+Make an iterator that computes the function using arguments from
+each of the iterables.  Stops when the shortest iterable is exhausted.
+<span class=" -Color -Color-Red">Type:</span>           type
+<span class=" -Color -Color-Red">Subclasses:</span>     
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>list<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Init signature:</span> list<span class=" -Color -Color-Blue">(</span>iterable<span class=" -Color -Color-Blue">=(),</span> <span class=" -Color -Color-Blue">/)</span>
+<span class=" -Color -Color-Red">Docstring:</span>     
+Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.
+<span class=" -Color -Color-Red">Type:</span>           type
+<span class=" -Color -Color-Red">Subclasses:</span>     _HashedSeq, StackSummary, _Threads, ConvertingList, DeferredConfigList, _ymd, SList, _ImmutableLineList, FormattedText, NodeList, ...
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id8">
+<h2>2の平方根<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/YBC_7289">YBC 7289 - Wikipedia</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+YBC 7289について
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>YBC 7289（Yale Babylonian Collection 7289）は、バビロニアの数学者が紀元前1800年から1600年の間に作成した粘土板です。これは、最も古い既知の幾何学的図形を含んでおり、特に現代の数学におけるピタゴラスの定理に関連する図形が描かれています。</p>
+<p>この粘土板には大まかに二つの部分があります。一つは正方形の図形で、その対角線の長さが正方形の辺の長さの約1.414213（現代の数学で√2として知られる値）であることが示されています。これは、バビロニア人が二次元の幾何学的関係を理解していたことを示しています。</p>
+<p>もう一つの部分は、60進法（セクステージシマル）を基にした数値表記が描かれています。バビロニア人は、私たちが今日使用している10進法ではなく、60進法を使用していました。この60進法は現代でも時間の計測（例：1時間=60分、1分=60秒）や角度の表現（例：1度=60分、1分=60秒）に使われており、その影響を見ることができます。</p>
+<p>YBC 7289の数値表記は、おそらく正方形の対角線の長さを計算するためのもので、それは正方形の一辺の長さの約1.414213倍となります。この数値は、60進法に基づいて記録されており、”1;24,51,10”という形式で表現されています。これは、1と24/60と51/3600と10/216000を合計したもので、これは約1.414213となります。</p>
+<p>したがって、YBC 7289はバビロニア人が高度な数学的理解を持っていたことを示す重要な文化的・歴史的資料であり、特に幾何学と数値表記法の発展における彼らの貢献を示しています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+古代バビロニア人が2の平方根を求めた方法は？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>バビロニア人が2の平方根を求めた方法は完全には分かっていませんが、彼らが使用していた数学的手法と、バビロニアの粘土板の一つであるYBC 7289から見つかった情報から推測することは可能です。</p>
+<p>バビロニアの数学者たちは60進法を使用していました。YBC 7289の粘土板には、おそらく2の平方根の近似値と思われる数値が記録されています。この数値は “1;24,51,10” と表記されており、これを60進法で解釈すると約1.414213という値になります。これは2の平方根の現代的な近似値と非常によく一致しています。</p>
+<p>具体的にどのようにしてこの近似値を求めたのかは不明ですが、彼らが利用していた可能性のある技術としては、二分法や牛頓法のような反復法、または連分数のような方法があります。これらの技術は、与えられた数の平方根の近似値を反復的に改善するために使用されます。</p>
+<p>しかし、これらの方法が実際にバビロニアで使用されていたかどうかは確定的には言えません。これらの方法が現代の数学者によって発見されたものである可能性もあります。したがって、バビロニア人がどのようにして2の平方根を計算したのかは、まだ解明されていない歴史的な謎の一つと言えるでしょう。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">decimal_to_base60</span><span class="p">(</span><span class="mf">1.41421356</span><span class="p">),</span> <span class="p">[])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 24, 51, 10, 7, 44]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">decimal_to_babylonian</span><span class="p">,</span> <span class="n">_</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;𒐕&#39;, &#39;𒎙𒐘&#39;, &#39;𒐐𒐕&#39;, &#39;𒌋&#39;, &#39;𒐛&#39;, &#39;𒐏𒐘&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+バビロニア法と言われている平開法について
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>バビロニア法（または平均解法、ヘロンの方法）は、平方根を求めるための古典的なアルゴリズムです。この方法は古代バビロニア人やギリシャの数学者ヘロンにより使われていました。</p>
+<p>このアルゴリズムは反復的な手法で、初期推定値から始め、その値を徐々に改善していくことで求める値へと収束させます。</p>
+<p>以下にその反復計算の手順を示します：</p>
+<ol class="arabic simple">
+<li><p>初期推定値 $x_0$ を選びます（適当な正の値）。</p></li>
+<li><p>新しい推定値 $x_{n+1}$ を以下の式で計算します：</p></li>
+</ol>
+<p>$$x_{n+1} = \frac{1}{2} \left( x_n + \frac{S}{x_n} \right)$$</p>
+<p>ここで、$S$ は平方根を求めたい値です。</p>
+<ol class="arabic simple" start="3">
+<li><p>$x_{n+1}$ が十分に $S$ の平方根に近くなるまで、または一定の回数を超えるまでステップ2を繰り返します。</p></li>
+</ol>
+<p>このアルゴリズムを用いて、与えられた数値 $S$ の平方根を求める Python の関数を以下に示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">babylonian_method</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">max_iterations</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iterations</span><span class="p">):</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">S</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># 結果が十分に収束した（改善がない）場合、ループから抜け出します。</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x_new</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">tolerance</span><span class="p">:</span>
+            <span class="k">break</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x_new</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>この関数は、平方根を求めたい数値 <code class="docutils literal notranslate"><span class="pre">S</span></code>、初期推定値 <code class="docutils literal notranslate"><span class="pre">x0</span></code>、最大反復回数 <code class="docutils literal notranslate"><span class="pre">max_iterations</span></code>（オプション）、許容誤差 <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>（オプション）を引数に取り、求めた平方根の近似値を返します。反復は、新旧の推定値の差が許容誤差以下になると終了します。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">babylonian_method</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">max_iterations</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iterations</span><span class="p">):</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">S</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
+
+        <span class="c1"># 結果が十分に収束した（改善がない）場合、ループから抜け出します。</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x_new</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">tolerance</span><span class="p">:</span>
+            <span class="k">break</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x_new</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">babylonian_method</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5
+1.4166666666666665
+1.4142156862745097
+1.4142135623746899
+1.414213562373095
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1.4142135623746899, 1.4142135623730951)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+バビロニア法とニュートン法の関係
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>バビロニア法（またはヘロンの方法）とニュートン法は、両者とも反復的な近似法を用いて数値解を求めるアルゴリズムであり、実は深い関係にあります。特にバビロニア法は、平方根を求める特殊なケースのニュートン法と考えることができます。</p>
+<p>ニュートン法は一般的な非線形方程式の解を求めるための手法です。方程式 $f(x) = 0$ の解を求めるとき、初期推定値 $x_0$ から始めて以下の反復計算を行います：</p>
+<p>$$x_{n+1} = x_n - \frac{f(x_n)}{f’(x_n)}$$</p>
+<p>ここで $f’(x_n)$ は $f(x)$ の $x_n$ における微分係数（導関数）です。</p>
+<p>平方根 $\sqrt{S}$ を求める問題は、方程式 $x^2 - S = 0$ の解を求める問題と同じです。この方程式にニュートン法を適用すると、更新式は以下のようになります：</p>
+<p>$$x_{n+1} = x_n - \frac{x_n^2 - S}{2x_n} = \frac{1}{2} \left( x_n + \frac{S}{x_n} \right)$$</p>
+<p>これはまさしくバビロニア法の更新式と同じです。つまり、バビロニア法は平方根を求めるためのニュートン法と考えることができます。</p>
+</div>
+</div>
+<section id="pythagorean-theorem-and-square-root">
+<h3>Pythagorean theorem and square root<a class="headerlink" href="#pythagorean-theorem-and-square-root" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=YompsDlEdtc">How many ways are there to prove the Pythagorean theorem? - Betty Fei - YouTube</a></p></li>
+</ul>
+<p><img alt="Screenshot 2023-05-09 at 14.21.46.png" src="chapters/06/attachment:366372e2-188b-4559-a354-2a6fe7c2311c.png" /></p>
+<p><span class="math notranslate nohighlight">\(a = \frac{1}{\sqrt{2}} \times c = \frac{\sqrt{2}}{2} \times c\)</span></p>
+<p><span class="math notranslate nohighlight">\(2a = \frac{2}{\sqrt{2}} \times c = \sqrt{2} \times c\)</span></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/06"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03_past_assignment_comment.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">課題の解説</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05_plimpton322.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Plimton 322 の解読 (1)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">粘土板に楔形文字を書く</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">古代バビロニアの楔形文字による数字</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">60進法の各桁の記号を表現するための辞書を作る</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">60進数の位取り記法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2の平方根</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pythagorean-theorem-and-square-root">Pythagorean theorem and square root</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
