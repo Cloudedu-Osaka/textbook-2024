@@ -1,0 +1,1082 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>合成数の集合を生成する二つの手法 &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/07/04_composite';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/07/04_composite.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="課題" href="05_assignment.html" />
+    <link rel="prev" title="数の組み合わせによる概念の生成" href="03_combination.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/29</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_combination.html">Combinations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Composite Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/22</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../06/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/02_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/03_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/04_babylonian_numerals.html">Babylonian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/05_plimpton322.html">Plimpton 322</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/06_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05/00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/07/04_composite.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/07/04_composite.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>合成数の集合を生成する二つの手法</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">組み合わせを生成し、それらを乗算する手法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">数が<span class="math notranslate nohighlight">\((2,3,5)\)</span>の合成数であるかどうかを判定する手法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">参考) 素数の生成</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>合成数の集合を生成する二つの手法<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>組み合わせを生成し、それらを乗算する手法<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+$(2, 3, 5)$の任意の長さの組み合わせの乗算で表現される合成数を生成するPythonのプログラムを作成してください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>以下のPythonコードは、指定された数字$(2, 3, 5)$と任意の長さを使用して合成数を生成します。このコードでは、itertoolsのproduct関数を使用して指定された数字のすべての組み合わせを生成し、結果を乗算して合成数を取得します。また、長さが指定されていないため、組み合わせの長さは1から4までとしています。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">composite_numbers</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Generate combinations of length 1 to 4</span>
+<span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">subset</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="n">L</span><span class="p">):</span>
+        <span class="c1"># Multiply the numbers in the combination</span>
+        <span class="n">composite_number</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">composite_number</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">composite_numbers</span><span class="p">:</span>
+            <span class="n">composite_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">composite_number</span><span class="p">)</span>
+
+<span class="c1"># Sort the composite numbers</span>
+<span class="n">composite_numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">composite_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このコードを実行すると、$(2, 3, 5)$の任意の長さの組み合わせで生成される合成数のリストが出力されます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">composite_numbers</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Generate combinations of length 1 to 4</span>
+<span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">subset</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="n">L</span><span class="p">):</span>
+        <span class="c1"># Multiply the numbers in the combination</span>
+        <span class="n">composite_number</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">composite_number</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">composite_numbers</span><span class="p">:</span>
+            <span class="n">composite_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">composite_number</span><span class="p">)</span>
+
+<span class="c1"># Sort the composite numbers</span>
+<span class="n">composite_numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">composite_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 16, 18, 20, 24, 25, 27, 30, 36, 40, 45, 50, 54, 60, 75, 81, 90, 100, 125, 135, 150, 225, 250, 375, 625]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+この方法を拡張して、ある範囲内の全ての合成数 ($(2, 3, 5)$の任意の長さの組み合わせの乗算で表現される数) を抽出できますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、そのような拡張は可能です。特定の範囲内での合成数を抽出するには、生成された合成数が指定した範囲内にあるかどうかをチェックする条件を追加すればよいです。</p>
+<p>以下のPythonコードは、指定された範囲内の合成数を抽出します。この例では範囲を1から100としていますが、必要に応じてこれを変更できます。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">composite_numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Generate combinations of any length</span>
+<span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>  <span class="c1"># The upper range here (10) can be adjusted as needed</span>
+    <span class="k">for</span> <span class="n">subset</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="n">L</span><span class="p">):</span>
+        <span class="c1"># Multiply the numbers in the combination</span>
+        <span class="n">composite_number</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
+        <span class="c1"># Check if the composite number is within the specified range</span>
+        <span class="k">if</span> <span class="n">lower_bound</span> <span class="o">&lt;=</span> <span class="n">composite_number</span> <span class="o">&lt;=</span> <span class="n">upper_bound</span> <span class="ow">and</span> <span class="n">composite_number</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">composite_numbers</span><span class="p">:</span>
+            <span class="n">composite_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">composite_number</span><span class="p">)</span>
+
+<span class="c1"># Sort the composite numbers</span>
+<span class="n">composite_numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">composite_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このコードを実行すると、範囲内の全ての合成数が出力されます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">composite_numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Generate combinations of any length</span>
+<span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>  <span class="c1"># The upper range here (10) can be adjusted as needed</span>
+    <span class="k">for</span> <span class="n">subset</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="n">L</span><span class="p">):</span>
+        <span class="c1"># Multiply the numbers in the combination</span>
+        <span class="n">composite_number</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
+        <span class="c1"># Check if the composite number is within the specified range</span>
+        <span class="k">if</span> <span class="n">lower_bound</span> <span class="o">&lt;=</span> <span class="n">composite_number</span> <span class="o">&lt;=</span> <span class="n">upper_bound</span> <span class="ow">and</span> <span class="n">composite_number</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">composite_numbers</span><span class="p">:</span>
+            <span class="n">composite_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">composite_number</span><span class="p">)</span>
+
+<span class="c1"># Sort the composite numbers</span>
+<span class="n">composite_numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">composite_numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 3, 4, 5, 6, 9, 10, 15, 25]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+`L`の上限の値によっては抽出洩れが生じるのではありませんか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、その通りです。<code class="docutils literal notranslate"><span class="pre">L</span></code>の上限は、生成される組み合わせの長さを制限します。したがって、その値が小さすぎると、生成されるべき合成数の一部が省略される可能性があります。一方、その値が大きすぎると、必要以上に大きな合成数が生成され、計算時間やメモリ使用量が不必要に増大する可能性があります。</p>
+<p>この問題を解決するための一つの方法は、上限をデータに基づいて動的に調整することです。具体的には、<code class="docutils literal notranslate"><span class="pre">upper_bound</span></code>（生成する合成数の上限）と<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の最小値を使用して、必要な組み合わせの最大長さを計算します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">composite_numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Calculate the maximum length of combinations based on the upper_bound and the smallest number in &#39;numbers&#39;</span>
+<span class="n">max_length</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">)))</span>
+
+<span class="c1"># Generate combinations of any length up to max_length</span>
+<span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">subset</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="n">L</span><span class="p">):</span>
+        <span class="c1"># Multiply the numbers in the combination</span>
+        <span class="n">composite_number</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
+        <span class="c1"># Check if the composite number is within the specified range</span>
+        <span class="k">if</span> <span class="n">lower_bound</span> <span class="o">&lt;=</span> <span class="n">composite_number</span> <span class="o">&lt;=</span> <span class="n">upper_bound</span> <span class="ow">and</span> <span class="n">composite_number</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">composite_numbers</span><span class="p">:</span>
+            <span class="n">composite_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">composite_number</span><span class="p">)</span>
+
+<span class="c1"># Sort the composite numbers</span>
+<span class="n">composite_numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">composite_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このコードでは、<code class="docutils literal notranslate"><span class="pre">max_length</span></code>は<code class="docutils literal notranslate"><span class="pre">upper_bound</span></code>に基づいて動的に計算されるため、必要なすべての合成数をカバーしつつ、計算時間やメモリ使用量を最小限に抑えることができます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">composite_numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Calculate the maximum length of combinations based on the upper_bound and the smallest number in &#39;numbers&#39;</span>
+<span class="n">max_length</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">)))</span>
+
+<span class="c1"># Generate combinations of any length up to max_length</span>
+<span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">subset</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="n">L</span><span class="p">):</span>
+        <span class="c1"># Multiply the numbers in the combination</span>
+        <span class="n">composite_number</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
+        <span class="c1"># Check if the composite number is within the specified range</span>
+        <span class="k">if</span> <span class="n">lower_bound</span> <span class="o">&lt;=</span> <span class="n">composite_number</span> <span class="o">&lt;=</span> <span class="n">upper_bound</span> <span class="ow">and</span> <span class="n">composite_number</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">composite_numbers</span><span class="p">:</span>
+            <span class="n">composite_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">composite_number</span><span class="p">)</span>
+
+<span class="c1"># Sort the composite numbers</span>
+<span class="n">composite_numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">composite_numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2,
+ 3,
+ 4,
+ 5,
+ 6,
+ 8,
+ 9,
+ 10,
+ 12,
+ 15,
+ 16,
+ 18,
+ 20,
+ 24,
+ 25,
+ 27,
+ 30,
+ 32,
+ 36,
+ 40,
+ 45,
+ 48,
+ 50,
+ 54,
+ 60,
+ 64,
+ 72,
+ 75,
+ 80,
+ 81,
+ 90,
+ 96,
+ 100]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>数が<span class="math notranslate nohighlight">\((2,3,5)\)</span>の合成数であるかどうかを判定する手法<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+与えられた数が$(2, 3, 5)$の組み合わせの乗算で表現される合成数か否かを判定する関数を定義し、
+自然数の列をフィルターすることはできますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、それは可能です。以下に、指定された数が$(2, 3, 5)$の組み合わせの乗算で表現される合成数であるかどうかを判定する関数<code class="docutils literal notranslate"><span class="pre">is_composite</span></code>を定義します。この関数は、指定された数が2, 3, 5で何度も割り切れるかどうかをチェックします。</p>
+<p>その後、この関数を使用して、自然数のリストをフィルタリングします。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_composite</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># Check if n is a composite number formed by multiplication of combinations of 2, 3, 5</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+        <span class="k">while</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="c1"># List of natural numbers</span>
+<span class="n">natural_numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
+
+<span class="c1"># Filter the list using the is_composite function</span>
+<span class="n">composite_numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">is_composite</span><span class="p">,</span> <span class="n">natural_numbers</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">composite_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このプログラムを実行すると、1から100までの自然数のリストから、$(2, 3, 5)$の組み合わせの乗算で表現される合成数だけが抽出されます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_composite</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># Check if n is a composite number formed by multiplication of combinations of 2, 3, 5</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+        <span class="k">while</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="c1"># List of natural numbers</span>
+<span class="n">natural_numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
+
+<span class="c1"># Filter the list using the is_composite function</span>
+<span class="n">composite_numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">is_composite</span><span class="p">,</span> <span class="n">natural_numbers</span><span class="p">))</span>
+<span class="n">composite_numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1,
+ 2,
+ 3,
+ 4,
+ 5,
+ 6,
+ 8,
+ 9,
+ 10,
+ 12,
+ 15,
+ 16,
+ 18,
+ 20,
+ 24,
+ 25,
+ 27,
+ 30,
+ 32,
+ 36,
+ 40,
+ 45,
+ 48,
+ 50,
+ 54,
+ 60,
+ 64,
+ 72,
+ 75,
+ 80,
+ 81,
+ 90,
+ 96,
+ 100]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>34
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+双方の実装の利点と欠点を教えてください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>もちろんです。以下に、前述した2つのアプローチの利点と欠点を示します。</p>
+<p><strong>1. 組み合わせを生成し、それらを乗算するアプローチ</strong></p>
+<ul class="simple">
+<li><p><strong>利点:</strong></p>
+<ul>
+<li><p>各組み合わせの乗算結果を具体的に生成するため、結果の合成数が明確にわかります。</p></li>
+<li><p>組み合わせの長さ（<code class="docutils literal notranslate"><span class="pre">L</span></code>）を調整することで、特定の範囲の合成数の生成を制御することができます。</p></li>
+</ul>
+</li>
+<li><p><strong>欠点:</strong></p>
+<ul>
+<li><p>組み合わせの長さが大きくなると、生成される組み合わせの数が急速に増加します。これは、計算時間とメモリ使用量の増大につながります。</p></li>
+<li><p>長さ<code class="docutils literal notranslate"><span class="pre">L</span></code>の適切な上限を設定しなければならないため、一部の合成数が省略される可能性があります。</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>2. 数が$(2, 3, 5)$の組み合わせの乗算で表現される合成数であるかどうかを判定するアプローチ</strong></p>
+<ul class="simple">
+<li><p><strong>利点:</strong></p>
+<ul>
+<li><p>各数について判定を行うため、特定の範囲内のすべての数をカバーすることができます。</p></li>
+<li><p>判定処理は各数に対して独立に行われるため、計算時間やメモリ使用量が組み合わせの数に依存することはありません。</p></li>
+</ul>
+</li>
+<li><p><strong>欠点:</strong></p>
+<ul>
+<li><p>大きな範囲の数に対して判定を行うと、計算時間が増大します。</p></li>
+<li><p>合成数が具体的にどの組み合わせによって生成されたかは明確にはわかりません。</p></li>
+</ul>
+</li>
+</ul>
+<p>各アプローチは、使用する状況や目的に応じて利点と欠点があります。したがって、どちらのアプローチを使用するかは、具体的な問題の要件によります。</p>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>参考) 素数の生成<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Eratosthenes - Wikipedia</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+pythonで素数の判定について
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonで数が素数かどうかを判定する基本的な方法は、その数が2からその数自身の平方根までの全ての数で割り切れるかどうかを確認することです。以下に素数を判定する簡単な関数を示します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="c1"># Usage</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># Returns: False</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="mi">13</span><span class="p">))</span>  <span class="c1"># Returns: True</span>
+</pre></div>
+</div>
+<p>この関数は、与えられた数<code class="docutils literal notranslate"><span class="pre">n</span></code>が素数であるかどうかを判定します。2以外の偶数は素数でないため、偶数の場合は素数ではないとすぐに判定できます。それ以外の数については、奇数だけを対象にして、<code class="docutils literal notranslate"><span class="pre">n</span></code>がその数で割り切れるかどうかを確認します。</p>
+<p>この関数は基本的な素数の判定法を実装していますが、大きな数を素数判定する場合にはより効率的なアルゴリズムや手法が必要となる場合があります。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+エラトステネスの篩い法を使ってください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>エラトステネスの篩は、指定した範囲内の全ての素数を効率的に見つけるためのアルゴリズムです。以下に、Pythonでエラトステネスの篩を実装したコードを示します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sieve_of_eratosthenes</span><span class="p">(</span><span class="n">limit</span><span class="p">):</span>
+    <span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="n">limit</span>
+    <span class="n">primes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">primes</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">primes</span><span class="p">[</span><span class="n">ind</span><span class="o">*</span><span class="mi">2</span><span class="p">::</span><span class="n">ind</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="p">(((</span><span class="n">limit</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="n">ind</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">[</span><span class="n">ind</span> <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">]</span>
+
+<span class="c1"># Usage</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sieve_of_eratosthenes</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>  <span class="c1"># Returns: [2, 3, 5, 7, 11, 13, 17, 19]</span>
+</pre></div>
+</div>
+<p>この関数<code class="docutils literal notranslate"><span class="pre">sieve_of_eratosthenes()</span></code>は、引数<code class="docutils literal notranslate"><span class="pre">limit</span></code>までの全ての素数のリストを返します。まず、<code class="docutils literal notranslate"><span class="pre">limit</span></code>の長さを持つ真偽値のリスト<code class="docutils literal notranslate"><span class="pre">primes</span></code>を作成し、全てのインデックスを素数であると仮定します（<code class="docutils literal notranslate"><span class="pre">True</span></code>とします）。その後、リストの各インデックスに対して、そのインデックスが示す数の倍数を全て合成数（素数ではない）とマークします。</p>
+<p>最終的に、<code class="docutils literal notranslate"><span class="pre">primes</span></code>リストで<code class="docutils literal notranslate"><span class="pre">True</span></code>となっているインデックスが、<code class="docutils literal notranslate"><span class="pre">limit</span></code>までの全ての素数となります。このリストを返すことで、指定した範囲内の全ての素数を取得できます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+平方根を使ってください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>エラトステネスの篩のアルゴリズムは、平方根を使用してさらに効率化することができます。具体的には、現在の数の倍数を見つける際に、それが限界の平方根よりも大きい場合は探索を停止することができます。というのも、それ以上の数の倍数は、既に小さい数の倍数としてマークされているはずだからです。</p>
+<p>以下にこの改良版のエラトステネスの篩を示します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sieve_of_eratosthenes</span><span class="p">(</span><span class="n">limit</span><span class="p">):</span>
+    <span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="n">limit</span>
+    <span class="n">primes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">primes</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ind</span> <span class="o">&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="n">limit</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span> 
+            <span class="k">break</span>
+        <span class="k">elif</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">primes</span><span class="p">[</span><span class="n">ind</span><span class="o">*</span><span class="mi">2</span><span class="p">::</span><span class="n">ind</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="p">(((</span><span class="n">limit</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="n">ind</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">[</span><span class="n">ind</span> <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">]</span>
+
+<span class="c1"># Usage</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sieve_of_eratosthenes</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>  <span class="c1"># Returns: [2, 3, 5, 7, 11, 13, 17, 19]</span>
+</pre></div>
+</div>
+<p>この関数では、<code class="docutils literal notranslate"><span class="pre">ind</span> <span class="pre">&gt;</span> <span class="pre">int(limit</span> <span class="pre">**</span> <span class="pre">0.5)</span> <span class="pre">+</span> <span class="pre">1</span></code>という条件を使用して、現在の数が限界の平方根よりも大きい場合に探索を停止します。これにより、アルゴリズムの効率が向上します。</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/07"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03_combination.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">数の組み合わせによる概念の生成</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05_assignment.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">課題</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">組み合わせを生成し、それらを乗算する手法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">数が<span class="math notranslate nohighlight">\((2,3,5)\)</span>の合成数であるかどうかを判定する手法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">参考) 素数の生成</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
