@@ -4,6 +4,19 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/05/29
+  numbered: false
+  chapters:
+  - file: chapters/07/01_past_assignment.ipynb
+    title: Past Assignment
+  - file: chapters/07/02_past_assignment_comment.ipynb
+    title: Comments to Past Assignment
+  - file: chapters/07/03_combination.ipynb
+    title: Combinations
+  - file: chapters/07/04_composite.ipynb
+    title: Composite Numbers
+  - file: chapters/07/05_assignment.ipynb
+    title: Assignment
 - caption: 2024/05/22
   numbered: false
   chapters:
