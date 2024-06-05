@@ -17,7 +17,7 @@ parts:
     title: Overtone
   - file: chapters/08/06_overtone.ipynb
     title: Synthesize (1)
-  - file: chapters/08/07_composite.ipynb
+  - file: chapters/08/07_vibrato.ipynb
     title: Synthesize (2)
   - file: chapters/08/08_assignment.ipynb
     title: Assignment
