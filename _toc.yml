@@ -7,6 +7,8 @@ parts:
 - caption: 2024/06/05
   numbered: false
   chapters:
+  - file: chapters/08/00_intro.ipynb
+    title: Introduction
   - file: chapters/08/01_past_assignment.ipynb
     title: Past Assignment
   - file: chapters/08/02_past_assignment_comment.ipynb
