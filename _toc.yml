@@ -4,6 +4,23 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/06/05
+  numbered: false
+  chapters:
+  - file: chapters/08/01_past_assignment.ipynb
+    title: Past Assignment
+  - file: chapters/08/02_past_assignment_comment.ipynb
+    title: Comments to Past Assignment
+  - file: chapters/08/04_timbre.ipynb
+    title: Timbre
+  - file: chapters/08/05_overtone.ipynb
+    title: Overtone
+  - file: chapters/08/06_overtone.ipynb
+    title: Synthesize (1)
+  - file: chapters/08/07_composite.ipynb
+    title: Synthesize (2)
+  - file: chapters/08/08_assignment.ipynb
+    title: Assignment
 - caption: 2024/05/29
   numbered: false
   chapters:
