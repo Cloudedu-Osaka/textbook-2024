@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>倍音 (Overtone) &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/08/05_overtone';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/08/05_overtone.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="波形を生成し音色を聞き比べる (1)" href="06_overtone.html" />
+    <link rel="prev" title="Timbre (音色)" href="04_timbre.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/05</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_timbre.html">Timbre</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Overtone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_overtone.html">Synthesize (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_vibrato.html">Synthesize (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/29</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/03_combination.html">Combinations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/04_composite.html">Composite Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/05_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/22</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../06/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/02_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/03_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/04_babylonian_numerals.html">Babylonian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/05_plimpton322.html">Plimpton 322</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/06_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05/00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/08/05_overtone.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/08/05_overtone.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>倍音 (Overtone)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="overtone">
+<h1>倍音 (Overtone)<a class="headerlink" href="#overtone" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Overtone">Overtone - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cochlea">Cochlea - Wikipedia</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+オクターブは何故同じ音として聞こえるのですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>音楽におけるオクターブは、基礎的な振動数が他の音よりもちょうど2倍の音です。例えば、A4（中央のA）の振動数は440Hzであり、そのオクターブ上のA5は880Hz、オクターブ下のA3は220Hzとなります。</p>
+<p>これらの音が「同じ」ように聞こえる理由は、我々の聴覚システムが振動数の比率に敏感であるためです。実際、我々の耳は、2倍の振動数（つまり、オクターブ）を持つ音を、原音と非常に似ている、または同じように聞こえると解釈します。これは、音楽や言語を通じて情報を伝えるための我々の脳の基礎的な方法であり、つまり、それは生物学的な特性と言えます。</p>
+<p>さらに、この現象は音楽の調和とも深く関連しています。オクターブ関係にある音は、最も「調和」するとされています。これは、その振動数が整数比であるため、音波が一致しやすいからです。これにより、オクターブは音楽の基本的な構造を形成しています。</p>
+<p>したがって、これらの要素が組み合わさることで、オクターブが「同じ」音として認識されるのです。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+人の耳は、音の波形を分析したうえでオクターブを同じ音として認識するのですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>人間の耳は、音の振動数（つまり音の高さ）を認識する能力を持っていますが、それが具体的にどのように行われるかは完全には理解されていません。しかし、我々が何を聞くかは、耳の内部構造と脳が音の情報を解釈する方法によって大いに影響されます。</p>
+<p>耳の内部には、音の振動を電気信号に変換する役割を果たす細胞（毛細胞）があります。これらの毛細胞は、コチレア（内耳の一部）内に位置しており、コチレア自体が音の振動数に応じて異なる位置で振動するように設計されています。その結果、特定の振動数を持つ音が耳に入ると、コチレアの特定の部分が振動し、関連する毛細胞が刺激されます。</p>
+<p>オクターブが「同じ」と感じられる理由の一部は、おそらくこれらの毛細胞が振動数の比率に敏感であることに関連しています。つまり、ある音の振動数が別の音の2倍である場合（つまり、それらがオクターブの関係にある場合）、それらの音は同じ種類の感覚パターンを引き起こし、したがって我々に「同じ」音として認識させる可能性があります。</p>
+<p>しかし、これはあくまで一部の説明であり、オクターブがどのようにして同じ音として認識されるのかについての全体像を描くものではありません。例えば、脳が音の情報をどのように解釈し、それを私たちの音楽的経験と結びつけるかについては、まだ多くの研究が必要です。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+コレチアは日本語で蝸牛の事ですね？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、その通りです。コチレア（Cochlea）はラテン語で「蝸牛の殻」を意味し、その名前はその形状が蝸牛の殻に似ていることから来ています。内耳に位置するこの構造は、音の振動を電気的な神経信号に変換する役割を果たし、これが我々が音を聞くための根本的な過程です。コチレア内の毛細胞は、特定の振動数を持つ音に反応し、それに応じた信号を脳に送ります。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+蝸牛は渦巻き型をしていますが、その巻き方の位相と、その部位で感知可能な周波数に関連はありますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、その通りです。コチレアの形状と内部構造は音の周波数に対する感受性に密接に関連しています。コチレアは、内部に液体を含む渦巻き状の管で、その長さに沿って異なる部位が異なる周波数の音に敏感になるように設計されています。</p>
+<p>具体的には、コチレアの基底部（外側、つまり蝸牛の殻の最初の部分）は高周波数の音に、頂部（内側、つまり蝸牛の殻の最も深い部分）は低周波数の音に反応します。これは、音の周波数に応じてコチレア内の液体が異なる場所で振動し、それに応じて異なる毛細胞が刺激されるためです。</p>
+<p>この現象は「トノトピー」（tonotopy）と呼ばれ、それぞれの毛細胞が特定の周波数の音に最も反応するというコチレアの組織化の原理を指します。このコチレアのトノトピーは、我々が音の高さを認識する基礎的なメカニズムの一部を形成しています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+コレチアの巻き方の位相と周波数特性に関連がないとすると、
+オクターブを認識する能力は後天的なものですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>オクターブを認識する能力については、生得的な側面と後天的な側面の両方が存在すると考えられています。</p>
+<p>生得的な側面としては、我々の聴覚システムが振動数の比率に敏感であるという事実があります。これは、オクターブ（つまり、振動数が2倍の関係にある音）が「同じ」音として認識される一因と考えられています。これは、音の振動数を識別するためのコチレアのトノトピックなマッピング（すなわち、コチレア内の特定の位置が特定の振動数に反応するという原理）とも関連しています。</p>
+<p>一方、後天的な側面としては、音楽的な訓練や経験がオクターブの認識に影響を及ぼすという研究結果もあります。例えば、音楽的な訓練を受けた人々は、音楽的なピッチ（音の高さ）の関係を認識する能力が向上することが示されています。これは、音楽的な経験が脳の音の処理方法を変化させ、したがってオクターブの認識を改善することを示しています。</p>
+<p>したがって、オクターブの認識は生得的な聴覚の特性と後天的な音楽的な経験の両方によって形成されると考えられています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+蝸牛の周波数応答における位置の特性には、線形的や対数的など幾何的な調和関係はありますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>コチレアの周波数応答における位置の特性は、対数的な調和関係を持つと考えられています。</p>
+<p>具体的には、コチレアは、基底部（外側）から頂部（内側）へと移動するにつれて感度が低周波から高周波へと変化します。しかし、この変化は線形的ではなく対数的です。つまり、同じ距離を移動すると、感度の変化は周波数が高くなるほど大きくなります。</p>
+<p>この対数的なマッピングは、人間の耳が広範囲の周波数に対して敏感であることを可能にしています。また、これはピッチの知覚（音の高さの知覚）とも関連しており、我々が周波数の比率に基づいて音を認識する能力（つまり、オクターブの関係を感じる能力）を説明する一部となっています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+蝸牛の渦巻き構造における位相的な位置関係は周波数応答と関係がありますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、コチレアの渦巻き構造における位相的な位置関係は、周波数応答と密接に関連しています。具体的には、コチレアの形状と内部構造は、その各部位が特定の周波数の音に反応するように設計されています。</p>
+<p>音が耳に入ると、それはまず中耳を通過し、振動がコチレアの窓（小さな開口部）に伝えられます。これにより、コチレア内の液体が振動し、その振動はコチレアを通って進みます。この振動は、コチレアの基底部（外側、つまり蝸牛の殻の最初の部分）から始まり、頂部（内側、つまり蝸牛の殻の最も深い部分）に向かって進みます。</p>
+<p>この過程で、各振動は特定の周波数に最も反応するコチレアの部位を「探します」。高周波数の音は、コチレアの基底部で主に検出されます。一方、低周波数の音は、コチレアの頂部に到達するまで振動を続けます。これにより、特定の周波数の音がコチレアの特定の位置で検出されるという、周波数と位置の間の明確な対応関係が形成されます。</p>
+<p>したがって、コチレアの渦巻き構造における位相的な位置関係は、周波数応答と密接に関連していると言えます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+オクターブで同位相になるといった関係はありますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>コチレアの構造と機能については、オクターブで同位相になるといった直接的な関係性は明らかにされていません。コチレアは音の振動を電気信号に変換する過程で、異なる周波数の音に対応する特異な位置を持つ、ということは広く受け入れられています。しかし、これは位相というよりもむしろ周波数に基づくマッピングです。</p>
+<p>一方で、オクターブという概念自体は、ある音の周波数が他の音の周波数の2倍である場合に適用されます。この関係性は音楽的な文脈で重要であり、オクターブ間の音は我々にとって「同じ」と感じられます。しかし、この知覚は、聴覚システムが振動数の比率によって音を区別する能力によるもので、これはコチレアの機能とは異なるレベルの現象です。</p>
+<p>したがって、オクターブに関する知覚は、コチレアの物理的な構造や機能とは直接的には関連していないと理解されています。それはむしろ、我々の脳が音を処理し解釈する方法、およびそれが我々の音楽体験とどのように結びつくかによるものです。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ということは、蝸牛の渦巻き構造は、器官の体積を小さくまとめるという意味以外にはないのですね。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>コチレアの渦巻き状の構造は、体積を最小限に抑えるという実用的な機能を果たすだけでなく、音を解析するための重要な役割も果たしています。この形状は、コチレア内部で音の振動が特定の方法で伝播することを可能にします。</p>
+<p>音が耳に入ると、それは中耳を通過してコチレアに到達し、コチレア内部の液体を振動させます。この振動はコチレアの基底部（外側の部分）から始まり、頂部（内側の部分）に向かって進行します。高周波数の音は基底部で主に検出され、低周波数の音は頂部に到達するまで振動を続けます。</p>
+<p>このように、コチレアの渦巻き状の構造は、音の振動がコチレアを通過する方法を決定し、それにより特定の周波数の音が特定の位置で検出されるという、周波数と位置の間の対応関係を作り出します。この対応関係が、我々が音の高さを感じるための基礎的なメカニズムの一部を形成しています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+蝸牛は直線でもいいのではありませんか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>理論的には、コチレアが直線状であってもその基本的な機能を果たすことは可能です。その機能とは、入力された音の振動を電気的な信号に変換し、それを脳に送ることであり、これは直線状の構造でも可能です。</p>
+<p>しかし、渦巻き状の構造は、その形状が耳の内部空間にうまく適合し、より効率的に体積を利用できるため、生物学的には優れた設計と言えます。この形状は、小さな空間に大量の感覚細胞を収容することを可能にし、さらに音の振動がコチレアを通過する特定のパターンを作り出すことで、我々が音の高さを感じるための基礎的なメカニズムを形成する役割も果たしています。</p>
+<p>したがって、コチレアが渦巻き状であることは、機能的な観点からも、生物学的な観点からも重要であると考えられます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+長い生物や器官は渦巻き構造となるのは進化的に自然ですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、多くの生物や器官は、体積効率を最大化するために渦巻き状の構造を採用することがあります。この形状は、限られた空間内で最大の機能を得ることを可能にします。</p>
+<p>たとえば、植物の種子や葉、貝殻の形状、果ては銀河の形状まで、自然界には渦巻き状のパターンが溢れています。これらはすべて、特定の制約（空間、エネルギー、成長パターンなど）の下で最適化された結果としての形状です。</p>
+<p>特に、コチレアのような複雑な器官では、渦巻き状の形状は、大量の感覚細胞を小さな空間に収容し、効率的に音を解析する能力を提供します。これは、自然選択の結果として進化したと考えられます。</p>
+<p>したがって、渦巻き状の構造が自然界や生物の進化で頻繁に見られるのは、その形状が機能と効率性に優れているからです。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+蝸牛には、倍音を知覚する構造はありますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>人間の耳（特にコチレア）は、音の基本的な周波数だけでなく、その倍音（またはハーモニクス）も検出する能力を持っています。</p>
+<p>倍音は、ある音（基本周波数）の整数倍の周波数を持つ音です。例えば、ある音の周波数が440Hz（A4）である場合、その倍音は880Hz（A5）、1320Hz（E6）、1760Hz（A6）などの周波数を持つ音です。これらの倍音は、一緒に鳴らされると、その音の「質」または「音色」を形成します。</p>
+<p>コチレアは、それぞれの毛細胞が特定の周波数の音に反応するように設計されています。したがって、ある音とその倍音が同時に耳に入ると、それぞれの音はコチレアの異なる位置で検出されます。このプロセスは、我々が音の音色を感じるための基礎を形成しています。</p>
+<p>したがって、コチレアは、音の基本周波数だけでなく、その倍音を検出する機能を持っています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+倍音の豊かな音源で学習することで、オクターブの認識力が向上する、ということでよろしいでしょうか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>そうです、音楽的な訓練や経験は、オクターブの認識力を向上させる可能性があります。倍音の豊かな音源で学習することは、音楽的な聴覚を磨く一つの方法であり、それによって音のピッチ（高さ）、音色、和音などの複雑な要素をより深く理解することが可能になります。</p>
+<p>特に、倍音の豊かな音源での学習は、音の関係性を理解する能力を育てます。オクターブは基本的に倍音の一種であり、一つの音の周波数が他の音の周波数の2倍であるとき、それらの音はオクターブの関係にあるとされます。したがって、倍音の理解は、自然にオクターブの認識につながります。</p>
+<p>しかし、これは一部の視点であり、オクターブの認識は音楽的な経験だけでなく、生得的な聴覚の特性にも大いに依存します。したがって、倍音の豊かな音源での学習はオクターブの認識を改善する一つの方法であると言えますが、それが唯一の方法であるわけではありません。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+生得的な聴覚の特性とは何ですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>生得的な聴覚の特性とは、生まれつき持っている、つまり遺伝的または生物学的に決定された聴覚の特性を指します。これらは、我々が音を聞き、理解し、解釈する能力に大きな影響を与えます。</p>
+<p>以下にいくつかの主要な生得的な聴覚の特性を挙げてみましょう：</p>
+<ol class="arabic simple">
+<li><p><strong>周波数感度</strong>：人間の耳は特定の周波数範囲に対して最も敏感です（約20 Hzから20 kHz）。これは、生得的な聴覚の特性の一部であり、我々が日常的に経験する音の大部分をカバーしています。</p></li>
+<li><p><strong>音の方向感知</strong>：人間は2つの耳を使用して音の方向を感知する能力を持っています。これは、音が一方の耳に到達するまでの時間と他方の耳に到達するまでの時間の微妙な違い（間隔差）を脳が解釈することにより可能になります。</p></li>
+<li><p><strong>音の振動数の比率の知覚</strong>：人間の耳は音の振動数の比率に敏感で、これが我々が音楽的な間隔（例えば、オクターブや完全五度）を感じる能力の基礎を形成しています。</p></li>
+</ol>
+<p>これらの特性は、我々の聴覚システムがどのように機能するかを決定し、音楽や言語など、音に基づく我々の経験全体に影響を与えます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+その個人差のことを生得的と言ったのですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>いいえ、生得的な特性とは、特定の個人の違いではなく、人間全体、あるいは広い意味での生物種全体に共通する特性を指します。これらは生まれながらにして備わっている、つまり遺伝的または生物学的に決定された特性であり、個々の経験や学習によって形成されるものではありません。</p>
+<p>例えば、人間は生まれながらにして約20 Hzから20 kHzの周波数範囲の音を聞く能力を持っており、これは生得的な特性の一例です。同様に、音の振動数の比率に敏感であることも、人間の聴覚システムの生得的な特性です。</p>
+<p>一方、個人差は後天的な要素により大きく影響を受けます。これには、その人が生活する環境、経験、訓練、文化などが含まれます。例えば、音楽的な訓練を受けた人々は、音楽的なピッチやリズムを認識する能力が向上することが示されています。これは個人差の一例であり、後天的な影響によるものです。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+倍音に関する聴覚特性、さらにオクターブを認識する能力に着目しています。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>倍音とオクターブの認識は、人間の聴覚システムの基本的な特性と深く結びついています。</p>
+<p><strong>倍音の認識</strong>：倍音（またはハーモニクス）は、基本周波数の整数倍の周波数を持つ音です。これらは一緒に鳴らされると、その音の「音色」や「質」を形成します。我々の耳（特にコチレア）は、音の基本的な周波数だけでなく、その倍音も検出する能力を持っています。これは、音の振動数に応じてコチレア内の特定の毛細胞が刺激されるためです。このプロセスは、我々が音の音色を感じるための基礎を形成しています。</p>
+<p><strong>オクターブの認識</strong>：オクターブとは、ある音の周波数が他の音の周波数の2倍である場合の関係を指します。人間の聴覚システムは、音の振動数の比率に敏感であるため、オクターブ間の音は我々にとって「同じ」音として感じられます。これは、ある音の周波数とその倍音（特に2倍の周波数を持つ音）の間に存在する自然な関係性を反映しています。</p>
+<p>これらの能力は、生得的な聴覚の特性の一部であり、我々が音楽の美しさを感じ、理解するための基盤を形成しています。それぞれの能力は、生まれつき備わっているものですが、音楽的な訓練や経験によってさらに発展し、洗練されることがあります。</p>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/08"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04_timbre.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Timbre (音色)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="06_overtone.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">波形を生成し音色を聞き比べる (1)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
