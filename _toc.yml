@@ -4,6 +4,27 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/06/12
+  numbered: false
+  chapters:
+  - file: chapters/09/01_aasignment.ipynb
+    title: Past Assignment
+  - file: chapters/09/02_intro.ipynb
+    title: Think like a programmer (1)
+  - file: chapters/09/03_intro.ipynb
+    title: Think like a programmer (2)
+  - file: chapters/09/04_dncl.ipynb
+    title: Pseudo language
+  - file: chapters/09/05_dncl_2008.ipynb
+    title: Past exam at 2008
+  - file: chapters/09/06_dncl_2008_template.ipynb
+    title: Past exam at 2008 (template)
+  - file: chapters/09/07_vibrato.ipynb
+    title: Past exam at 2008 (your answer)
+  - file: chapters/09/08_dncl_answer.ipynb
+    title: Past exam at 2008 (sample answer)
+  - file: chapters/09/09_assignment.ipynb
+    title: Assignment
 - caption: 2024/06/05
   numbered: false
   chapters:
