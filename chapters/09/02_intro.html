@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>プログラミング言語で考える &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/09/02_intro';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/09/02_intro.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="プログラミング言語で考える" href="03_intro.html" />
+    <link rel="prev" title="プログラミングで遡る科学史" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/12</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Think like a programmer (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_intro.html">Think like a programmer (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_dncl.html">Pseudo language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_dncl_2008.html">Past exam at 2008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_dncl_2008_template.html">Past exam at 2008 (template)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_dncl_answer.html">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/05</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../08/00_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/04_timbre.html">Timbre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/05_overtone.html">Overtone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/06_overtone.html">Synthesize (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/07_vibrato.html">Synthesize (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/08_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/29</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/03_combination.html">Combinations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/04_composite.html">Composite Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/05_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/22</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../06/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/02_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/03_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/04_babylonian_numerals.html">Babylonian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/05_plimpton322.html">Plimpton 322</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/06_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05/00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/09/02_intro.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/09/02_intro.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>プログラミング言語で考える</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">入試問題を解く人工知能</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt">東ロボくんが引かなかった補助線をChatGPTに引かせてみる</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>プログラミング言語で考える<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>入試問題を解く人工知能<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ja.wikipedia.org/wiki/%E6%9D%B1%E3%83%AD%E3%83%9C%E3%81%8F%E3%82%93">東ロボくん - Wikipedia</a> (2011–2021)</p>
+<ul>
+<li><p><a class="reference external" href="https://www.anlp.jp/anniversary/20th_symposium.html">言語処理学会20周年記念シンポジウム</a> (2014/10/04)</p>
+<ul>
+<li><p><a class="reference external" href="https://www.anlp.jp/anniversary/20th_sympo/slide_arai.pdf">数理的演繹をめざす言葉の理解：近似ではない言語処理はいつか可能になるか？</a> (新井紀子, NII)</p>
+<ul>
+<li><p>「機械が入試数学を解く」ための３つの課題</p>
+<ol class="arabic simple">
+<li><p>言語理解: 問題の意味を形式表現へ正確に翻訳する</p></li>
+<li><p>言語理解と推論系の接合: 直訳された問題を、現実的に推論が可能な表現へと変換する</p></li>
+<li><p>推論の実行: 限量子消去、自動証明</p></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.nikkei.com/article/DGXKZO12401780R00C17A2X12000/">人間のみが可能な領域は？　「機械の能力」検証を - 日本経済新聞</a> (2017/02/02)</p>
+<ul>
+<li><p>『「補助線を引くセンスこそ、数学のセンス」との信念を持つ読者もおられよう。』</p></li>
+<li><p>『では、うまい補助線を引けるようなセンスは不可欠なのか。』</p></li>
+<li><p>『東ロボくんが問題を解くときには、補助線どころか図を書く必要もなかった。』</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Alfred_Tarski">Alfred Tarski - Wikipedia</a> (1901–1983)</p>
+<ul>
+<li><p>“A decision method for elementary algebra and geometry.” (1948)</p>
+<ul>
+<li><p>『初等代数と初等幾何の自動処理の方法』</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>「二等辺三角形の2つの底角が等しいことを示せ」</p></li>
+</ul>
+<p><img alt="image.png" src="chapters/09/attachment:019dd4d6-f5c8-4cab-839e-90d5888363ee.png" /></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://toyokeizai.net/articles/-/656682">｢ChatGPT｣に浮かれる人が知らない恐ろしい未来 新井紀子氏｢非常に危険なものが生み出された｣ | IT･電機･半導体･部品 | 東洋経済オンライン</a></p>
+<ul>
+<li><p>『「東ロボくん」はストーリーを作ることができず、一文一文事実を述べることしかできなかった。」</p></li>
+<li><p>『(ChatGPTは) 自信満々かつスムーズにウソをつく』</p>
+<ul>
+<li><p>ChatGPTに東大の入試問題を解かせてみた</p></li>
+<li><p>ChatGPTは独裁国家と相性がいい？</p></li>
+<li><p>ChatGPTに身を委ねるのは恐ろしい</p></li>
+<li><p>「ウェブ」という資源を失う？</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="chatgpt">
+<h2>東ロボくんが引かなかった補助線をChatGPTに引かせてみる<a class="headerlink" href="#chatgpt" title="Link to this heading">#</a></h2>
+<p><img alt="image.png" src="chapters/09/attachment:df1aa715-1c61-4edf-a790-734f59189b9a.png" /></p>
+<ul class="simple">
+<li><p>羽海野チカ, “3月のライオン 9”, Chapter. 86 あたらしい年, 2012年.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai_ask</span>
+初等幾何において、補助線の引き方にコツはありますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>補助線を引く際には、問題の図形の性質や条件を考慮し、目的に合わせた補助線を引くことが重要です。また、補助線を引いた後は、図形の性質を利用して問題を解くことができるため、図形の性質についても理解しておくことが大切です。補助線を引く際には、線分の中点や垂線、平行線、相似などの性質を利用することが多いため、これらの性質についても理解しておくと良いでしょう。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai_continue</span>
+「まず一番さびしそうな所に引いてごらん」というアドバイスは的確ですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>「まず一番さびしそうな所に引いてごらん」というアドバイスは、補助線を引く際に一つのアプローチとしては有効かもしれませんが、必ずしも的確とは言えません。問題によっては、一番さびしそうな所に補助線を引いても解決できない場合があります。そのため、問題の図形の性質や条件をよく読み、目的に合わせた補助線を引くことが重要です。また、補助線を引いた後には、図形の性質を利用して問題を解くことができるため、図形の性質についても理解しておくことが大切です。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai_continue</span>
+目的に合わせた補助線を引くセンスは初等幾何学に不可欠ですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>目的に合わせた補助線を引くセンスは、初等幾何学において非常に重要なスキルの一つです。補助線を引くことで、問題をより簡単に解くことができる場合があります。しかし、適切な補助線を引くことができないと、問題を解くことができない場合もあります。そのため、図形の性質や条件をよく読み、目的に合わせた補助線を引くセンスを身につけることは、初等幾何学において不可欠なスキルの一つと言えます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai_continue</span>
+例えば、「二等辺三角形の2つの底角が等しいことを示せ」という問題が出されたとき、
+どのように補助線を引くべきですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>「二等辺三角形の2つの底角が等しいことを示せ」という問題において、目的は底角が等しいことを示すことです。この場合、三角形の対辺の長さが等しいことを利用して、底角が等しいことを示すことができます。</p>
+<p>具体的には、三角形の底辺の中点を取り、その点から対辺に垂線を引きます。すると、底辺の中点から垂線の足までの距離が等しいため、三角形が二等辺三角形であることから、垂線の足から各頂点までの距離も等しくなります。そして、垂線の足から各頂点までの距離が等しいことから、各頂点までの距離も等しくなり、つまり三角形の各辺の長さが等しくなります。このようにして、底角が等しいことを示すことができます。</p>
+<p>このように、問題の目的に合わせて、図形の性質や条件を利用して適切な補助線を引くことが重要です。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai_continue</span>
+対辺とは、ある頂点に相対する辺のことなので、「返の中点に対する対辺」は存在しないのではないですか。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ご指摘いただきありがとうございます。確かに、対辺とはある頂点に相対する辺のことであり、返の中点に対する対辺という表現は不適切でした。訂正いたします。</p>
+<p>「二等辺三角形の2つの底角が等しいことを示せ」という問題において、目的は底角が等しいことを示すことです。この場合、三角形の対辺の長さが等しいことを利用して、底角が等しいことを示すことができます。</p>
+<p>具体的には、三角形の底辺の中点を取り、その点から底辺に垂線を引きます。すると、底辺の中点から垂線の足までの距離が等しいため、三角形が二等辺三角形であることから、垂線の足から各頂点までの距離も等しくなります。そして、垂線の足から各頂点までの距離が等しいことから、各頂点までの距離も等しくなり、つまり三角形の各辺の長さが等しくなります。このようにして、底角が等しいことを示すことができます。</p>
+<p>このように、問題の目的に合わせて、図形の性質や条件を利用して適切な補助線を引くことが重要です。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai_continue</span>
+その垂線の足は底辺の中点なので、それらの距離は0です。
+確かに底返上の頂点までの距離は同じですが、底辺にない頂点までの距離は必ずしもそれらと等しくないはずです。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>再度、ご指摘いただきありがとうございます。確かに、私の前回の回答に誤りがありました。底辺の中点から底辺に垂線を引いた場合、垂線の足は底辺の中点と一致するため、各頂点までの距離が等しくなるという説明は誤りでした。</p>
+<p>正しい補助線の引き方としては、例えば、底辺の中点を取り、その点から対辺に垂線を引く方法があります。すると、底辺の中点から垂線の足までの距離が等しいため、三角形が二等辺三角形であることから、垂線の足から各頂点までの距離も等しくなります。そして、垂線の足から各頂点までの距離が等しいことから、各頂点までの距離も等しくなり、つまり三角形の各辺の長さが等しくなります。このようにして、底角が等しいことを示すことができます。</p>
+<p>改めて、正しい情報を提供できず、申し訳ありませんでした。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai_continue</span>
+補助線を引かずに証明することはできますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、二等辺三角形の2つの底角が等しいことは、補助線を引かずに証明することができます。</p>
+<p>具体的には、二等辺三角形の底辺に対して、その中点を通る直線を引きます。すると、この直線は底辺を等分するため、二等辺三角形の底辺の両側にある2つの三角形は合同になります。そして、合同な三角形の対応する角度は等しいため、底辺の両側にある2つの三角形の底角は等しくなります。つまり、二等辺三角形の2つの底角が等しいことが証明できます。</p>
+<p>このように、図形の性質や条件を利用して、補助線を引かずに問題を解くこともできます。ただし、補助線を引くことで問題を解くことができる場合もあるため、目的に合わせて適切な方法を選択することが重要です。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai_continue</span>
+余弦定理を使って証明して下さい。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>二等辺三角形の2つの底角が等しいことを余弦定理を用いて証明することができます。</p>
+<p>まず、三角形の底辺をc、その他の2辺をaとbとします。また、底辺の中点をMとし、頂点をA、底辺の両端点をBとCとします。このとき、三角形ABCは二等辺三角形であるため、AB=AC=c/2となります。</p>
+<p>次に、余弦定理を用いて、aとbの関係を求めます。余弦定理によれば、a^2 = b^2 + c^2 - 2bc cosA です。ここで、Aは角BACの大きさです。</p>
+<p>また、底辺の中点Mから頂点Aまでの距離をhとすると、三角形ABMは直角三角形となり、h^2 = (c/2)^2 - (a/2)^2 となります。</p>
+<p>さらに、三角形ACMも直角三角形となるため、h^2 = (c/2)^2 - (b/2)^2 となります。</p>
+<p>これらの式を組み合わせると、(c/2)^2 - (a/2)^2 = (c/2)^2 - (b/2)^2 となり、a^2 = b^2 となります。つまり、二等辺三角形の2つの底角が等しいことが証明できます。</p>
+<p>以上が、余弦定理を用いた二等辺三角形の2つの底角が等しいことの証明です。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai_continue</span>
+AB=AC=c/2となるのは正三角形のときではありませんか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>申し訳ありません。前回の回答に誤りがありました。二等辺三角形の底辺の中点から頂点に引いた垂線の長さは、底辺の長さの半分になります。つまり、底辺の長さをc、底辺の中点から頂点に引いた垂線の長さをhとすると、h = c/2 となります。</p>
+<p>余弦定理を用いて、二等辺三角形の2つの底角が等しいことを証明する場合、以下のようになります。</p>
+<p>まず、三角形の底辺をc、その他の2辺をaとbとします。また、底辺の中点をMとし、頂点をA、底辺の両端点をBとCとします。このとき、三角形ABCは二等辺三角形であるため、AB=AC=c/2となります。</p>
+<p>次に、余弦定理を用いて、aとbの関係を求めます。余弦定理によれば、a^2 = b^2 + c^2 - 2bc cosA です。ここで、Aは角BACの大きさです。</p>
+<p>また、底辺の中点Mから頂点Aまでの距離をhとすると、三角形ABMは直角三角形となり、h^2 = (c/2)^2 - (a/2)^2 となります。</p>
+<p>さらに、三角形ACMも直角三角形となるため、h^2 = (c/2)^2 - (b/2)^2 となります。</p>
+<p>これらの式を組み合わせると、(c/2)^2 - (a/2)^2 = (c/2)^2 - (b/2)^2 となり、a^2 = b^2 となります。つまり、二等辺三角形の2つの底角が等しいことが証明できます。</p>
+<p>以上が、余弦定理を用いた二等辺三角形の2つの底角が等しいことの証明です。</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/09"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">プログラミングで遡る科学史</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03_intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">プログラミング言語で考える</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">入試問題を解く人工知能</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt">東ロボくんが引かなかった補助線をChatGPTに引かせてみる</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
