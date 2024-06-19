@@ -4,6 +4,25 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/06/19
+  numbered: false
+  chapters:
+  - file: chapters/10/08_dnc_answer.ipynb
+    title: Past exam at 2008 (sample answer)
+  - file: chapters/10/09_assignment.ipynb
+    title: Past assignment
+  - file: chapters/10/10_intro.ipynb
+    title: Introduction
+  - file: chapters/10/11_ybc7289.ipynb
+    title: YBC 7289 (1)
+  - file: chapters/10/12_ybc7289.ipynb
+    title: YBC 7289 (2)
+  - file: chapters/10/13_ybc7289.ipynb
+    title: YBC 7289 (3)
+  - file: chapters/10/14_ybc7289.ipynb
+    title: YBC 7289 (4)
+  - file: chapters/10/15_assginment.ipynb
+    title: Assignment
 - caption: 2024/06/12
   numbered: false
   chapters:
