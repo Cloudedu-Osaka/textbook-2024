@@ -1,0 +1,1099 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2008年度 大学入学共通テスト 情報関係基礎から &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/10/08_dncl_answer';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/10/08_dncl_answer.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="課題: 相加平均と相乗平均の関係を表す不等式" href="09_assignment.html" />
+    <link rel="prev" title="プログラミングで遡る科学史" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/19</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_assignment.html">Past assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_ybc7289.html">YBC 7289 (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_ybc7289.html">YBC 7289 (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_ybc7289.html">YBC 7289 (3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_ybc7289.html">YBC 7289 (4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../09/02_intro.html">Think like a programmer (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/03_intro.html">Think like a programmer (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/04_dncl.html">Pseudo language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/05_dncl_2008.html">Past exam at 2008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/06_dncl_2008_template.html">Past exam at 2008 (template)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/08_dncl_answer.html">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/09_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/05</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../08/00_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/04_timbre.html">Timbre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/05_overtone.html">Overtone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/06_overtone.html">Synthesize (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/07_vibrato.html">Synthesize (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/08_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/29</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/03_combination.html">Combinations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/04_composite.html">Composite Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/05_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/22</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../06/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/02_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/03_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/04_babylonian_numerals.html">Babylonian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/05_plimpton322.html">Plimpton 322</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/06_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05/00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/10/08_dncl_answer.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/10/08_dncl_answer.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2008年度 大学入学共通テスト 情報関係基礎から</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">模範解答: 問2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">模範解答: 問2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">以下、Pythonのコードを細かい調整・・・</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">前置判定と後置判定</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>2008年度 大学入学共通テスト 情報関係基礎から<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>模範解答: 問2<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+今から擬似コードでプログラミングしますが、擬似コードの実行環境はありません。
+あなたが提示するコードを検証するためPythonのプログラムコードも同時に提示してください。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>もちろんです。擬似コードとPythonの実際のコードの両方を提供します。何のプログラムを作成したいですか？ その詳細を教えていただけますか？</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+「配列の要素を初期化する手続き」です。行頭の括弧内の数字はプログラムの行数です。
+---
+(01) Namae[1] ← 「はるこ」，Tokuten[1] ← 73 
+(02) Namae[2] ← 「なつお」，Tokuten[2] ← 77
+(03) Namae[3] ← 「あきよ」，Tokuten[3] ← 81 
+(04) Namae[4] ← 「ふゆき」，Tokuten[4] ← 68
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>あなたが提供した擬似コードは配列の要素を初期化するものと理解しています。Pythonのコードでは、これを以下のように表現できます：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python code</span>
+<span class="n">Namae</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;はるこ&quot;</span><span class="p">,</span> <span class="s2">&quot;なつお&quot;</span><span class="p">,</span> <span class="s2">&quot;あきよ&quot;</span><span class="p">,</span> <span class="s2">&quot;ふゆき&quot;</span><span class="p">]</span>
+<span class="n">Tokuten</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">68</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Pythonのリストは0番目から始まるため、各名前と得点を対応させるために最初の要素は空白（””や0）としています。次に、Pythonのリストの1番目の要素（擬似コードの1）に”はるこ”と73をセットし、2番目の要素に”なつお”と77をセットし、というように続けています。</p>
+<p>このように、Pythonは擬似コードを実装するための非常に直感的な言語で、配列（リスト）の初期化も簡単に行うことができます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+この後、擬似コードの手続きを示しますが、【エ】から【ケ】の穴があるので埋めてください。
+次はその解答群です。穴埋めの際は、0から11の中から選択してください。
+---
+0. `Name[i]`
+1. `Name[j]`
+2. `Name[i+1]`
+3. `Tokuten[i]`
+4. `Tokuten[j]`
+5. `Tokuten[i+1]`
+6. `i+1`
+7. `n`
+8. `t`
+9. `j`
+10. `j+1`
+11. `4`
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>もちろんです、穴埋めしましょう。まずは、【エ】から【ケ】の擬似コードを教えていただけますか？</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+「配列の要素を入れ替える手続き」です。【エ】から【キ】を先の解答群から選択してください。
+
+```
+(01) n ← Namae[i]
+(02) 【エ】 ← 【オ】
+(03) Namae[i+1] ← n 
+(04) t ← 【カ】
+(05) 【カ】 ← Tokuten[i+1]
+(06) Tokuten[i+1] ← 【キ】
+```
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>あなたが提供した擬似コードは配列の要素を入れ替えるものと理解しています。それぞれの穴埋めに対応する解答群の選択肢を選んでみましょう。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(01) n ← Namae[i]
+(02) Namae[i] ← Namae[i+1]  (【エ】は `2. Name[i+1]` を選びました)
+(03) Namae[i+1] ← n 
+(04) t ← Tokuten[i]  (【カ】は `3. Tokuten[i]` を選びました)
+(05) Tokuten[i] ← Tokuten[i+1]  (【カ】は `5. Tokuten[i+1]` を選びました)
+(06) Tokuten[i+1] ← t  (【キ】は `8. t` を選びました)
+</pre></div>
+</div>
+<p>これは基本的な入れ替え操作で、一時的な変数 <code class="docutils literal notranslate"><span class="pre">n</span></code> と <code class="docutils literal notranslate"><span class="pre">t</span></code> を使用して <code class="docutils literal notranslate"><span class="pre">Namae</span></code> と <code class="docutils literal notranslate"><span class="pre">Tokuten</span></code> 配列の <code class="docutils literal notranslate"><span class="pre">i</span></code> 番目と <code class="docutils literal notranslate"><span class="pre">i+1</span></code> 番目の要素を入れ替えています。Pythonのコードで実装すると以下のようになります：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>
+</pre></div>
+</div>
+<p>このような入れ替え操作は、配列のソートなどに頻繁に用いられます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+「並べ替えの手続き」です。【ク】と【ケ】を先の解答群から選択してください。
+
+```
+(01) ~ (04) (先に示した「配列の要素を初期化する手続き」) 
+(05)        jを4-1から1まで1ずつ減らしながら，
+(06)        ｜ iを1から【ク】まで1ずつ増やしながら，
+(07)        ｜ ｜ もしTokuten[i] &lt; 【ケ】 ならば
+(08) ~ (13) ｜ ｜ ｜ (先に示した「配列の要素を入れ替える手続き」) 
+(14)        ｜ ｜ を実行する
+(15)        ｜ を繰り返す
+(16)        を繰り返す
+```
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>あなたが提供した擬似コードは配列の要素を並べ替えるものと理解しています。具体的には、これはバブルソートのアルゴリズムに似ています。それぞれの穴埋めに対応する解答群の選択肢を選んでみましょう。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(01) ~ (04) (先に示した「配列の要素を初期化する手続き」) 
+(05)        jを4-1から1まで1ずつ減らしながら，
+(06)        ｜ iを1からjまで1ずつ増やしながら， (【ク】は `9. j` を選びました)
+(07)        ｜ ｜ もしTokuten[i] &lt; Tokuten[i+1] ならば (【ケ】は `5. Tokuten[i+1]` を選びました)
+(08) ~ (13) ｜ ｜ ｜ (先に示した「配列の要素を入れ替える手続き」) 
+(14)        ｜ ｜ を実行する
+(15)        ｜ を繰り返す
+(16)        を繰り返す
+</pre></div>
+</div>
+<p>これは基本的なバブルソートのアルゴリズムで、<code class="docutils literal notranslate"><span class="pre">Tokuten</span></code> 配列の <code class="docutils literal notranslate"><span class="pre">i</span></code> 番目と <code class="docutils literal notranslate"><span class="pre">i+1</span></code> 番目の要素を比較し、<code class="docutils literal notranslate"><span class="pre">i</span></code> 番目の方が大きい場合に入れ替えを行います。これを全ての要素について繰り返すことで、配列は昇順に並び替えられます。Pythonのコードで実装すると以下のようになります：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="c1"># The following is the &quot;swap procedure&quot; you mentioned earlier.</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+
+            <span class="n">t</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Namae</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;はるこ&quot;</span><span class="p">,</span> <span class="s2">&quot;なつお&quot;</span><span class="p">,</span> <span class="s2">&quot;あきよ&quot;</span><span class="p">,</span> <span class="s2">&quot;ふゆき&quot;</span><span class="p">]</span>
+<span class="n">Tokuten</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">68</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+            <span class="c1"># The following is the &quot;swap procedure&quot; you mentioned earlier.</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+
+            <span class="n">t</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>73 77
+はるこ なつお
+73 81
+はるこ あきよ
+73 68
+77 81
+なつお あきよ
+77 73
+81 77
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Namae</span><span class="p">,</span> <span class="n">Tokuten</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&#39;&#39;, &#39;あきよ&#39;, &#39;なつお&#39;, &#39;はるこ&#39;, &#39;ふゆき&#39;], [0, 81, 77, 73, 68])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>模範解答: 問2<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+「比較回数を減らした並べ替えの手続き」です。
+擬似コードの手続きの【シ】と【ス】を末尾の解答群から選択して埋めてください。
+
+```
+(01) ~ (04) (先に示した「配列の要素を初期化する手続き」) 
+(05)        j ← 【シ】 - 1
+(06)        繰り返し，
+(07)        ｜ saigo ← 0
+(08)        ｜ iを1から【ク】まで1ずつ増やしながら，
+(09)        ｜ ｜ もしTokuten[i] &lt; 【ケ】 ならば
+(10) ~ (15) ｜ ｜ ｜ (先に示した「配列の要素を入れ替える手続き」) 
+(16)        ｜ ｜ ｜ saigo ← 【ス】
+(17)        ｜ ｜ を実行する
+(18)        ｜ を繰り返す
+(19)        ｜ j ← saigo - 1
+(20)        を，saigo ≤ 1になるまで実行する
+```
+---
+【シ】と【ス】の解答群
+0. `0`
+1. `1`
+2. `2`
+3. `3`
+4. `4`
+5. `i`
+6. `j`
+7. `i+1`
+8. `saig+1`
+9. `Tokuten[i]`
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>あなたが提供した擬似コードは、バブルソートの改良版であり、無駄な比較を省くために最後に交換した位置を記録するというものと理解しています。それぞれの穴埋めに対応する解答群の選択肢を選んでみましょう。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(01) ~ (04) (先に示した「配列の要素を初期化する手続き」) 
+(05)        j ← 4 - 1  (【シ】は `4. 4` を選びました)
+(06)        繰り返し，
+(07)        ｜ saigo ← 0
+(08)        ｜ iを1からjまで1ずつ増やしながら， (【ク】は `6. j` を選びました)
+(09)        ｜ ｜ もしTokuten[i] &lt; Tokuten[i+1] ならば (【ケ】は `5. Tokuten[i+1]` を選びました)
+(10) ~ (15) ｜ ｜ ｜ (先に示した「配列の要素を入れ替える手続き」) 
+(16)        ｜ ｜ ｜ saigo ← i  (【ス】は `5. i` を選びました)
+(17)        ｜ ｜ を実行する
+(18)        ｜ を繰り返す
+(19)        ｜ j ← saigo - 1
+(20)        を，saigo ≤ 1になるまで実行する
+</pre></div>
+</div>
+<p>この改良版のバブルソートでは、内部のループが各ステップで配列の末尾に最大の要素を「バブル（泡）」のように浮かび上がらせます。最後に交換した位置を <code class="docutils literal notranslate"><span class="pre">saigo</span></code> に記録することで、それ以降の要素はすでにソートされていると判断でき、次回のループでは <code class="docutils literal notranslate"><span class="pre">saigo</span></code> までしか比較しません。</p>
+<p>Pythonのコードで実装すると以下のようになります：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">j</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">saigo</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="c1"># The following is the &quot;swap procedure&quot; you mentioned earlier.</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+
+            <span class="n">t</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>
+
+            <span class="n">saigo</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">saigo</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">saigo</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Namae</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;はるこ&quot;</span><span class="p">,</span> <span class="s2">&quot;なつお&quot;</span><span class="p">,</span> <span class="s2">&quot;あきよ&quot;</span><span class="p">,</span> <span class="s2">&quot;ふゆき&quot;</span><span class="p">]</span>
+<span class="n">Tokuten</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">68</span><span class="p">]</span>
+
+<span class="n">j</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">saigo</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+            <span class="c1"># The following is the &quot;swap procedure&quot; you mentioned earlier.</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+
+            <span class="n">t</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>
+
+            <span class="n">saigo</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">saigo</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">saigo</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>73 77
+はるこ なつお
+73 81
+はるこ あきよ
+73 68
+77 81
+なつお あきよ
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="python">
+<h2>以下、Pythonのコードを細かい調整・・・<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+Pythonのコードで配列の添字が0から始まるように調整してください。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonのリストは0から始まるので、その点を考慮してコードを調整します。以下が調整後のPythonコードです：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the arrays</span>
+<span class="n">Namae</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;はるこ&quot;</span><span class="p">,</span> <span class="s2">&quot;なつお&quot;</span><span class="p">,</span> <span class="s2">&quot;あきよ&quot;</span><span class="p">,</span> <span class="s2">&quot;ふゆき&quot;</span><span class="p">]</span>
+<span class="n">Tokuten</span> <span class="o">=</span> <span class="p">[</span><span class="mi">73</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">68</span><span class="p">]</span>
+
+<span class="n">j</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Namae</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">saigo</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="c1"># Swapping procedure</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+
+            <span class="n">t</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>
+
+            <span class="n">saigo</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">saigo</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">saigo</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+<p>このコードでは、<code class="docutils literal notranslate"><span class="pre">range(j)</span></code>によりリストのインデックスが0から始まることを考慮し、<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">saigo</span> <span class="pre">&lt;=</span> <span class="pre">0:</span></code>によりリストの最初の要素まで処理が完了したかどうかを確認しています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+配列を初期化する手続きは、変数にタプル・リテラルを代入して簡略化してください。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>もちろんです。Pythonではタプルやリストリテラルを使って配列を一度に初期化することができます。それを考慮に入れると、配列の初期化は以下のように1行で書くことが可能となります：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Namae</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;はるこ&#39;</span><span class="p">,</span> <span class="s1">&#39;なつお&#39;</span><span class="p">,</span> <span class="s1">&#39;あきよ&#39;</span><span class="p">,</span> <span class="s1">&#39;ふゆき&#39;</span><span class="p">]</span>
+<span class="n">Tokuten</span> <span class="o">=</span> <span class="p">[</span><span class="mi">73</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">68</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>このコードは、それぞれの要素を直接リストに格納しているため、配列のインデックスは自動的に0から始まります。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+疑似言語では、後置判定のdo-whileループを使っています。
+Pythonで同様に記述できますか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pythonの標準の構文には後置判定のdo-whileループは存在しませんが、同様の動作を実現するためにwhileループとbreak文を使用することができます。以下に、その方法を示します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Namae</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;はるこ&#39;</span><span class="p">,</span> <span class="s1">&#39;なつお&#39;</span><span class="p">,</span> <span class="s1">&#39;あきよ&#39;</span><span class="p">,</span> <span class="s1">&#39;ふゆき&#39;</span><span class="p">]</span>
+<span class="n">Tokuten</span> <span class="o">=</span> <span class="p">[</span><span class="mi">73</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">68</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">Namae</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+<span class="n">j</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">saigo</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">Tokuten</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">swap</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">saigo</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">saigo</span>
+    <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+<p>ここでは、無限ループを作るために<code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True:</span></code>を使用し、ループの終了条件を満たすとき（ここでは<code class="docutils literal notranslate"><span class="pre">j</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>のとき）に<code class="docutils literal notranslate"><span class="pre">break</span></code>文でループを抜けます。これにより、do-whileループのような動作をPythonで実現することができます。</p>
+</div>
+</div>
+<section id="id4">
+<h3>前置判定と後置判定<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ループの制御構造で、前置判定と後置判定の違いを教えてください。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ループ制御における前置判定と後置判定は、ループの繰り返しを制御する条件が評価されるタイミングの違いを表しています。</p>
+<ul class="simple">
+<li><p><strong>前置判定</strong>: ループの開始前に条件が評価されます。条件が最初から偽であった場合、ループの本体は一度も実行されません。この構造は、Pythonの<code class="docutils literal notranslate"><span class="pre">while</span></code>ループや<code class="docutils literal notranslate"><span class="pre">for</span></code>ループでよく使用されます。</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python code with pre-test loop (while)</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>後置判定</strong>: ループの本体が実行された後に条件が評価されます。そのため、ループの本体は必ず少なくとも一度は実行されます。Pythonの標準機能として後置判定ループは提供されていませんが、<code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code>と<code class="docutils literal notranslate"><span class="pre">break</span></code>を組み合わせることで同様の振る舞いを実現できます。</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python code with post-test loop (while True with break)</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+<p>これらの制御構造は、ループの振る舞いを細かく制御するための重要なツールです。どちらを使用するかは、特定の問題や要件によります。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+動作に違いが生じる場合を示してください。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>前置判定ループと後置判定ループの主な違いは、ループの条件が偽である場合にループ本体が一度も実行されないか（前置判定）、少なくとも一度は実行されるか（後置判定）の違いです。</p>
+<p>例えば、あるリストから特定の要素を探し、その要素が見つかったらループを抜け出すという場合を考えてみましょう。</p>
+<p><strong>前置判定ループの場合：</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">target</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># This element does not exist in the list</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">target</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2"> at position </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2"> not found in the list&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このスクリプトでは、<code class="docutils literal notranslate"><span class="pre">target</span></code>がリスト<code class="docutils literal notranslate"><span class="pre">data</span></code>内に存在しない場合、ループは一度も実行されません。</p>
+<p><strong>後置判定ループの場合：</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">target</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># This element does not exist in the list</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="ow">or</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2"> at position </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2"> not found in the list&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このスクリプトでは、<code class="docutils literal notranslate"><span class="pre">target</span></code>がリスト<code class="docutils literal notranslate"><span class="pre">data</span></code>内に存在しない場合でも、ループは一度実行されます。</p>
+<p>このように、前置判定と後置判定ではループの動作に違いが生じ、それぞれが特定の状況に適しています。</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">プログラミングで遡る科学史</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="09_assignment.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">課題: 相加平均と相乗平均の関係を表す不等式</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">模範解答: 問2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">模範解答: 問2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">以下、Pythonのコードを細かい調整・・・</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">前置判定と後置判定</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

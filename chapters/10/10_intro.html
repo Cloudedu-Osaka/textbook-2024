@@ -1,0 +1,757 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>第十週の講義 &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/10/10_intro';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/10/10_intro.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="YBC 7289" href="11_ybc7289.html" />
+    <link rel="prev" title="課題: 相加平均と相乗平均の関係を表す不等式" href="09_assignment.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/19</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="08_dncl_answer.html">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_assignment.html">Past assignment</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_ybc7289.html">YBC 7289 (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_ybc7289.html">YBC 7289 (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_ybc7289.html">YBC 7289 (3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_ybc7289.html">YBC 7289 (4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../09/02_intro.html">Think like a programmer (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/03_intro.html">Think like a programmer (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/04_dncl.html">Pseudo language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/05_dncl_2008.html">Past exam at 2008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/06_dncl_2008_template.html">Past exam at 2008 (template)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/08_dncl_answer.html">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/09_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/05</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../08/00_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/04_timbre.html">Timbre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/05_overtone.html">Overtone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/06_overtone.html">Synthesize (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/07_vibrato.html">Synthesize (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/08_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/29</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/03_combination.html">Combinations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/04_composite.html">Composite Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/05_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/22</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../06/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/02_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/03_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/04_babylonian_numerals.html">Babylonian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/05_plimpton322.html">Plimpton 322</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/06_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05/00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/10/10_intro.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/10/10_intro.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>第十週の講義</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">第十一週の講義予定</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>第十週の講義<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>文字生成AIによる試験問題の理解</p>
+<ul>
+<li><p>僅かな文脈から正答を導くことができる</p></li>
+<li><p>補助線は引けない（理解する「人格」がない）</p></li>
+</ul>
+</li>
+<li><p>数式と図形の対応</p>
+<ul>
+<li><p>相加相乗平均から平開法、ピタゴラスの定理</p></li>
+<li><p>YBC 7289の解析的意義</p></li>
+</ul>
+</li>
+<li><p>ユークリッド原論</p>
+<ul>
+<li><p>二千年変わらない教育課程の礎</p></li>
+</ul>
+</li>
+</ul>
+<section id="id2">
+<h2>第十一週の講義予定<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>古代ギリシア・ローマ（地中海沿岸）</p>
+<ul>
+<li><p>アルキメデスとアポロニウスの楕円曲線論</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+アルキメデスとアポロニウスの楕円曲線論について
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>アルキメデスとアポロニウスは古代ギリシャの偉大な数学者であり、彼らの楕円曲線論は数学および物理学に大きな影響を与えました。</p>
+<p><strong>アルキメデス</strong></p>
+<p>アルキメデスは紀元前3世紀のシラクサの数学者であり、彼の名前はしばしば古代ギリシャの最も有名な科学者の一人として語られます。彼は幾何学、力学、流体力学における重要な発見で知られています。</p>
+<p>楕円曲線についてのアルキメデスの主な貢献は、彼が円周率$\pi$の近似値を求めるために円と楕円の関係を使ったことです。彼は、円の内部と外部に内接する多角形を描くことで、円周と直径の比率（つまり、円周率）を求めました。このプロセスは、円を楕円として近似し、その楕円の周囲を計算することに似ています。</p>
+<p><strong>アポロニウス</strong></p>
+<p>アポロニウスは紀元前2世紀のペルガの数学者で、「円錐断面」の作者として知られています。彼の楕円曲線論は、楕円、双曲線、放物線といった円錐断面曲線を深く探求し、それらを「円錐断面」として一般化したことで、その名が知られています。</p>
+<p>彼の楕円曲線論の重要な部分は、それらの曲線の幾何学的な性質を理解し、それらがどのように生成され、どのように互いに関連しているかを示すことでした。例えば、アポロニウスは、楕円が一つの点からの距離と固定線との距離の和が一定であるすべての点の集合であることを示しました。</p>
+<p>これらの発見は、それぞれの曲線が持つ独特の性質とそれらがどのようにして生成されるかを理解するための基礎を築きました。それらは今日でも、天体の軌道や物理学の法則、さらには建築や工学の設計など、様々な分野で応用されています。</p>
+</div>
+</div>
+<ul class="simple">
+<li><p>ルネッサンス</p>
+<ul>
+<li><p>Leibnizの機械式計算機から電子式計算機への道のり</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+アルキメデスと積分について
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>アルキメデスは古代ギリシャの数学者であり、彼の業績の中でも特に「アルキメデスの原理」と「アルキメデスのねじ」が知られています。しかし、彼の業績はそれだけにとどまりません。積分計算の基礎を築いたとも言える重要な貢献をしています。</p>
+<p>積分とは、ある関数の下で形成される領域の面積を計算するための数学的手法です。現代の積分計算は、17世紀の数学者ニュートンとライプニッツによって形式化されましたが、その根底にある考え方は、アルキメデスの時代までさかのぼります。</p>
+<p>アルキメデスは、所与の曲線下の面積を計算するための手法を開発しました。彼のアプローチは、「<strong>排気法</strong>」として知られ、現代の積分の考え方と非常に似ています。排気法は、曲線下の面積を無限に多くの三角形や長方形で近似することにより、その面積を「尽くす」（つまり「積分する」）という考え方に基づいています。</p>
+<p>彼の著書「円の測定」では、円の面積を求めるためにこの方法を用いています。彼は円を内接する多角形と外接する多角形で挟み込むことで、円の面積を近似しました。この多角形の辺の数を無限大に増やすことで（つまり「排気」することで）、彼は円周率$\pi$の精度を上げることができました。</p>
+<p>このように、アルキメデスの排気法は、数学における積分の概念の早期の形態を示していると言えます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+Leibnizの機械式計算機から電子式計算機への道のり
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>17世紀から21世紀までの計算機の進化は驚くべき旅でした。この進化の初期は、機械式計算機から電子式計算機への変遷に関連しています。以下にその経緯を説明します。</p>
+<p><strong>1. 機械式計算機：</strong></p>
+<p>この旅の最初の重要なステップは、ゴットフリート・ヴィルヘルム・ライプニッツが開発した「Stepped Reckoner」（またはLeibniz Wheel）でした。これは1672年に設計され、機械的な手段で加算、減算、乗算、除算を行うことができました。しかし、ライプニッツの計算機は完全に信頼性がありませんでした。これは、精度と信頼性を確保するために必要な精密な部品を製造する技術が当時はまだ存在しなかったからです。</p>
+<p><strong>2. 分析機：</strong></p>
+<p>19世紀になると、チャールズ・バベッジが「分析機」を設計しました。これは機械式計算機の大きな進歩で、プログラム可能な自動計算機の概念を導入しました。分析機は、機械的な手段で複雑な数学的計算を行うために設計されました。しかし、バベッジの計算機もまた、当時の技術では製造が困難でした。</p>
+<p><strong>3. 電気機械式計算機：</strong></p>
+<p>20世紀初頭に、電気機械式計算機が登場しました。これらは電力を使用して動作し、機械的な部品（リレーや電子真空管など）を使って計算を行いました。例としては、1936年に設計されたハワード・エイケンの「ハーバード・マークI」があります。</p>
+<p><strong>4. 電子式計算機：</strong></p>
+<p>1940年代には、完全に電子式の計算機が開発されました。これらの計算機は、電子真空管を使用してデータを処理しました。最初の全電子式計算機は、1946年に完成したジョン・プレスパー・エッカートとジョン・モーリー・モーリーによって設計された「ENIAC（Electronic Numerical Integrator and Computer）」でした。</p>
+<p>これらの発展は、今日のデジタルコンピュータの基礎を築いた。それらはトランジスタ、集積回路、そして最終的にはマイクロプロセッサへと進化し、我々が今日使用しているパーソナルコンピュータ、スマートフォン、そして他の多くのデジタルデバイスを可能にしました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+Leibnizと二進数について
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ゴットフリート・ヴィルヘルム・ライプニッツは、17世紀のドイツの哲学者であり数学者で、微分積分学の共同創設者として広く認識されています。しかし、彼の数学に対する貢献はそれだけにとどまりません。彼は二進数、つまり0と1だけを用いる数の表記法についての初期の研究を行い、その重要性を認識しました。</p>
+<p>ライプニッツは1703年に『二進数に関する説明』(Explication de l’Arithmétique Binaire)を著し、1と0だけを用いて任意の数を表すことができる二進法を紹介しました。彼は、このシステムが論理と数学を結びつけ、より高度な計算を行うための新たな方法を提供することを認識しました。</p>
+<p>ライプニッツの二進数概念は、その後の電子計算機の開発において中心的な役割を果たします。なぜなら、電子計算機は内部的に二進数（ビット）を使用して情報を表現するからです。したがって、ライプニッツのこの発見は、現代のコンピュータ科学の基礎を築く一助となりました。</p>
+<p>彼の二進数の考え方は、哲学的な観点からも重要でした。彼は、このシンプルな数学的表現が理論的な真実への理解を深める手段であると信じていました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+Leibnizが二進数に着目したのは何故ですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ゴットフリート・ヴィルヘルム・ライプニッツが二進数に興味を持った理由は、その独特な哲学的視点と、真理と論理の理解を深めるための数学的手段として二進数の可能性を見出したからです。</p>
+<ol class="arabic simple">
+<li><p><strong>哲学的視点：</strong> ライプニッツは、哲学者であり論理学者でもありました。彼は自然、神、宇宙の理論的な理解を追求しており、その視点から二進数を考察しました。彼は “0” と “1” を「無」と「神」または「創造」の象徴とみなし、これが全ての数と情報を生成する基礎であるとの見解を示しました。</p></li>
+<li><p><strong>論理と数学の結びつき：</strong> ライプニッツは、二進数が論理と数学を結びつける強力な道具であると認識していました。一連の複雑な思考を表現するための明確で単純な方法として、二進数を見ました。また、二進数は、彼が追求していたユニバーサルな「特性言語」または「記号計算」の開発に対して関連性があると考えました。</p></li>
+<li><p><strong>計算の簡素化：</strong> ライプニッツはまた、二進数が計算を大幅に簡素化する可能性に気付きました。二進数は加算、減算、乗算、除算などの基本的な算術操作を効率的に行うための手段を提供します。</p></li>
+</ol>
+<p>これらの観点から、ライプニッツは二進数に深い興味を持ち、その可能性を追求しました。この彼の見識は、後の世紀で電子計算機の開発に一役買うことになりました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+二進数の乗算で計算が簡素化される理由を語ってください
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>二進数の乗算が簡素化される理由は、二進数の性質と乗算操作の性質によるものです。二進数は0と1のみで構成されているため、乗算は非常に単純な操作になります。</p>
+<p>具体的には、二進数の乗算では以下のルールが適用されます：</p>
+<ul class="simple">
+<li><p>0乗すると0になる（$0 \times 0 = 0$、$0 \times 1 = 0$）</p></li>
+<li><p>1乗すると元の数がそのまま得られる（$1 \times 1 = 1$）</p></li>
+</ul>
+<p>これらのルールに基づけば、二進数の乗算は基本的には0と1の置き換えと加算に過ぎません。したがって、二進数の乗算は、10進数の乗算よりもかなり単純化されます。</p>
+<p>例えば、二進数 $1011$（十進数で11）と $1101$（十進数で13）の乗算を考えてみましょう：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="mi">1011</span>   <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="mi">11</span> <span class="ow">in</span> <span class="n">decimal</span><span class="p">)</span>
+<span class="n">x</span> <span class="mi">1101</span>   <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="mi">13</span> <span class="ow">in</span> <span class="n">decimal</span><span class="p">)</span>
+<span class="o">------</span>
+  <span class="mi">1011</span>   <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="mi">1101</span> <span class="n">times</span> <span class="mi">1</span><span class="p">)</span>
+ <span class="mi">0000</span>    <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="mi">1101</span> <span class="n">times</span> <span class="mi">0</span><span class="p">,</span> <span class="n">shifted</span> <span class="n">one</span> <span class="n">position</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span><span class="p">)</span>
+<span class="mi">1011</span>     <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="mi">1101</span> <span class="n">times</span> <span class="mi">1</span><span class="p">,</span> <span class="n">shifted</span> <span class="n">two</span> <span class="n">positions</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span><span class="p">)</span>
+<span class="mi">1011</span>     <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="mi">1101</span> <span class="n">times</span> <span class="mi">1</span><span class="p">,</span> <span class="n">shifted</span> <span class="n">three</span> <span class="n">positions</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span><span class="p">)</span>
+<span class="o">------</span>
+<span class="mi">10011111</span> <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="mi">143</span> <span class="ow">in</span> <span class="n">decimal</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このように、二進数の乗算は位のシフトと加算の操作だけで実行でき、その計算過程は直観的で簡単です。これが、ライプニッツが二進数の計算が簡素化されると考えた理由の一部です。</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="09_assignment.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">課題: 相加平均と相乗平均の関係を表す不等式</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="11_ybc7289.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">YBC 7289</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">第十一週の講義予定</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
