@@ -1,0 +1,1253 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Napier’s bone: 九九のある世界 &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/11/10_napier';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/11/10_napier.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Napier’s Logarithms: 九九のない世界" href="11_napier.html" />
+    <link rel="prev" title="第十一週: 九九のない世界" href="01_intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/26</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_past_assignment.html">Past assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Napier's bone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_napier.html">Napier's Logarithm (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_napier.html">Napiers Logarithm (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20_leibniz.html">Leibniz's binary system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_binary_arithmatics.html">Leibniz's binary arithmatics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="30_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/19</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../10/08_dncl_answer.html">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/09_assignment.html">Past assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/10_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/11_ybc7289.html">YBC 7289 (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/12_ybc7289.html">YBC 7289 (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/13_ybc7289.html">YBC 7289 (3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/14_ybc7289.html">YBC 7289 (4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/15_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../09/02_intro.html">Think like a programmer (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/03_intro.html">Think like a programmer (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/04_dncl.html">Pseudo language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/05_dncl_2008.html">Past exam at 2008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/06_dncl_2008_template.html">Past exam at 2008 (template)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/08_dncl_answer.html">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/09_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/05</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../08/00_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/04_timbre.html">Timbre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/05_overtone.html">Overtone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/06_overtone.html">Synthesize (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/07_vibrato.html">Synthesize (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/08_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/29</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/03_combination.html">Combinations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/04_composite.html">Composite Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/05_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/22</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../06/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/02_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/03_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/04_babylonian_numerals.html">Babylonian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/05_plimpton322.html">Plimpton 322</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/06_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05/00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/11/10_napier.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/11/10_napier.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Napier’s bone: 九九のある世界</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Napier’s boneを描画する</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#napier-s-bone-425-times-6">Napier’s bone を並べて<span class="math notranslate nohighlight">\(425 \times 6\)</span> を求める</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Napier’s boneによる平開法</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#napier-s-bone2">Napier’s boneを並べて<span class="math notranslate nohighlight">\(2\)</span>の平方根を求める</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="napier-s-bone">
+<h1>Napier’s bone: 九九のある世界<a class="headerlink" href="#napier-s-bone" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Multiplication_table">Multiplication table - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Napier%27s_bones">Napier’s bones - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://ja.wikipedia.org/wiki/%E4%B9%9D%E4%B9%9D">九九 - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Japanese_wordplay">Japanese wordplay - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<section id="id1">
+<h2>Napier’s boneを描画する<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">class</span> <span class="nc">napier_bone</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">place</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mf">1.1</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">.4</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="mf">.7</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">sqrt</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">.4</span><span class="p">,</span> <span class="mf">.7</span><span class="p">,</span> <span class="s2">&quot;√&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">.4</span><span class="p">,</span> <span class="mf">.7</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">((</span><span class="n">x</span><span class="p">,</span>  <span class="n">y</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span>  <span class="p">),(</span><span class="n">x</span><span class="p">,</span>  <span class="n">y</span><span class="p">)),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">)),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">sqrt</span><span class="p">:</span>
+                    <span class="n">d</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:02d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">d</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:02d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
+                <span class="c1">#if d[0] != &#39;0&#39;:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">.1</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="mf">.5</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">.6</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="mf">.8</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+                
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="s1">&#39;datalim&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="c1">#nb.place(True, sqrt=True)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/c626300910f632cac51a8bbce8898f2fa15cefe13268596036ba8c2d3fc7f006.png" src="../../_images/c626300910f632cac51a8bbce8898f2fa15cefe13268596036ba8c2d3fc7f006.png" />
+</div>
+</div>
+<section id="napier-s-bone-425-times-6">
+<h3>Napier’s bone を並べて<span class="math notranslate nohighlight">\(425 \times 6\)</span> を求める<a class="headerlink" href="#napier-s-bone-425-times-6" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/2509ba709283c8b84b8fcf021f72fa53a9acc10ce03c09ba401ff4c5061448a3.png" src="../../_images/2509ba709283c8b84b8fcf021f72fa53a9acc10ce03c09ba401ff4c5061448a3.png" />
+</div>
+</div>
+<p>6行目に注目して、<span class="math notranslate nohighlight">\(2 \times 1000 + (4+1) \times 100 + (2+3) \times 10 + 0\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">425</span><span class="o">*</span><span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2550
+</pre></div>
+</div>
+</div>
+</div>
+<pre>
+ 425
+<u>×  6</u>
+  30
+ 12
+<u>24  </u>
+2550
+</pre><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>以下、補足です</p>
+</div>
+</section>
+</section>
+<section id="id2">
+<h2>Napier’s boneによる平開法<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>“Decimal (base 10)”</p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Decimal_(base_10)">Methods of computing square roots - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># [Methods of computing square roots - Wikipedia]</span>
+<span class="c1"># (https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Decimal_(base_10))</span>
+
+<span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="k">def</span> <span class="nf">square_root_by_long_division</span><span class="p">(</span><span class="n">cif</span><span class="p">):</span>
+    <span class="c1"># split by two digits, each side of period (integer.fractions)</span>
+    <span class="n">ci</span><span class="p">,</span> <span class="n">cf</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.10f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cif</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="n">ci</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ci</span><span class="p">)</span><span class="o">%</span><span class="k">2</span>) + ci
+    <span class="n">cf</span> <span class="o">=</span> <span class="n">cf</span> <span class="o">+</span> <span class="s1">&#39;0&#39;</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cf</span><span class="p">)</span><span class="o">%</span><span class="k">2</span>)
+
+    <span class="n">cl</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="o">*</span><span class="p">[[</span><span class="nb">int</span><span class="p">(</span><span class="n">cx</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">cx</span><span class="p">),</span><span class="mi">2</span><span class="p">)]</span>
+                           <span class="k">for</span> <span class="n">cx</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ci</span><span class="p">,</span> <span class="n">cf</span><span class="p">)])</span>
+
+    <span class="k">def</span> <span class="nf">cy</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">px</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="n">px</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="n">px</span><span class="o">**</span><span class="mi">2</span>
+    
+    <span class="n">p</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cl</span><span class="p">:</span>
+
+        <span class="n">c</span> <span class="o">+=</span> <span class="n">r</span><span class="o">*</span><span class="mi">100</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;place </span><span class="si">{:d}</span><span class="s2"> bone(s), to find largest less than current remainder: </span><span class="si">{:d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
+        <span class="c1"># 2*p is the number that selects corresponding bones</span>
+        
+        <span class="n">px</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">cy</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">px</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">c</span><span class="p">:</span>
+            <span class="n">px</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  from the </span><span class="si">{:d}</span><span class="s2">-th row, </span><span class="si">{:d}</span><span class="s2"> is found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">cy</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">px</span><span class="p">)))</span>
+        <span class="c1"># px is &#39;quotient&#39; (slected line number of selected bones)</span>
+
+        <span class="n">r</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="n">cy</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">px</span><span class="p">)</span> <span class="c1"># r is &#39;remainder&#39;</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">p</span><span class="o">+</span><span class="n">px</span>       <span class="c1"># p is current value of square root</span>
+    <span class="c1"># print(p, r)</span>
+    <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="n">r</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">square_root_by_long_division</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>place 0 bone(s), to find largest less than current remainder: 2
+  from the 1-th row, 1 is found
+place 2 bone(s), to find largest less than current remainder: 100
+  from the 4-th row, 96 is found
+place 28 bone(s), to find largest less than current remainder: 400
+  from the 1-th row, 281 is found
+place 282 bone(s), to find largest less than current remainder: 11900
+  from the 4-th row, 11296 is found
+place 2828 bone(s), to find largest less than current remainder: 60400
+  from the 2-th row, 56564 is found
+place 28284 bone(s), to find largest less than current remainder: 383600
+  from the 1-th row, 282841 is found
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(141421, 100759)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="napier-s-bone2">
+<h3>Napier’s boneを並べて<span class="math notranslate nohighlight">\(2\)</span>の平方根を求める<a class="headerlink" href="#napier-s-bone2" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">square_root_by_long_division</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>place 0 bone(s), to find largest less than current remainder: 2
+from the 1-th row, 1 is found
+place 2 bone(s), to find largest less than current remainder: 100
+from the 4-th row, 96 is found
+place 28 bone(s), to find largest less than current remainder: 400
+from the 1-th row, 281 is found
+place 282 bone(s), to find largest less than current remainder: 11900
+from the 4-th row, 11296 is found
+place 2828 bone(s), to find largest less than current remainder: 60400
+from the 2-th row, 56564 is found
+place 28284 bone(s), to find largest less than current remainder: 383600
+from the 1-th row, 282841 is found
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(141421, 100759)
+</pre></div>
+</div>
+</div>
+</div>
+<pre>
+ <u>2 8 2 8 4 2</u>
+)2            141421
+ <u>1</u>
+ 100
+ <u> 96</u>
+   400
+   <u>281</u>
+   11900
+   <u>11296</u>
+     60400
+     <u>56564</u>
+      383600
+      282841
+</pre><ul class="simple">
+<li><p>place 0 bone(s), to find largest less than current remainder: 2</p>
+<ul>
+<li><p>from the 1-th row, 1 is found</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/1df486150949d1628292c6ca5fe8d3bfaeaf9357f1ce379480f5ba71971492f2.png" src="../../_images/1df486150949d1628292c6ca5fe8d3bfaeaf9357f1ce379480f5ba71971492f2.png" />
+</div>
+</div>
+<pre>
+ <u>  2</u>
+)2    1
+ <u>1</u>
+ 100
+</pre><ul class="simple">
+<li><p>place 2 bone(s), to find largest less than current remainder: 100</p>
+<ul>
+<li><p>from the 4-th row, 96 is found</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/d7f2628fc62aa13c2be2ca72b56c986c01e335c0c83513251473285175e54a02.png" src="../../_images/d7f2628fc62aa13c2be2ca72b56c986c01e335c0c83513251473285175e54a02.png" />
+</div>
+</div>
+<pre>
+ <u>  2 8</u>
+)2      14
+ <u>1  </u>
+ 100
+ <u> 96  </u>
+   400
+</pre><ul class="simple">
+<li><p>place 28 bone(s), to find largest less than current remainder: 400</p>
+<ul>
+<li><p>from the 1-th row, 281 is found</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/dfb143da2081022d0f3e08f2e1c1a2f5baf2abac36b6da5f1bc1134fb708cdf1.png" src="../../_images/dfb143da2081022d0f3e08f2e1c1a2f5baf2abac36b6da5f1bc1134fb708cdf1.png" />
+</div>
+</div>
+<pre>
+ <u>  2 8 2</u>
+)2        141
+ <u>1  </u>
+ 100
+ <u> 96  </u>
+   400
+   <u>281  </u>
+   11900
+</pre><ul class="simple">
+<li><p>place 282 bone(s), to find largest less than current remainder: 11900</p>
+<ul>
+<li><p>from the 4-th row, 11296 is found</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/095d8d687cb9fc1e7aa823b84a21c211854238b13c8d15915bf5c78f0098e7ae.png" src="../../_images/095d8d687cb9fc1e7aa823b84a21c211854238b13c8d15915bf5c78f0098e7ae.png" />
+</div>
+</div>
+<pre>
+ <u>  2 8 2 8</u>
+)2          1414
+ <u>1  </u>
+ 100
+ <u> 96  </u>
+   400
+   <u>281  </u>
+   11900
+   <u>11296  </u>
+     60400
+</pre><ul class="simple">
+<li><p>place 2828 bone(s), to find largest less than current remainder: 60400</p>
+<ul>
+<li><p>from the 2-th row, 56564 is found</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/1335e39e8c5f9bf243d458187c6d437a4a318fc49e3c32abf1de5e4ad3e69f25.png" src="../../_images/1335e39e8c5f9bf243d458187c6d437a4a318fc49e3c32abf1de5e4ad3e69f25.png" />
+</div>
+</div>
+<pre>
+ <u>  2 8 2 8 4</u>
+)2            14142
+ <u>1  </u>
+ 100
+ <u> 96  </u>
+   400
+   <u>281  </u>
+   11900
+   <u>11296  </u>
+     60400
+     <u>56564  </u>
+      383600
+</pre><ul class="simple">
+<li><p>place 28284 bone(s), to find largest less than current remainder: 383600</p>
+<ul>
+<li><p>from the 1-th row, 282841 is found</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/dc4308f230390321e03a7f6f6a67da2eb46d8d06a2ef1697c59e674ee044ff36.png" src="../../_images/dc4308f230390321e03a7f6f6a67da2eb46d8d06a2ef1697c59e674ee044ff36.png" />
+</div>
+</div>
+<pre>
+ <u>  2 8 2 8 4</u>
+)2            141421
+ <u>1  </u>
+ 100
+ <u> 96  </u>
+   400
+   <u>281  </u>
+   11900
+   <u>11296  </u>
+     60400
+     <u>56564  </u>
+      383600
+      282941
+</pre><ul class="simple">
+<li><p>Extracting square roots</p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Napier%27s_bones#Extracting_square_roots">Napier’s bones - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(46,785,399\)</span> の平方根を求める</p>
+<p>小数点を起点に二桁に分割する: <span class="math notranslate nohighlight">\(46\)</span> <span class="math notranslate nohighlight">\(78\)</span> <span class="math notranslate nohighlight">\(53\)</span> <span class="math notranslate nohighlight">\(99\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">square_root_by_long_division</span><span class="p">(</span><span class="mi">46785399</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>place 0 bone(s), to find largest less than current remainder: 46
+from the 6-th row, 36 is found
+place 12 bone(s), to find largest less than current remainder: 1078
+from the 8-th row, 1024 is found
+place 136 bone(s), to find largest less than current remainder: 5453
+from the 3-th row, 4089 is found
+place 1366 bone(s), to find largest less than current remainder: 136499
+from the 9-th row, 123021 is found
+place 13678 bone(s), to find largest less than current remainder: 1347800
+from the 9-th row, 1231101 is found
+place 136798 bone(s), to find largest less than current remainder: 11669900
+from the 8-th row, 10943904 is found
+place 1367996 bone(s), to find largest less than current remainder: 72599600
+from the 5-th row, 68399825 is found
+place 13679970 bone(s), to find largest less than current remainder: 419977500
+from the 3-th row, 410399109 is found
+place 136799706 bone(s), to find largest less than current remainder: 957839100
+from the 0-th row, 0 is found
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(683998530, 957839100)
+</pre></div>
+</div>
+</div>
+</div>
+<p>自乗が <span class="math notranslate nohighlight">\(46\)</span> を越えない最大の数を探す: <span class="math notranslate nohighlight">\(6\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/1df486150949d1628292c6ca5fe8d3bfaeaf9357f1ce379480f5ba71971492f2.png" src="../../_images/1df486150949d1628292c6ca5fe8d3bfaeaf9357f1ce379480f5ba71971492f2.png" />
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(6 \times 2 = 12\)</span> のボーンをセットし、前段の余り <span class="math notranslate nohighlight">\(1078\)</span> よりも小さい行を探すと 8行目が選択肢となる: <span class="math notranslate nohighlight">\((8+1) \times 100 + (6+6) \times 10 + 4 = 1024\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/2815e47bd83118f71a946f8ce3484ceda0c8034a7f24aca51772e79643e70306.png" src="../../_images/2815e47bd83118f71a946f8ce3484ceda0c8034a7f24aca51772e79643e70306.png" />
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(68 \times 2 = 136\)</span> のボーンをセットし、前段の余り <span class="math notranslate nohighlight">\(5453\)</span> よりも小さい行を探すと 3 行目が選択肢となる: <span class="math notranslate nohighlight">\((3+0) \times 1000 + (9+1) \times 100 + (8+0) \times 10 + 9 = 4089\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/7b340139dd31fd93f8547fdeeff27c2750513c245190bedd8dac4bdef2d5e9e4.png" src="../../_images/7b340139dd31fd93f8547fdeeff27c2750513c245190bedd8dac4bdef2d5e9e4.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/1eb9265c1e663ea976b29ea253178c44e9c681b4e2640371d028abde0619886c.png" src="../../_images/1eb9265c1e663ea976b29ea253178c44e9c681b4e2640371d028abde0619886c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/7cb8aaea08dfe23e284c9146639ebd941d456ca1b71d2d59cc91293bca963015.png" src="../../_images/7cb8aaea08dfe23e284c9146639ebd941d456ca1b71d2d59cc91293bca963015.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">napier_bone</span><span class="p">()</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sqrt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/a8f2dd73680f7f10c12daf8377d2b35ed5d10806ef684d61a081c5d283d8fb49.png" src="../../_images/a8f2dd73680f7f10c12daf8377d2b35ed5d10806ef684d61a081c5d283d8fb49.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">6839.98</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>46785326.40039999
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/11"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">第十一週: 九九のない世界</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="11_napier.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Napier’s Logarithms: 九九のない世界</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Napier’s boneを描画する</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#napier-s-bone-425-times-6">Napier’s bone を並べて<span class="math notranslate nohighlight">\(425 \times 6\)</span> を求める</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Napier’s boneによる平開法</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#napier-s-bone2">Napier’s boneを並べて<span class="math notranslate nohighlight">\(2\)</span>の平方根を求める</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

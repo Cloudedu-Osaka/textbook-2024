@@ -1,0 +1,931 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>第十一週: 九九のない世界 &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/11/01_intro';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/11/01_intro.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Napier’s bone: 九九のある世界" href="10_napier.html" />
+    <link rel="prev" title="課題: EDSACのプログラム技法" href="00_past_assignment.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/26</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_past_assignment.html">Past assignment</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_napier.html">Napier's bone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_napier.html">Napier's Logarithm (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_napier.html">Napiers Logarithm (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20_leibniz.html">Leibniz's binary system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_binary_arithmatics.html">Leibniz's binary arithmatics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="30_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/19</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../10/08_dncl_answer.html">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/09_assignment.html">Past assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/10_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/11_ybc7289.html">YBC 7289 (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/12_ybc7289.html">YBC 7289 (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/13_ybc7289.html">YBC 7289 (3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/14_ybc7289.html">YBC 7289 (4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/15_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../09/02_intro.html">Think like a programmer (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/03_intro.html">Think like a programmer (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/04_dncl.html">Pseudo language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/05_dncl_2008.html">Past exam at 2008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/06_dncl_2008_template.html">Past exam at 2008 (template)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/08_dncl_answer.html">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/09_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/05</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../08/00_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/04_timbre.html">Timbre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/05_overtone.html">Overtone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/06_overtone.html">Synthesize (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/07_vibrato.html">Synthesize (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/08_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/29</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/03_combination.html">Combinations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/04_composite.html">Composite Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/05_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/22</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../06/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/02_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/03_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/04_babylonian_numerals.html">Babylonian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/05_plimpton322.html">Plimpton 322</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/06_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05/00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/11/01_intro.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/11/01_intro.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>第十一週: 九九のない世界</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">機械式計算機から電子式計算機への道のり</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ルネッサンス、科学革命</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>第十一週: 九九のない世界<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>機械式計算機から電子式計算機への道のり<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+機械式計算機から電子式計算機への道のり
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>計算機の歴史は非常に興味深いもので、初期の機械式計算機から現在の電子式計算機への進化は、科学、工学、技術の著しい進歩を示しています。以下にその道のりを簡単に説明します。</p>
+<ol class="arabic simple">
+<li><p><strong>機械式計算機の時代:</strong> 最初の計算機は完全に手動で動作し、ギアとレバーの複雑な配列によって動かされました。例えば、17世紀の数学者ブレーズ・パスカルが作ったパスカリンや、19世紀の数学者チャールズ・バベッジが設計した解析機はその初期の例です。これらの機械は基本的な算術を自動化することができましたが、その機能は非常に限定的でした。</p></li>
+<li><p><strong>電気機械式計算機の時代:</strong> 20世紀に入ると、電気機械式計算機が開発されました。これらの機械は電気を使用して動作し、より高速で効率的な計算を可能にしました。一例としては、1930年代にIBMが製造したパンチカードシステムがあります。これらのシステムは、電気パルスを使用してカードの穴を読み取り、データを処理しました。</p></li>
+<li><p><strong>電子式計算機の時代:</strong> 第二次世界大戦中、科学者たちはより高度な計算能力を必要としました。これは、複雑な軍事計算と暗号解読のためでした。その結果、世界初の真の電子式計算機であるENIAC（Electronic Numerical Integrator and Computer）が1945年に誕生しました。ENIACは真空管を使用し、数千の電子スイッチを高速でオンオフすることで計算を行いました。</p></li>
+<li><p><strong>トランジスタと集積回路の導入:</strong> 1950年代には、真空管を置き換える新たな技術が開発されました：トランジスタ。トランジスタは真空管よりも小さく、より信頼性が高く、より少ない電力を消費しました。その後、1960年代には集積回路（IC）が開発され、さらに多くのトランジスタを一つの小さなチップに納めることができるようになりました。</p></li>
+<li><p><strong>マイクロプロセッサの時代:</strong> 1970年代には、マイクロプロセッサが開発され、計算機の全ての主要なコンポーネントが一つのチップに統合されました。これにより、パーソナルコンピューターの時代が始まり、一般の人々が計算機を手に入れることが可能となりました。</p></li>
+</ol>
+<p>以上が、大まかな機械式計算機から電子式計算機への道のりです。今日では、私たちの日常生活はこの進化の産物であるスマートフォン、ラップトップ、デスクトップコンピュータに大きく依存しています。</p>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/EDSAC">EDSAC - Wikipedia</a></p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+電子式計算機におけるEDSACの位置づけは？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>EDSAC（Electronic Delay Storage Automatic Calculator）は、計算機の歴史において非常に重要な役割を果たしました。EDSACは1949年にイギリスのケンブリッジ大学で設計および構築され、その後のコンピュータ設計に大きな影響を与えました。</p>
+<p>以下に、EDSACの主な特徴とその重要性について説明します。</p>
+<ol class="arabic simple">
+<li><p><strong>最初の完全電子式ストアドプログラム式コンピュータ:</strong> EDSACは、ストアドプログラム方式を採用した最初の完全電子式のコンピュータとして広く認識されています。これは、プログラムの指示が主記憶装置に保存され、必要に応じて読み出されるという方式で、現在のコンピュータの基本的な動作原理を形成しています。</p></li>
+<li><p><strong>ビットとバイトの初期使用:</strong> EDSACは、情報を保存し操作するための基本単位としてビットとバイトを使用しました。これも現代のコンピュータ科学の基本的な概念です。</p></li>
+<li><p><strong>高水準プログラミング言語の先駆け:</strong> EDSACは初期のアセンブラ（低水準プログラム言語）を使用してプログラムされ、数値計算と科学計算を実行するためのライブラリが開発されました。これは高水準プログラミング言語の開発への道を開きました。</p></li>
+<li><p><strong>商用コンピュータの先駆け:</strong> EDSACの設計は、初の商用コンピュータであるLEO（Lyons Electronic Office）の基礎となりました。これは、コンピュータが科学的な計算だけでなく、ビジネスと行政のタスクの自動化にも使用できることを示しました。</p></li>
+</ol>
+<p>以上のように、EDSACはその革新的な設計と概念により、電子式計算機の歴史において重要な地位を占めています。それは現代のコンピュータの設計と機能に対する基礎的な影響を与え、科学的な計算だけでなく商用の応用におけるコンピュータの可能性を示しました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+EDSACにおける平開法のアルゴリズムについて
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>EDSACは、その設計が現代のコンピューターアーキテクチャに多大な影響を与えただけでなく、初期のプログラミングテクニックとアルゴリズムの発展にも寄与しました。その中には、平開法を使用した平方根の計算のアルゴリズムも含まれています。</p>
+<p><strong>平開法</strong>は、ある数の平方根を求めるための手法で、手動計算でもコンピューターでも使用できます。このアルゴリズムは数値解析の基本的な手法であり、古代に遡る歴史があります。</p>
+<p>EDSACにおける平開法の具体的な実装については、具体的なコードや詳細な手順が公に利用可能であるわけではないため、具体的な指示を提供することはできません。しかし、基本的なアイデアは次のとおりです。</p>
+<ol class="arabic simple">
+<li><p>初期の推測値（通常は与えられた数自体またはその半分）から始めます。</p></li>
+<li><p>その推測値を使って平方根を計算し、その結果が与えられた数とどれほど近いかを評価します。</p></li>
+<li><p>結果が十分に近ければ、その推測値を最終的な答えとして受け入れます。そうでなければ、推測値を調整し、再度計算します。</p></li>
+</ol>
+<p>この手法は反復法とも呼ばれ、推測値が真の平方根に十分に近くなるまで繰り返されます。この種のアルゴリズムは、初期のコンピューターシステム、特に浮動小数点演算能力が限定的だったシステムで、非常に有用でした。</p>
+<p>現代のコンピューターでは、より高度なアルゴリズムが使用されることが多く、それらはハードウェアレベルで直接支援されている場合もあります。しかし、平開法のような基本的なアルゴリズムは、コンピューター科学の基礎であり、私たちがどのように複雑な数学的演算を行うことができるかを理解するための鍵となります。</p>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p>(1550—1617) <a class="reference external" href="https://en.wikipedia.org/wiki/John_Napier">John Napier - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Logarithm">Logarithm - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Napier%27s_bones">Napier’s bones - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Decimal_separator">Decimal separator - Wikipedia</a></p></li>
+</ul>
+</li>
+<li><p>(1646—1716) <a class="reference external" href="https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz">Gottfried Wilhelm Leibniz - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Leibniz_wheel">Leibniz wheel - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Binary_number">Binary number - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+機械式計算機におけるNapierとLeibnizの位置づけ
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ジョン・ネイピア（John Napier）とゴットフリート・ライプニッツ（Gottfried Leibniz）は、計算機の歴史において非常に重要な位置を占めています。彼らはそれぞれ異なる時代に機械式計算機の開発に大きな影響を与えました。</p>
+<p><strong>ジョン・ネイピア:</strong> ネイピア（1550-1617）はスコットランドの数学者で、彼の最も重要な貢献は対数の発明です。対数は乗算を加算に、除算を減算に変換することで、計算を大幅に簡単にしました。さらに、ネイピアは「ネイピアの骨」（またはネイピアの棒）と呼ばれる初期の計算機を発明しました。これは一連の棒または矩形の板で、それぞれが乗算表を表しており、これを使用することで乗算、除算、平方根の計算が可能になりました。これらの発明は、後の計算機開発に大きな影響を与え、特に対数は計算機科学における多くのアルゴリズムとデータ構造において中心的な役割を果たしています。</p>
+<p><strong>ゴットフリート・ライプニッツ:</strong> ライプニッツ（1646-1716）はドイツの数学者で哲学者であり、微分積分学を独立に発明したことで最もよく知られています。しかし、彼はまた、機械式計算機の分野でも重要な役割を果たしました。ライプニッツは「ライプニッツの計算機」（またはステップド・レクナー）を発明しました。これは、ギアの複雑な配置を使用して加算、減算、乗算、除算を自動化することができる機械でした。この計算機は、機械式計算機の可能性を示す重要な一歩であり、後の計算機設計の基礎を築きました。</p>
+<p>したがって、ネイピアとライプニッツは、それぞれが異なる方法で初期の機械式計算機の発展に対して重要な貢献をしました。ネイピアの対数とネイピアの骨は計算を簡素化し、ライプニッツの計算機は機械式計算機の可能性を広げました。これらの貢献は、計算機科学と計算機工学の発展において、基礎的なものでした。</p>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>ルネッサンス、科学革命<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Renaissance">Renaissance - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Science_in_the_Renaissance">Science in the Renaissance - Wikipedia</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Age_of_Enlightenment">Age of Enlightenment - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Science_in_the_Age_of_Enlightenment">Science in the Age of Enlightenment - Wikipedia</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Scientific_Revolution">Scientific Revolution - Wikipedia</a></p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+世界三大発明について
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>世界三大発明とは、通常、印刷術、火薬、そして羅針盤を指します。これらはすべて古代中国で発明されました。</p>
+<ol class="arabic simple">
+<li><p><strong>印刷術</strong>: 木版印刷が最初に発明され、その後、活版印刷が開発されました。これにより情報を大量に、効率的に伝えることが可能となり、知識と情報の広がりを助けました。</p></li>
+<li><p><strong>火薬</strong>: 9世紀に中国で発明されました。火薬の発明は戦争の方法を根本的に変え、大砲や銃のような武器の開発を可能にしました。</p></li>
+<li><p><strong>羅針盤</strong>: 羅針盤は方向を特定するための重要なツールで、航海や探検を助けました。羅針盤の発明は、世界の地図の作成と世界の探検に大きな影響を与えました。</p></li>
+</ol>
+<p>これらの発明は、科学、技術、交通、戦争、そして情報伝播の領域で人類の歴史に深く影響を与えました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+NHKの「３ヶ月で学ぶ世界史」というTV番組によれば、それらはすべてモンゴル帝国に関係あるとされています
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>それは非常に興味深い視点です。モンゴル帝国は13世紀から14世紀にかけて存在し、ユーラシア大陸の大部分を支配していました。</p>
+<ol class="arabic simple">
+<li><p><strong>印刷術</strong>: モンゴル帝国の広範な領土と経済的な力は、文化や知識の交換を促進しました。印刷術はこの交換の一部として広がったと考えられています。</p></li>
+<li><p><strong>火薬</strong>: モンゴル帝国は火薬を使用した武器を広く利用しました。彼らの侵略と征服は、火薬技術の広範な拡散に寄与しました。</p></li>
+<li><p><strong>羅針盤</strong>: モンゴル帝国の広大な領土は、異なる地域間の航海と交流を必要としました。羅針盤はそのような航海を可能にし、また、その技術もまたモンゴル帝国を通じて広まった可能性があります。</p></li>
+</ol>
+<p>モンゴル帝国の広範な交流と交易網は、これらの発明がユーラシア全体、そして最終的には世界中に広がるための道を開きました。これらの発明がモンゴル帝国の時代に広がったという視点は、技術と知識の拡散がどのようにして地理的な境界を越えて行われるかを示しています。</p>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Positional_notation">Positional notation - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/0">0 - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Decimal_separator">Decimal separator - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+古代メソポタミアでは60進法による位取り記法が使われていましたが、ゼロと小数点がありませんでした
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>その通りです。古代メソポタミアの数学は、特に我々が今日使用している10進法とは異なる60進法に基づいていました。この体系は、時間の計算（60秒/分、60分/時）や角度の計測（360度）など、現代の多くの計算方法にまだ影響を与えています。</p>
+<p>しかし、古代メソポタミアの数学者たちは、「ゼロ」の概念を持っていませんでした。彼らは空の場所を示すために特定の記号を使うことがありましたが、それは我々が理解する「ゼロ」（つまり、数値としてのゼロ）ではありませんでした。</p>
+<p>また、彼らは小数点の概念も持っていませんでした。しかし、彼らは分数を使用して非整数の値を表現し、それは現代の小数点以下の値を表現する方法に類似しています。</p>
+<p>たとえば、彼らは$1/2$、$1/3$、$1/4$などの分数を表現するための記号を持っていました。これにより、彼らは精密な計算と、現代の小数を用いた計算と同等の結果を得ることができました。</p>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/History_of_the_Hindu%E2%80%93Arabic_numeral_system">History of the Hindu–Arabic numeral system - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Toledo_School_of_Translators">Toledo School of Translators - Wikipedia</a></p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ゼロは、インド数字がイスラムに広まり、アラビア数字としてヨーロッパに伝わりました
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>その通りです。ゼロという概念は、古代インドの数学者によって開発され、そこからアラビアの学者を通じてヨーロッパに伝播されました。</p>
+<p>インドでは5世紀頃にゼロという概念が発展し始め、7世紀頃には完全に認識されるようになりました。ゼロは、数値としての存在（例えば、20と200の違いを表現するため）だけでなく、数学的な計算（例えば、減算や除算）にも重要でした。</p>
+<p>これらの概念は、9世紀から12世紀にかけてのイスラム黄金時代に、アラビアの学者たちによって取り入れられました。彼らはインドの数学を翻訳し、発展させ、イスラム世界全体に広めました。</p>
+<p>中世ヨーロッパにおいて、これらのアラビアの数学的知識は、12世紀のトレドの翻訳学校など、さまざまな経路を通じて伝えられました。これにより、ゼロという概念、そしてアラビア数字（0から9までの数字）は、ヨーロッパの数学と科学に取り入れられるようになりました。</p>
+<p>ゼロの導入は、数学的な計算と思考の方法を大きく変え、科学的な進歩を劇的に加速させました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+イスラムの文献は、レコンキスタと前後して翻訳されました
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>その通りです。レコンキスタ（イスラム統治下のイベリア半島をキリスト教徒が再征服する過程）は8世紀から15世紀にかけて行われました。この期間中、特に12世紀から13世紀にかけて、イスラムの文献の大規模な翻訳が行われました。この翻訳活動は、トレド翻訳学校を中心として行われました。</p>
+<p>トレド翻訳学校では、キリスト教徒、ユダヤ人、そしてイスラム教徒の学者たちが協力して、アラビア語の文献をラテン語や他のヨーロッパの言語に翻訳しました。これらの文献には、哲学、医学、天文学、数学など、様々な学問分野の知識が含まれていました。</p>
+<p>この翻訳活動は、中世ヨーロッパの思想と科学に大きな影響を与えました。特に、アラビア数字とゼロの概念、そしてアルジェブラといった数学的な概念の導入は、ヨーロッパの学問に大きな変革をもたらしました。</p>
+<p>また、これらの翻訳は、クラシックのギリシャやローマの知識をヨーロッパに再導入する重要な手段ともなりました。これは、イスラム学者がこれらの古典を保存し、研究し、翻訳していたためです。そのため、イスラムの翻訳活動は、ルネサンスの到来を促す一因ともなりました。</p>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p>(1550—1617) <a class="reference external" href="https://en.wikipedia.org/wiki/John_Napier">John Napier - Wikipedia</a></p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+小数点を導入したのはネイピアと言われています
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>その通りです。小数点の使用は、スコットランドの数学者ジョン・ネイピア（John Napier）によって広められました。彼は「対数」の概念を初めて紹介した人物でもあります。</p>
+<p>ネイピアは1614年に対数の概念を導入し、これにより複雑な乗算や除算をより簡単な加算や減算に置き換えることができるようになりました。これは、航海や天文学などの分野で大きな影響を及ぼしました。</p>
+<p>また、ネイピアは1617年に彼の作品「Rabdologiae」の中で、小数点を使用する方法を紹介しました。これにより、非整数の数値をより正確に表現し、計算することが可能となりました。</p>
+<p>しかし、小数点の記号そのもの（”.”）は、イングランドの数学者トーマス・ハリオット（Thomas Harriot）が初めて使用したとも言われています。ハリオットは、ネイピアと同じくらいの時期に小数点を使用していました。</p>
+<p>このように、小数点の導入は複数の数学者による独立した発明と発展の結果であり、それぞれが重要な役割を果たしています。</p>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p>(1596—1650) <a class="reference external" href="https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes">René Descartes - Wikipedia</a></p>
+<ul>
+<li><p>(1637) <a class="reference external" href="https://en.wikipedia.org/wiki/La_G%C3%A9om%C3%A9trie">La Géométrie - Wikipedia</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+座標を科学的に導入した人は？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>座標を科学的に導入したのは、フランスの数学者で哲学者でもあるルネ・デカルトです。彼は17世紀に「解析幾何学」を創設しました。</p>
+<p>解析幾何学は、数学（特に代数と微積分）と幾何を統合するための手法を提供します。デカルトは、数値を使用して幾何学的形状を表現するという新しい考え方を導入しました。これにより、数学者は形状と方程式を直接関連付けることができるようになりました。</p>
+<p>デカルト座標系は、2次元または3次元の空間で点を表現するために使用されます。各点は、原点からの距離（x, y,（3次元の場合はz））によって一意に定義されます。デカルトのこのイノベーションは、現代の科学、工学、数学の多くの分野で基本的なツールとなっています。</p>
+<p>そのため、デカルトは、座標の科学的な導入により、数学と物理学の発展に大きな影響を与えたと言えます。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ニュートンやライプニッツの微分の体系化は、座標なしでは有り得なかったと思いませんか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>その通りです。座標の導入は、微分積分学の発展にとって重要なステップでした。特に、デカルトの解析幾何学は、アイザック・ニュートンとゴットフリート・ライプニッツが微分積分学を独立に発展させる際の基礎となりました。</p>
+<p>微分積分学は、関数の変化率や曲線の傾きを調べる数学の一分野です。これらの概念を理解するためには、座標平面上で関数を視覚的に表示することが有用です。デカルト座標系はそれを可能にし、数値と幾何学的直観を結びつけるための枠組みを提供します。</p>
+<p>ニュートンの流体力学や運動の法則、ライプニッツの最小作用原理などの重要な概念は、この座標体系と微分積分学の概念を用いて形式化されました。また、これらの工具は物理学、工学、経済学など、幅広い分野で現在も広く使われています。</p>
+<p>したがって、座標の概念の導入は、微分積分学の体系化とそれが後の科学的進歩に与えた影響にとって、間違いなく不可欠でした。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+これらの業績は、ルネッサンスではなく、科学革命の時代と考えてよいですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>その通りです。ルネサンスと科学革命は異なる時代を示しますが、それらは歴史的な連続性を持っています。</p>
+<p>ルネサンスは14世紀から17世紀初頭にかけての期間を指し、文化、芸術、哲学、そして科学の広範な再生と革新の時代でした。この時代には、古典の再発見や人間中心主義の発展など、多くの重要な変化が生じました。</p>
+<p>一方、科学革命は16世紀後半から17世紀にかけての期間を指し、科学的方法の確立と、物理学、天文学、生物学、医学などの多くの科学分野での大きな進歩が特徴です。この時期には、コペルニクスの地動説、ガリレオ・ガリレイの物理学的発見、そしてニュートンの運動の法則などが提唱されました。</p>
+<p>ルネ・デカルトの解析幾何学（17世紀初頭）と、ニュートンやライプニッツによる微分積分学の発展（17世紀後半）は、明らかに科学革命の時代の成果と言えます。これらの発見は、科学的思考の方法を根本的に変え、科学の進歩を大きく加速させました。</p>
+<p>したがって、これらの業績は、科学革命の時代に位置付けることが最も適切と言えるでしょう。</p>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hexagram_(I_Ching)">Hexagram (I Ching) - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://zh.wikipedia.org/wiki/%E5%85%AD%E5%8D%81%E5%9B%9B%E5%8D%A6">六十四卦 - 维基百科，自由的百科全书</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ちなみに、ライプニッツは中国の六十四卦をどのように入手しましたか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ゴットフリート・ライプニッツは、中国の六十四卦（『易経』の一部）については、ヨーロッパにいながらにして学びました。17世紀のヨーロッパでは、中国の文化と知識に対する関心が高まっていました。</p>
+<p>ライプニッツが中国の六十四卦について学んだ具体的な方法は、イエズス会の宣教師たちの報告を通じてでした。当時のイエズス会は、中国とヨーロッパの間で文化と知識の交流を促進する役割を果たしていました。彼らは中国の文化、哲学、科学などについて詳細な報告をヨーロッパに送り、これらの知識を広めるための重要な媒介となりました。</p>
+<p>ライプニッツは、イエズス会の宣教師からの報告を通じて、中国の六十四卦や『易経』について知り、それらの思想を研究しました。また、中国の二進法の概念についても学びました。ライプニッツは二進法に深い興味を持ち、それが自身の数学と哲学の研究に影響を与えました。</p>
+<p>したがって、ライプニッツが六十四卦を入手した方法は、イエズス会の宣教師たちからの報告とその研究を通じてでした。</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/11"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="00_past_assignment.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">課題: EDSACのプログラム技法</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="10_napier.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Napier’s bone: 九九のある世界</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">機械式計算機から電子式計算機への道のり</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ルネッサンス、科学革命</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
