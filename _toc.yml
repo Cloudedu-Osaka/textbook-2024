@@ -4,6 +4,23 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/07/03
+  numbered: false
+  chapters:
+  - file: chapters/12/00_assignment.ipynb
+    title: Past assignment
+  - file: chapters/12/01_intro.ipynb
+    title: Introduction
+  - file: chapters/12/11_cache.ipynb
+    title: Caching
+  - file: chapters/12/20_anf.ipynb
+    title: Logig synthesis
+  - file: chapters/12/42_ml.ipynb
+    title: Machine learning (1)
+  - file: chapters/12/43_ml.ipynb
+    title: Machine learning (2)
+  - file: chapters/12/50_smt.ipynb
+    title: Assignment
 - caption: 2024/06/26
   numbered: false
   chapters:
