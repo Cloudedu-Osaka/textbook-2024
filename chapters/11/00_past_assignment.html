@@ -64,7 +64,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="第十一週: 九九のない世界" href="01_intro.html" />
-    <link rel="prev" title="プログラミングで遡る科学史" href="../intro.html" />
+    <link rel="prev" title="課題: SMTによる解の探索" href="../12/50_smt.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,7 +171,17 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/26</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/07/03</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../12/00_assignment.html">Past assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/11_cache.html">Caching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/20_anf.html">Logig synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/42_ml.html">Machine learning (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/43_ml.html">Machine learning (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/50_smt.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/26</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Past assignment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_intro.html">Introduction</a></li>
@@ -514,8 +524,8 @@ document.write(`
 </li>
 </ul>
 <p><span class="math notranslate nohighlight">\(f(x) = \frac{1}{x^2} - A\)</span> とする. ニュートン法により</p>
-<div class="amsmath math notranslate nohighlight" id="equation-10f5680d-59cc-4348-9467-51d307b23100">
-<span class="eqno">(1)<a class="headerlink" href="#equation-10f5680d-59cc-4348-9467-51d307b23100" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-bb539bd3-63cc-44b6-b3fc-5fec415cb049">
+<span class="eqno">(1)<a class="headerlink" href="#equation-bb539bd3-63cc-44b6-b3fc-5fec415cb049" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
   x_{n+1} &amp;=&amp; x_{n} - \frac{{x_{n}}^{-2}-A}{-2{x_{n}}^{-3}} \\
           &amp;=&amp; x_{n} + \frac{1}{2} x_{n} \left( 1 - A {x_{n}}^2 \right) \\
           &amp;=&amp; x_{n} - \frac{1}{2} x_{n} c_{n} \\
@@ -525,15 +535,15 @@ document.write(`
 <p>この式を <span class="math notranslate nohighlight">\({x_{n}}^2 = \frac{1}{A} (1+c_{n})\)</span> と変形し,上式の両辺を自乗して代入すると</p>
 <div class="math notranslate nohighlight">
 \[(1+c_{n+1}) = (1+c_{n}) \left( 1-\frac{c_{n}}{2}\right)^{2}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-0b10f0ff-34ec-45d6-870a-a20321b85874">
-<span class="eqno">(2)<a class="headerlink" href="#equation-0b10f0ff-34ec-45d6-870a-a20321b85874" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-91192471-2877-4712-83ce-50c8eb7e15f8">
+<span class="eqno">(2)<a class="headerlink" href="#equation-91192471-2877-4712-83ce-50c8eb7e15f8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 c_{n+1} &amp;=&amp; (1+c_{n})(1-c_{n}+\frac{{c_{n}}^2}{4}) - 1 \\
         &amp;=&amp; \frac{1}{4}{c_{n}}^2 \left( c_{n} - 3 \right)
 \end{eqnarray}\]</div>
 <p>この二重漸化式は, 除算を行う必要がないため (~~<span class="math notranslate nohighlight">\(1/2\)</span> や <span class="math notranslate nohighlight">\(1/4\)</span>は有限小数の乗算~~ビットシフト演算), 高精度で高速な演算を期待できる.</p>
 <p>この式は, 次のように一般化できる:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-422f88a5-e16d-436e-b8c3-72356868fcc4">
-<span class="eqno">(3)<a class="headerlink" href="#equation-422f88a5-e16d-436e-b8c3-72356868fcc4" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-dfe00e59-9f4d-45c4-8a07-4f5acb369a49">
+<span class="eqno">(3)<a class="headerlink" href="#equation-dfe00e59-9f4d-45c4-8a07-4f5acb369a49" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
     x_{n+1} &amp;=&amp; x_{n} \left( 1 - \frac{c_{n}}{n}\right) \\
 1 + c_{n+1} &amp;=&amp; (1 + c_{n})\left( 1 - \frac{c_{n}}{n} \right)^{n}
 \end{eqnarray}\]</div>
@@ -790,12 +800,12 @@ EDSACは、$2$と$4$の除算をビットシフト演算で行っていました
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../intro.html"
+       href="../12/50_smt.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">プログラミングで遡る科学史</p>
+        <p class="prev-next-title">課題: SMTによる解の探索</p>
       </div>
     </a>
     <a class="right-next"
