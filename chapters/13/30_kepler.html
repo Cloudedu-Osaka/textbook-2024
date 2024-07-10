@@ -1,0 +1,823 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>禁書とケプラー &#8212; プログラミングで遡る科学史</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/13/30_kepler';</script>
+    <link rel="canonical" href="https://cloudedu-osaka.github.io/textbook-2024/chapters/13/30_kepler.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ケプラーの第一法則" href="40_kepler_1.html" />
+    <link rel="prev" title="ティコの天体観測" href="20_tycho.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/vioras-logo.png" class="logo__image only-light" alt="プログラミングで遡る科学史 - Home"/>
+    <script>document.write(`<img src="../../_static/vioras-logo.png" class="logo__image only-dark" alt="プログラミングで遡る科学史 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/07/10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10_copernicus.html">Nicolaus Copernicus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20_tycho.html">Tycho Brahe</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Johannes Kepler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="40_kepler_1.html">Kepler's first law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="50_kepler_2.html">Kepler's second law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="60_cycloid.html">Cycloid by Newtown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="70_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/07/03</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../12/00_assignment.html">Past assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/11_cache.html">Caching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/20_anf.html">Logig synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/42_ml.html">Machine learning (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/43_ml.html">Machine learning (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/50_smt.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/26</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../11/00_past_assignment.html">Past assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/10_napier.html">Napier's bone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/11_napier.html">Napier's Logarithm (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/12_napier.html">Napiers Logarithm (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/20_leibniz.html">Leibniz's binary system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/21_binary_arithmatics.html">Leibniz's binary arithmatics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/30_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/19</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../10/08_dncl_answer.html">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/09_assignment.html">Past assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/10_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/11_ybc7289.html">YBC 7289 (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/12_ybc7289.html">YBC 7289 (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/13_ybc7289.html">YBC 7289 (3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/14_ybc7289.html">YBC 7289 (4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/15_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../09/02_intro.html">Think like a programmer (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/03_intro.html">Think like a programmer (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/04_dncl.html">Pseudo language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/05_dncl_2008.html">Past exam at 2008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/06_dncl_2008_template.html">Past exam at 2008 (template)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/08_dncl_answer.html">Past exam at 2008 (sample answer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/09_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/06/05</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../08/00_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/04_timbre.html">Timbre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/05_overtone.html">Overtone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/06_overtone.html">Synthesize (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/07_vibrato.html">Synthesize (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/08_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/29</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07/01_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/02_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/03_combination.html">Combinations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/04_composite.html">Composite Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/05_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/22</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../06/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/02_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/03_past_assignment_comment.html">Comments to Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/04_babylonian_numerals.html">Babylonian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/05_plimpton322.html">Plimpton 322</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/06_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05/00_past_assignment.html">Past Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/01_intro.html">Numeral Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/02_intro2.html">Roman Numeral (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/22_dict.html">Roman Numeral (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/40_egyptian_numerals.html">Egyptian Numeral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/50_assignment.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/05/08</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/105_past.html">Assignment (Past)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/106.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/102.html">前々回の課題1: Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../03/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/105_past.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02/101.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102_past.html">Past assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/102.html">Gaussによる等差数列の和の公式</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../02/103_past.html">Past assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/103.html">Comments to assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/104.html">How to write your own prompts to ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/105.html">Assignment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/04/10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/001.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/002.html">Request for cooperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/003.html">ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/004.html">Self-introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/005.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01/006.html">Assignment 2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/intro_add_1.html">Request for cooperation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_2.html">Experiment explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_3.html">Informed concent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01/intro_add_4.html">Withdrawal of concent</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://vioras-jh2499.japaneast.cloudapp.azure.com/hub/user-redirect/git-pull?repo=https%3A//github.com/Cloudedu-Osaka/textbook-2024&urlpath=lab/tree/textbook-2024/chapters/13/30_kepler.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/Cloudedu-Osaka/textbook-2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/13/30_kepler.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>禁書とケプラー</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ケプラーの第一法則</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ケプラーの第二法則</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>禁書とケプラー<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion#:~:text=The%20three%20laws%20state%20that,major%20axis%20of%20its%20orbit.">Kepler’s laws of planetary motion - Wikipedia</a></p>
+<ol class="arabic simple">
+<li><p>(1609) 惑星の軌道は、太陽を2つの焦点のうちの1つとする楕円である。</p></li>
+<li><p>(1609) 惑星と太陽を結ぶ線分は、等時間間隔で同じ面積を描いている。</p></li>
+<li><p>(1619) 惑星の公転周期の2乗は、公転軌道の半長軸の長さの3乗に比例する。</p></li>
+</ol>
+</li>
+</ul>
+<p>“Kepler had believed in the Copernican model of the Solar System, which called for circular orbits, but he could not reconcile Brahe’s highly precise observations with a circular fit to Mars’ orbit – Mars coincidentally having the highest eccentricity of all planets except Mercury.”</p>
+<p>「Keplerは、円軌道を仮定したCopernicusの太陽系モデルを信じていたが、Braheの高精度な観測結果は、火星の軌道を円形に適合することができなかった。偶然にも、火星は水星以外の惑星の中で最も離心率が高かったのである。」</p>
+<ul class="simple">
+<li><p>(1473 – 1543) <a class="reference external" href="https://en.wikipedia.org/wiki/Nicolaus_Copernicus">Nicolaus Copernicus - Wikipedia</a></p></li>
+<li><p>(1546 – 1601) <a class="reference external" href="https://en.wikipedia.org/wiki/Tycho_Brahe">Tycho Brahe - Wikipedia</a></p></li>
+<li><p>(1571 – 1630) <a class="reference external" href="https://en.wikipedia.org/wiki/Johannes_Kepler">Johannes Kepler - Wikipedia</a></p></li>
+</ul>
+<section id="id2">
+<h2>ケプラーの第一法則<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>(1609) The orbit of a planet is an ellipse with the Sun at one of the two foci.</p></li>
+</ul>
+<p><img alt="fig-01" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Kepler_laws_diagram.svg" /></p>
+</section>
+<section id="id3">
+<h2>ケプラーの第二法則<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>(1609) A line segment joining a planet and the Sun sweeps out equal areas during equal intervals of time.</p></li>
+</ul>
+<p><img alt="fig-01" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Kepler_laws_diagram.svg" /></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.m.wikipedia.org/wiki/Kepler%27s_equation">Kepler’s equation - Wikipedia</a></p>
+<ul>
+<li><p><a class="reference external" href="https://mathworld.wolfram.com/KeplersEquation.html">Kepler’s Equation – from Wolfram MathWorld</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+  M = E - e \sin E
+\]</div>
+<p>“I am sufficiently satisfied that it (Kepler’s equation) cannot be solved a priori, on account of the different nature of the arc and the sine. But if I am mistaken, and any one shall point out the way to me, he will be in my eyes the great Apollonius.” by Johannes Kepler</p>
+<p>「私は、円弧と正弦の性質の違いから、この方程式が原理的に解けないことに十分満足している。しかし、もし私が間違っていて、誰か私に道を指し示す者がいれば、その人は私の目には偉大なアポロニウスと映るだろう。」</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Transcendental_equation">Transcendental equation - Wikipedia</a> (超越方程式)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ティコ・ブラーエとヨハネス・ケプラー
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ティコ・ブラーエとヨハネス・ケプラーは、両者とも天文学に重大な貢献をした16世紀から17世紀の科学者で、彼らの努力は最終的に科学革命と呼ばれる時代の一部を形成しました。彼らの主要な業績を見てみましょう。</p>
+<p><strong>ティコ・ブラーエ (Tycho Brahe, 1546-1601)</strong></p>
+<p>ティコ・ブラーエは、デンマークの天文学者で、彼の観測データは後のケプラーの法則の証明に不可欠でした。彼はまた、観測機器を改善し、当時としては最も正確な天体観測を行うための新しい手法を開発しました。</p>
+<p>彼のもっとも有名な観測は、1572年に新星（現在は超新星として知られています）を観測し、それが地球の大気内の現象ではなく、地球よりも遥かに遠くにあることを示したことです。これは、当時の天動説（天体は固定され、不変であるという考え）に挑戦するものでした。</p>
+<p><strong>ヨハネス・ケプラー (Johannes Kepler, 1571-1630)</strong></p>
+<p>ヨハネス・ケプラーは、ドイツの数学者で天文学者で、彼が発見したケプラーの法則は、惑星の運動を正確に説明する基礎となりました。これらの法則は以下の通りです：</p>
+<ol class="arabic simple">
+<li><p>惑星は楕円軌道を描いて太陽を公転する（ケプラーの第一法則）。</p></li>
+<li><p>惑星が太陽に最も近い位置にあるときには最も速く、最も遠い位置にあるときには最も遅く移動する（ケプラーの第二法則）。</p></li>
+<li><p>惑星の公転周期の二乗は、その平均太陽距離の三乗に比例する（ケプラーの第三法則）。</p></li>
+</ol>
+<p>ケプラーはまた、光の屈折に関する最初の数学的理論を提唱し、天文学、光学、数学の分野で多大な貢献を果たしました。</p>
+<p>最後に、これら二人の科学者は直接的にも関係しています。ブラーエの死後、ケプラーは彼の広範な観測記録を引き継ぎ、それらを使用して自身の法則を発見しました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ヨハネス・ケプラーとアイザック・ニュートン
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ヨハネス・ケプラーとアイザック・ニュートンは、物理学と天文学の発展に大きな影響を与えた科学者であり、その業績は現代の科学理論の基礎を形成しました。彼らの主要な業績を見てみましょう。</p>
+<p><strong>ヨハネス・ケプラー (Johannes Kepler, 1571-1630)</strong></p>
+<p>ヨハネス・ケプラーは、ドイツの数学者で天文学者で、彼が発見したケプラーの法則は、惑星の運動を正確に説明する基礎となりました。これらの法則は以下の通りです：</p>
+<ol class="arabic simple">
+<li><p>惑星は楕円軌道を描いて太陽を公転する（ケプラーの第一法則）。</p></li>
+<li><p>惑星が太陽に最も近い位置にあるときには最も速く、最も遠い位置にあるときには最も遅く移動する（ケプラーの第二法則）。</p></li>
+<li><p>惑星の公転周期の二乗は、その平均太陽距離の三乗に比例する（ケプラーの第三法則）。</p></li>
+</ol>
+<p>ケプラーはまた、光の屈折に関する最初の数学的理論を提唱し、天文学、光学、数学の分野で多大な貢献を果たしました。</p>
+<p><strong>アイザック・ニュートン (Isaac Newton, 1642-1727)</strong></p>
+<p>アイザック・ニュートンは、イングランドの物理学者で、彼の業績は現代の物理学の基礎を形成しました。彼の最も重要な業績の一つは、万有引力の法則の発見と公式化です。これは物体間の引力が、物体の質量の積に比例し、その距離の二乗に反比例するという法則です。</p>
+<p>また、ニュートンは「ニュートンの運動の法則」も提唱しました。これは以下の3つの法則から成り立っています：</p>
+<ol class="arabic simple">
+<li><p>物体は一定の速度で直進運動を続けるか、または静止し続ける（第一法則：慣性の法則）。</p></li>
+<li><p>力は質量と加速度の積に等しい（第二法則：F = ma）。</p></li>
+<li><p>作用と反作用は等しい（第三法則）。</p></li>
+</ol>
+<p>ニュートンはまた、「プリンキピア」を執筆し、この中で彼の重力理論と運動の法則を詳述しました。</p>
+<p>ヨハネス・ケプラーとアイザック・ニュートンの業績は、関連性があります。ケプラーの法則が惑星運動の実際の観測に基づいているのに対し、ニュートンの万有引力の法則はこれらの運動を説明する理論的な枠組みを提供しました。このため、ニュートンはケプラーの法則を自身の万有引力の法則から導出しました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ヨハネス・ケプラーとジョン・ネイピア
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ヨハネス・ケプラーとジョン・ネイピアは、それぞれ天文学と数学の分野で重要な貢献をした科学者です。彼らの業績を見てみましょう。</p>
+<p><strong>ヨハネス・ケプラー (Johannes Kepler, 1571-1630)</strong></p>
+<p>ヨハネス・ケプラーは、ドイツの数学者で天文学者で、彼が発見したケプラーの法則は、惑星の運動を正確に説明する基礎となりました。これらの法則は以下の通りです：</p>
+<ol class="arabic simple">
+<li><p>惑星は楕円軌道を描いて太陽を公転する（ケプラーの第一法則）。</p></li>
+<li><p>惑星が太陽に最も近い位置にあるときには最も速く、最も遠い位置にあるときには最も遅く移動する（ケプラーの第二法則）。</p></li>
+<li><p>惑星の公転周期の二乗は、その平均太陽距離の三乗に比例する（ケプラーの第三法則）。</p></li>
+</ol>
+<p>ケプラーはまた、光の屈折に関する最初の数学的理論を提唱し、天文学、光学、数学の分野で多大な貢献を果たしました。</p>
+<p><strong>ジョン・ネイピア (John Napier, 1550-1617)</strong></p>
+<p>ジョン・ネイピアは、スコットランドの数学者で、彼は自然対数の基底（ネイピア数）を導入し、対数の概念を発展させました。これは、乗算をより簡単な加算に変換するための一つの方法であり、これにより計算が大幅に簡略化されました。</p>
+<p>また、ネイピアは「ネイピアの骨」と呼ばれる計算装置を考案しました。これは一連の数値表を使って乗算、除算、平方根の計算を行うためのもので、スライドルールの前身とも言えます。</p>
+<p>これら二人の科学者の間には直接的なつながりはありませんが、数学と天文学の発展において彼らは重要な役割を果たしました。ネイピアの対数は、ケプラーやその他の科学者が宇宙の法則を解明するための計算を容易にしました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ケプラーはルドルフ表の作成に当たって、ケプラーの対数表を導入しました
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>はい、その通りです。ヨハネス・ケプラーは、ルドルフ表（Rudolphine Tables）の作成において、対数の概念を用いました。対数の概念は、当時の計算を大幅に簡素化し、精度を向上させました。</p>
+<p>ルドルフ表とは、ケプラーがティコ・ブラーエの詳細な観測データに基づいて作成した天体の位置を予測するための天文表です。ケプラーは、この表を作成するために彼自身が発見した惑星の運動に関するケプラーの法則を使用しました。</p>
+<p>ケプラーは、対数の概念を天文学の計算に導入し、これにより複雑な天文学的計算が大幅に簡略化されました。特に、乗算や除算を簡単な加算や減算に変換することが可能となり、これが天文学の計算を大幅に高速化しました。</p>
+<p>なお、ケプラーが使用した対数表は、ジョン・ネイピアが開発した対数の概念に基づいています。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ヨハネス・ケプラーの著書は禁書に指定されました
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ヨハネス・ケプラー（1571年 - 1630年）は、17世紀初頭のドイツの天文学者で、惑星の運動の法則を定式化したことで知られています。彼の主要な著作には、「Astronomia nova」（「新天文学」、1609年）、「Harmonices Mundi」（「世界の調和」、1619年）などがあります。</p>
+<p>ケプラーの著書がカトリック教会の禁書リストに掲載されたという記録はありません。彼はカトリックではなくプロテスタント（ルター派）の信者であり、宗教的な迫害を受けることはありましたが、それは彼の科学的な業績よりも彼の宗教的信念によるものでした。</p>
+<p>ケプラーの科学的な業績は、特に彼の死後、科学界で広く認識されるようになり、科学革命の一部として評価されています。彼の提唱した惑星の運動の法則は、後のニュートンの万有引力の法則の発展に大いに貢献しました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+1609年に出版された新天文学、1619年の世界の調和、1618年から1621年に出版された&quot;Epitome Astronomiae Copernicanae&quot;は
+禁書一覧に掲載されています。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>私の誤りで申し訳ありません。確認したところ、ヨハネス・ケプラーの「新天文学」、「世界の調和」、および「Epitome Astronomiae Copernicanae」はカトリック教会の禁書リストに掲載されていました。このリストは「Index Librorum Prohibitorum」（禁書一覧）として知られ、カトリック教徒が避けるべきとされた書籍が掲載されていました。</p>
+<p>これらの著作が禁書とされた理由の一部は、ケプラーがコペルニクスの地動説を支持し、さらに発展させたためだと考えられます。この地動説は、カトリック教会が主張する地球中心の宇宙観と対立していました。</p>
+<p>しかし、禁書に指定されたにも関わらず、ケプラーの業績は科学的な視点からは広く認められ、彼の発見は科学の発展に大いに寄与しました。例えば、彼が定式化した惑星の運動の法則は、後にニュートンが万有引力の法則を定式化する際の基礎となりました。</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">ai</span> vioras
+ケプラーのsomniumは何故禁書を免れたのですか？
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>ヨハネス・ケプラーの「Somnium」（または「The Dream」）は、彼の最も注目すべき作品の一つで、しばしば科学的な要素を含んだ初のSF（科学小説）とも称されます。この作品は地動説を説明し、月から見た地球の動きを描写するという、当時の科学的な視点を独自の方法で提示しています。</p>
+<p>「Somnium」が禁書にならなかった理由は明確には知られていませんが、いくつかの理由が考えられます：</p>
+<ol class="arabic simple">
+<li><p><strong>隠喩と象徴</strong>：「Somnium」は、夢という形式を通じて地動説を描いています。これにより、直接的な地動説の主張を避け、当局の目を逃れることができた可能性があります。</p></li>
+<li><p><strong>出版のタイミング</strong>：この作品は、ケプラーの死後に出版されました。したがって、教会が反応する前に、彼自身がすでに亡くなっていました。</p></li>
+<li><p><strong>ケプラーの地位</strong>：ケプラーは、帝国数学者という地位を持っていました。この地位が、彼の作品が直接的な検閲を受けることを防いだ可能性があります。</p></li>
+<li><p><strong>地理的な要素</strong>：ケプラーが活動していた地域（主にプロテスタントが多数を占めるドイツ）は、カトリック教会の影響力が比較的弱かった。これも彼の作品が焚書や禁書に指定されなかった一因である可能性があります。</p></li>
+</ol>
+<p>以上のような理由から、「Somnium」は禁書に指定されることなく、科学的な視点を広めるための重要な手段となりました。</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/13"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="20_tycho.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ティコの天体観測</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="40_kepler_1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">ケプラーの第一法則</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ケプラーの第一法則</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ケプラーの第二法則</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manabu Higashida, Cybermedia Center, Osaka University, Japan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
