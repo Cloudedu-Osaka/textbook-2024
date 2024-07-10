@@ -4,6 +4,23 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/07/10
+  numbered: false
+  chapters:
+  - file: chapters/13/10_copernicus.ipynb
+    title: Nicolaus Copernicus
+  - file: chapters/13/20_tycho.ipynb
+    title: Tycho Brahe
+  - file: chapters/13/30_kepler.ipynb
+    title: Johannes Kepler
+  - file: chapters/13/40_kepler_1.ipynb
+    title: Kepler's first law
+  - file: chapters/13/50_kepler_2.ipynb
+    title: Kepler's second law
+  - file: chapters/13/60_cycloid.ipynb
+    title: Cycloid by Newtown
+  - file: chapters/13/70_assignment.ipynb
+    title: Assignment
 - caption: 2024/07/03
   numbered: false
   chapters:
