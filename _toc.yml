@@ -4,6 +4,19 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/07/17
+  numbered: false
+  chapters:
+  - file: chapters/14/14_2010_0intro.ipynb
+    title: Introduction
+  - file: chapters/14/14_2010_1.ipynb
+    title: 第３問 問１
+  - file: chapters/14/14_2010_2.ipynb
+    title: 第３問 問２
+  - file: chapters/14/14_2010_3.ipynb
+    title: 第３問 問３
+  - file: chapters/14/14_2010_ans.ipynb
+    title: 解答
 - caption: 2024/07/10
   numbered: false
   chapters:
