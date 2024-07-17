@@ -171,7 +171,15 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/07/10</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/07/17</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../14/14_2010_0intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../14/14_2010_1.html">第３問 問１</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../14/14_2010_2.html">第３問 問２</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../14/14_2010_3.html">第３問 問３</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../14/14_2010_ans.html">解答</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/07/10</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../13/10_copernicus.html">Nicolaus Copernicus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../13/20_tycho.html">Tycho Brahe</a></li>
@@ -524,8 +532,8 @@ document.write(`
 </li>
 </ul>
 <p><span class="math notranslate nohighlight">\(f(x) = \frac{1}{x^2} - A\)</span> とする. ニュートン法により</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8a20a5db-a71d-4fd2-8d9d-d339f8d51953">
-<span class="eqno">(4)<a class="headerlink" href="#equation-8a20a5db-a71d-4fd2-8d9d-d339f8d51953" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-45251d6a-c4ef-4a71-bf49-0cfc44cf402b">
+<span class="eqno">(4)<a class="headerlink" href="#equation-45251d6a-c4ef-4a71-bf49-0cfc44cf402b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
   x_{n+1} &amp;=&amp; x_{n} - \frac{{x_{n}}^{-2}-A}{-2{x_{n}}^{-3}} \\
           &amp;=&amp; x_{n} + \frac{1}{2} x_{n} \left( 1 - A {x_{n}}^2 \right) \\
           &amp;=&amp; x_{n} - \frac{1}{2} x_{n} c_{n} \\
@@ -535,15 +543,15 @@ document.write(`
 <p>この式を <span class="math notranslate nohighlight">\({x_{n}}^2 = \frac{1}{A} (1+c_{n})\)</span> と変形し,上式の両辺を自乗して代入すると</p>
 <div class="math notranslate nohighlight">
 \[(1+c_{n+1}) = (1+c_{n}) \left( 1-\frac{c_{n}}{2}\right)^{2}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-0ddf91ac-c65a-4df2-b175-c83678486fce">
-<span class="eqno">(5)<a class="headerlink" href="#equation-0ddf91ac-c65a-4df2-b175-c83678486fce" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-385b2a28-d670-41aa-9f60-ee0f3fd49aaa">
+<span class="eqno">(5)<a class="headerlink" href="#equation-385b2a28-d670-41aa-9f60-ee0f3fd49aaa" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 c_{n+1} &amp;=&amp; (1+c_{n})(1-c_{n}+\frac{{c_{n}}^2}{4}) - 1 \\
         &amp;=&amp; \frac{1}{4}{c_{n}}^2 \left( c_{n} - 3 \right)
 \end{eqnarray}\]</div>
 <p>この二重漸化式は, 除算を行う必要がないため (~~<span class="math notranslate nohighlight">\(1/2\)</span> や <span class="math notranslate nohighlight">\(1/4\)</span>は有限小数の乗算~~ビットシフト演算), 高精度で高速な演算を期待できる.</p>
 <p>この式は, 次のように一般化できる:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c75ece34-e828-40b8-b74c-1df44d6138d1">
-<span class="eqno">(6)<a class="headerlink" href="#equation-c75ece34-e828-40b8-b74c-1df44d6138d1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-c89347b2-8408-46f6-9f92-04a76093c529">
+<span class="eqno">(6)<a class="headerlink" href="#equation-c89347b2-8408-46f6-9f92-04a76093c529" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
     x_{n+1} &amp;=&amp; x_{n} \left( 1 - \frac{c_{n}}{n}\right) \\
 1 + c_{n+1} &amp;=&amp; (1 + c_{n})\left( 1 - \frac{c_{n}}{n} \right)^{n}
 \end{eqnarray}\]</div>
