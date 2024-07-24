@@ -4,6 +4,23 @@
 format: jb-book
 root: chapters/intro.md
 parts:
+- caption: 2024/07/24
+  numbered: false
+  chapters:
+  - file: chapters/15/000.ipynb
+    title: Introduction
+  - file: chapters/15/010.ipynb
+    title: Differential Geometry
+  - file: chapters/15/020.ipynb
+    title: Differential Geometry (2)
+  - file: chapters/15/025_newton.ipynb
+    title: Newton vs. Leibniz
+  - file: chapters/15/030_2dim.ipynb
+    title: Differential Geometry (3)
+  - file: chapters/15/040_3dim.ipynb 
+    title: Gravity and geodesics
+  - file: chapters/15/050_geodesic.ipynb
+    title: Gravity and geodesics (2)
 - caption: 2024/07/17
   numbered: false
   chapters:
