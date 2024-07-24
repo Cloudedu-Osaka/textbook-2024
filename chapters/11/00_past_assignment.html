@@ -171,7 +171,17 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/07/17</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/07/24</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../15/000.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15/010.html">Differential Geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15/020.html">Differential Geometry (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15/025_newton.html">Newton vs. Leibniz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15/030_2dim.html">Differential Geometry (3)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15/040_3dim.html">Gravity and geodesics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15/050_geodesic.html">Gravity and geodesics (2)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2024/07/17</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../14/14_2010_0intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../14/14_2010_1.html">第３問 問１</a></li>
@@ -542,8 +552,8 @@ document.write(`
 </li>
 </ul>
 <p><span class="math notranslate nohighlight">\(f(x) = \frac{1}{x^2} - A\)</span> とする. ニュートン法により</p>
-<div class="amsmath math notranslate nohighlight" id="equation-256dc5fc-584d-439c-9a13-6026139eeb0f">
-<span class="eqno">(1)<a class="headerlink" href="#equation-256dc5fc-584d-439c-9a13-6026139eeb0f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-74b9de54-914f-4c68-8773-b6cc5f59ae97">
+<span class="eqno">(1)<a class="headerlink" href="#equation-74b9de54-914f-4c68-8773-b6cc5f59ae97" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
   x_{n+1} &amp;=&amp; x_{n} - \frac{{x_{n}}^{-2}-A}{-2{x_{n}}^{-3}} \\
           &amp;=&amp; x_{n} + \frac{1}{2} x_{n} \left( 1 - A {x_{n}}^2 \right) \\
           &amp;=&amp; x_{n} - \frac{1}{2} x_{n} c_{n} \\
@@ -553,15 +563,15 @@ document.write(`
 <p>この式を <span class="math notranslate nohighlight">\({x_{n}}^2 = \frac{1}{A} (1+c_{n})\)</span> と変形し,上式の両辺を自乗して代入すると</p>
 <div class="math notranslate nohighlight">
 \[(1+c_{n+1}) = (1+c_{n}) \left( 1-\frac{c_{n}}{2}\right)^{2}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-94efc11e-9e29-4e08-8e33-23202b04548f">
-<span class="eqno">(2)<a class="headerlink" href="#equation-94efc11e-9e29-4e08-8e33-23202b04548f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-143bab4c-865d-4c3e-a31d-258a0cd445a3">
+<span class="eqno">(2)<a class="headerlink" href="#equation-143bab4c-865d-4c3e-a31d-258a0cd445a3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 c_{n+1} &amp;=&amp; (1+c_{n})(1-c_{n}+\frac{{c_{n}}^2}{4}) - 1 \\
         &amp;=&amp; \frac{1}{4}{c_{n}}^2 \left( c_{n} - 3 \right)
 \end{eqnarray}\]</div>
 <p>この二重漸化式は, 除算を行う必要がないため (~~<span class="math notranslate nohighlight">\(1/2\)</span> や <span class="math notranslate nohighlight">\(1/4\)</span>は有限小数の乗算~~ビットシフト演算), 高精度で高速な演算を期待できる.</p>
 <p>この式は, 次のように一般化できる:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1b5db3fd-afd5-4ce6-86c5-a02da9423f5f">
-<span class="eqno">(3)<a class="headerlink" href="#equation-1b5db3fd-afd5-4ce6-86c5-a02da9423f5f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-f98f65d0-d1b7-439a-b102-30b247d22ed2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-f98f65d0-d1b7-439a-b102-30b247d22ed2" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
     x_{n+1} &amp;=&amp; x_{n} \left( 1 - \frac{c_{n}}{n}\right) \\
 1 + c_{n+1} &amp;=&amp; (1 + c_{n})\left( 1 - \frac{c_{n}}{n} \right)^{n}
 \end{eqnarray}\]</div>
